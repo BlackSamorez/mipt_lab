@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{cmap}
+\usepackage[utf8]{inputenc}
+\usepackage[warn]{mathtext}
+\usepackage{epsf,amsmath,amsfonts,amssymb,amsbsy}
+\usepackage[mathscr]{eucal}
+\usepackage[english, russian]{babel}
+\author{Мещеряков Павел Б02-920}
+\title{Отчёт о выполнении лабораторной работы 2.2.1}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{indentfirst}
+\graphicspath{{pictures2.2.1/}}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}
+\usepackage{pgfplots}
+\usepackage{rotating}
+\usepackage{pgfplotstable}
+\usepackage{booktabs}
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{center}
+\begin{figure}[h!]
+\begin{tikzpicture}[scale = 2]
+\begin{axis}[
+legend cell align={left},
+axis x line=left,
+axis y line=left,
+legend style={at={(1,0.177)}},
+ylabel= {$-\ln{\frac{U}{U_0}}$},
+xlabel = {$ t,c $},
+xmin=0, xmax=950,
+ymin=0, ymax=0.8,
+ymajorgrids = true,
+xmajorgrids = true,
+yminorgrids = true,
+xminorgrids = true,
+minor tick num = 4
+]
+
+\if 0
+\addplot +[only marks] 
+plot table [		    	    	    	
+x=t1, 
+y=-U1]
+{data_1.txt};
+
+
+\addplot +[only marks] 
+plot table [		    	    	    	
+x=t2, 
+y=-U2]
+{data_2.txt};
+
+
+\addplot +[only marks] 
+plot table [		    	    	    	
+x=t3, 
+y=-U3]
+{data_3.txt};
+
+\fi
+
+\addplot +[only marks] 
+plot table [		    	    	    	
+x=t4, 
+y=-U4]
+{data_4.txt};
+
+\if 0
+\addplot[blue, domain=0:550]{+0.00424 +0.001479865*x};
+\addplot[domain=0:1000]{+0.007604811 +0.000917233*x};
+\addplot[domain=0:1000]{+0.010858935 +0.000689002*x};
+\fi
+
+\addplot[domain=0:1000]{+0.011878708 +0.000534871*x};
+	\legend{
+	$P = 60$
+};
+\end{axis}
+\end{tikzpicture}
+\caption{График зависимости $-\ln{\frac{U}{U_0}}(t)$}
+\end{figure}
+\end{center}
+
+\end{document}

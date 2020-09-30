@@ -1,0 +1,13 @@
+set terminal pngcairo size 500, 500 enhanced font 'Verdana, 10'
+
+f(x) = a * x + b
+
+fit f(x) 'data' u 1:3 via a, b
+
+set xrange[2.9:3.5]
+set xlabel '1000К / T'
+set ylabel '\mu, К/бар'
+
+plot 'data' u 1:3:2:4 w xyerrorbars title 'points', f(x) title 'line'
+
+pause -1

@@ -1,0 +1,11 @@
+set terminal pngcairo size 500, 500 enhanced font 'Verdana, 10'
+
+f(x) = a + b * x
+
+fit f(x) 'data2' u 3:1 via a, b
+
+set ylabel 'T, deg'
+set xlabel 'p, кгс'
+plot 'data2' using 3:1:4:2 w xyerrorbars title 'pressure-plot', f(x) title 'fitting line'
+
+pause -1

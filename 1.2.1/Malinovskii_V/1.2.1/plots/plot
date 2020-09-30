@@ -1,0 +1,10 @@
+f(x) = a*x + b
+fit f(x) "data" using 1:2 via a, b
+
+set xlabel "R^2, м^2"
+set ylabel "T^2, c^2"
+
+set xrange[-0.01:0.12]
+plot "data" using 1:2:3 pt 7 ps 1  with yerrorbars, f(x)
+
+pause -1

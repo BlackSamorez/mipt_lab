@@ -1,0 +1,48 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{Images/}}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{calc}
+\usepackage{wrapfig}
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{subfigure}
+\usepackage{multirow}
+
+
+\title{
+Отчет о выполнении лабораторной работы 2.3.1 А
+
+Получение и измерение вакуума
+}
+
+\author{Варламов Антоний, группа Б02-928}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\section{Теоретический материал}
+
+
+\section{Экспериментальная часть}
+
+	\subsection{Определение откачиваемого объёма и измерение скорости откачки форвакуумным насосом}
+	
+	\subsection{Измерение скорости откачки турбомолекулярным насосом и определение предельного вакуума}
+	
+	\subsection{Создание искусственной течи и определение давления перехода в молекулярный режим}
+	
+\section{Определение погрешностей измерений}
+
+\section{Выводы}
+
+\end{document}
