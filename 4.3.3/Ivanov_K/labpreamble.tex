@@ -1,0 +1,53 @@
+\documentclass[12pt]{report}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage[english,russian]{babel}
+
+% Графика
+\usepackage{graphicx}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.9}
+\usetikzlibrary{arrows}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+
+% Математика
+\usepackage{amsmath, amsfonts, amssymb, amsthm, mathtools}
+\usepackage{euscript}
+\usepackage{mathrsfs}
+\usepackage{icomma}
+
+\renewcommand{\le}{\leqslant}
+\renewcommand{\ge}{\geqslant}
+
+% Первый абзац
+\usepackage{indentfirst}
+
+% Поля
+\usepackage{geometry}
+\geometry{top=2cm}
+\geometry{left=2cm}
+\geometry{right=2cm}
+\geometry{bottom=3cm}
+
+% Листинги
+\usepackage{moreverb}
+\usepackage{listings}
+\lstset{
+	frame=single,
+	showspaces=false,
+	showstringspaces=false,
+	numbers=left,
+}
+
+% Среднее значение
+\newcommand{\aver}[1]{\langle #1 \rangle}
+
+% Таблицы
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{makecell}
+
+\author{Яковлева Саша, группа 625}
