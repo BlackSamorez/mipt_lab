@@ -1,0 +1,11 @@
+set terminal pngcairo size 500, 500 enhanced font 'Verdana, 10'
+
+f(x) = a + b * x
+
+fit f(x) 'data' u 1:3 via a, b
+
+set xlabel 'T, deg'
+set ylabel 'sigma, мН/м^2'
+plot 'data' using 1:3:2:4 w xyerrorbars title 'sigma-plot', f(x) title 'fitting line'
+
+pause -1

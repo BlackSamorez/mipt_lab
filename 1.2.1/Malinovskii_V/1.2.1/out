@@ -1,0 +1,83 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./main.tex
+LaTeX2e <2018-12-01>
+\@input{head.aux}
+(./head.tex (/usr/share/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texmf-dist/tex/latex/geometry/geometry.sty
+(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty)
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifvtex.sty)
+(/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty))
+(/usr/share/texmf-dist/tex/latex/base/inputenc.sty)
+(/usr/share/texmf-dist/tex/generic/babel/babel.sty
+(/usr/share/texmf-dist/tex/generic/babel/switch.def)
+(/usr/share/texmf-dist/tex/generic/babel-russian/russianb.ldf
+(/usr/share/texmf-dist/tex/generic/babel/babel.def
+(/usr/share/texmf-dist/tex/generic/babel/txtbabel.def))
+
+Package babel Warning: No Cyrillic font encoding has been loaded so far.
+(babel)                A font encoding should be declared before babel.
+(babel)                Default `T2A' encoding will be loaded  on input line 74.
+
+
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2aenc.def
+(/usr/share/texmf-dist/tex/latex/base/t2aenc.dfu))))
+(/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/share/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg)
+(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def)))
+(/usr/share/texmf-dist/tex/latex/cm-lgc/cmlgc.sty)
+(/usr/share/texmf-dist/tex/latex/tools/array.sty))
+(/usr/share/texmf-dist/tex/latex/subfig/subfig.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texmf-dist/tex/latex/caption/caption3.sty))) (./main.aux
+(/usr/share/texmf-dist/tex/latex/cyrillic/t2acmr.fd))
+(/usr/share/texmf-dist/tex/latex/cm-lgc/ot1fcm.fd)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+(/usr/share/texmf-dist/tex/latex/cm-lgc/t2afcm.fd)
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+(/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty)
+(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/share/texmf-dist/tex/latex/cm-lgc/t2afct.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd) [1{/var/lib/texmf/fonts/map/
+pdftex/updmap/pdftex.map} <./prop-1.png> <./prop-2.png>] [2 <./rot.png>]
+[3]
+Overfull \hbox (10.00002pt too wide) in paragraph at lines 161--166
+ []$ 
+[4 <./inertia.png (PNG copy)>] [5] (./main.aux) )
+(see the transcript file for additional information)</usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
+share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-lgc/fc
+mb6z.pfb></usr/share/texmf-dist/fonts/type1/public/cm-lgc/fcmr6z.pfb></usr/shar
+e/texmf-dist/fonts/type1/public/cm-lgc/fctr6z.pfb>
+Output written on main.pdf (5 pages, 241543 bytes).
+Transcript written on main.log.

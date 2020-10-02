@@ -1,0 +1,19 @@
+set term png size 1000,800 #800 pixels by 400 pixels
+
+set xrange [0:800]
+set yrange [200:500]
+
+set xlabel "t, s"
+set ylabel "f, Hz"
+
+f(x) = a * x + b
+g(x) = c * exp(-x * d)
+
+c = 450
+d = 0.001
+fit log(g(x)) "out" using 1:(log($2)) via c, d
+
+fit f(x) "out" using 1:2 via a, b
+
+
+plot "out" using 1:2:3:4 with xyerrorbars title "data", f(x), g(x)

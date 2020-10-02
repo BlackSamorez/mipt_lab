@@ -1,0 +1,13 @@
+set term png size 1000,1100 #800 pixels by 400 pixels
+
+set xrange [0:350]
+set yrange [0:0.2]
+
+set xlabel "mass, g"
+set ylabel "\Omega, s^{-1}"
+
+f(x) = a * x
+
+fit f(x) "out" u 1:2:3 yerrors via a
+
+plot "out" using 1:2:3 with yerrorbars title "data", f(x)
