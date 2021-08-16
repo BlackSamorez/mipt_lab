@@ -1,0 +1,71 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -0.12265839
+xMax = 8.84988711
+xTickUnit = 0.5
+xGridUnit = 0.5
+xShowGrid = 1
+yMin = 0.21917241
+yMax = 1.08317241
+yTickUnit = 0.1
+yGridUnit = 0.1
+yShowGrid = 1
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,24,clBlack
+LegendFont = Times New Roman,26,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[PointSeries1]
+FillColor = clFuchsia
+LineColor = clFuchsia
+Size = 10
+Style = 2
+LineSize = 3
+LineStyle = 1
+LabelPosition = 1
+PointCount = 12
+Points = 0,0.28;0.301029996,0.52;1,0.96;1.698970004,1;2.301029996,1;3,1;3.301029996,1;3.698970004,1;4.301029996,1;7.204119983,0.92;7.361727836,0.76;7.477121255,0.6;
+LegendText = AC
+
+[PointSeries2]
+FillColor = clAqua
+LineColor = clAqua
+Size = 10
+Style = 0
+LineSize = 3
+LineStyle = 1
+LabelPosition = 1
+PointCount = 12
+Points = 0,1;0.301029996,1;1,1;1.698970004,1;2.301029996,1;3,1;3.301029996,1;3.698970004,1;4.301029996,1;7.204119983,0.92;7.361727836,0.76;7.477121255,0.6;
+LegendText = DC
+
+[Label1]
+Placement = 4
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\fnil Times New Roman;}}\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs60 K\\lang1049\\f1\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label2]
+Placement = 0
+Pos = 8.26515942771798;0.294896551724138
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n\\viewkind4\\uc1\\pard\\f0\\fs60 lg f\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Data]
+TextLabelCount = 2
+FuncCount = 0
+PointSeriesCount = 2
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

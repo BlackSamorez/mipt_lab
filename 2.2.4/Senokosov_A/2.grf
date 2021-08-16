@@ -1,0 +1,78 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -2.48607702
+xMax = 49.01197333
+xTickUnit = 5
+xGridUnit = 5
+xShowGrid = 1
+xLabel = r, мм
+yMin = 0.91077948
+yMax = 1.22402943
+yTickUnit = 0.05
+yGridUnit = 0.05
+yShowGrid = 1
+yLabel = U/a
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,22,clBlack
+LabelFont = Times New Roman,22,clBlack,B
+LegendFont = Times New Roman,22,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[Func1]
+FuncType = 0
+y = -0.00596393*x+1.1902338
+LegendText = f(x)=-0.006*x+1.1902
+From = 1.1
+To = 42.6
+Color = clRed
+Size = 4
+
+[PointSeries1]
+FillColor = clBlue
+LineColor = clAqua
+Size = 8
+Style = 2
+LineSize = 3
+LabelPosition = 1
+PointCount = 4
+Points = 1.1,1.183673469;9.7,1.163265306;24.1,1.067961165;42.6,0.936170213;
+ShowInLegend = 0
+LegendText = Ряд 1
+
+[Func2]
+FuncType = 0
+y = -1.21597768E-05*x^2-0.00462416*x+1.19557105
+Visible = 0
+ShowInLegend = 0
+LegendText = f(x)=-1.216E-05*x^2-0.0046*x+1.1956; R²=0.988
+Color = clRed
+
+[PointSeries2]
+FillColor = clBlue
+LineColor = clAqua
+Size = 8
+Style = 2
+LineSize = 3
+LabelPosition = 1
+PointCount = 2
+Points = 1.1,1.183673469;42.6,0.936170213;
+Visible = 0
+LegendText = Ряд 2
+
+[Data]
+TextLabelCount = 0
+FuncCount = 2
+PointSeriesCount = 2
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

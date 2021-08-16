@@ -1,0 +1,99 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = 0
+xMax = 380
+xTickUnit = 20
+xGridUnit = 20
+xShowGrid = 1
+xLabel = V, мВ
+yMin = 0
+yMax = 850
+yTickUnit = 50
+yGridUnit = 50
+yShowGrid = 1
+yLabel = I, мА
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,18,clBlack
+LabelFont = Times New Roman,20,clBlack,B
+LegendFont = Times New Roman,20,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[PointSeries1]
+FillColor = clRed
+LineColor = clBlue
+Size = 8
+Style = 0
+LabelPosition = 1
+PointCount = 10
+Points = 334.16,725;275.28,595;194.88,425;123.62,270;92.33,200;102.75,220;127.91,275;162.69,350;186.32,405;328.03,710;
+xErrorBarType = 1
+xErrorBarValue = 0.005
+yErrorBarType = 1
+yErrorBarValue = 2.5
+LegendText = l = 20 см
+
+[PointSeries2]
+FillColor = clLime
+LineColor = clBlue
+Size = 8
+Style = 1
+LabelPosition = 1
+PointCount = 10
+Points = 227.16,745;182.61,600;138.14,455;107.99,355;78.89,260;90.03,295;101.51,335;117.83,390;142.59,470;189.22,620;
+yErrorBarType = 1
+yErrorBarValue = 2.5
+LegendText = l = 30 см
+
+[PointSeries3]
+FillColor = clFuchsia
+LineColor = clBlue
+Size = 8
+Style = 2
+LabelPosition = 1
+PointCount = 10
+Points = 139.06,750;125.81,680;105.1,570;85.15,460;71.16,385;81.32,440;97.09,525;120.46,650;132.55,715;115.25,625;
+yErrorBarType = 1
+yErrorBarValue = 2.5
+LegendText = l = 50 см
+
+[Func1]
+FuncType = 0
+y = 2.16618933*x+0
+ShowInLegend = 0
+LegendText = f(x)=2.1662*x+0; R²=0.9999
+Color = clRed
+Size = 3
+
+[Func2]
+FuncType = 0
+y = 3.2867472*x+0
+ShowInLegend = 0
+LegendText = f(x)=3.2867*x+0; R²=0.9999
+Color = clLime
+Size = 3
+
+[Func3]
+FuncType = 0
+y = 5.4046915*x+0
+ShowInLegend = 0
+LegendText = f(x)=5.4047*x+0; R²=0.9999
+Color = clFuchsia
+Size = 3
+
+[Data]
+TextLabelCount = 0
+FuncCount = 3
+PointSeriesCount = 3
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

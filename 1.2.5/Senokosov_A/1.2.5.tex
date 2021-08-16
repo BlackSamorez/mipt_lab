@@ -1,0 +1,560 @@
+\documentclass[a4paper,12pt]{article} % добавить leqno в [] для нумерации слева
+\usepackage[a4paper,top=1.3cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=0.75cm]{geometry}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage[warn]{mathtext} 		% русские буквы в фомулах
+\usepackage[T2A]{fontenc}			% кодировка
+\usepackage[utf8]{inputenc}			% кодировка исходного текста
+\usepackage[english,russian]{babel}	% локализация и переносы
+\usepackage{physics}
+\usepackage{multirow}
+\usepackage{float}
+\restylefloat{table}
+
+
+\usepackage{graphicx}
+
+\usepackage{wrapfig}
+\usepackage{tabularx}
+
+\usepackage{hyperref}
+\usepackage[rgb]{xcolor}
+\hypersetup{
+colorlinks=true,urlcolor=blue
+}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\date{\today}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		{\large МОСКОВСКИЙ ФИЗИКО-ТЕХНИЧЕСКИЙ ИНСТИТУТ (НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ)}
+	\end{center}
+	\begin{center}
+		{\large Физтех-школа физики и исследований им. Ландау}
+	\end{center}
+	
+	
+	\vspace{4.5cm}
+	{\huge
+		\begin{center}
+			{\bf Отчёт о выполнении лабораторной работы 1.2.5}\\
+			Изучение вынужденной регулярной прецессии гироскопа
+		\end{center}
+	}
+	\vspace{2cm}
+	\begin{flushright}
+		{\LARGE Автор:\\ Сенокосов Арсений Олегович \\
+			\vspace{0.2cm}
+			Б02-012}
+	\end{flushright}
+	\vspace{8cm}
+	\begin{center}
+		Долгопрудный\\
+		\today
+	\end{center}
+\end{titlepage}
+
+\section{Введение}
+
+\textbf{Цель работы:} исследовать вынужденную прецессию гироскопа; установить зависимость скорости вынужденной прецессии от величины момента сил, действующих на ось гироскопа; определить скорость вращения ротора гироскопа и сравнить ее со скоростью, рассчитанной по скорости прецессии.\\
+\textbf{В работе используются:} гироскоп в кардановом подвесе, секундомер, набор грузов, отдельный ротор гироскопа, цилиндр известной массы, крутильный маятник, штангенциркуль, линейка, осцилограф, генератор частоты.
+
+\section{Теоретический сведения}
+
+Уравнение движения твёрдого тела можно записать в следующем виде:
+
+\begin{equation}
+\frac{d\vec{P}}{dt}=\vec{F}
+\label{one}
+\end{equation}
+
+\begin{equation}
+\frac{d\vec{L}}{dt}=\vec{M}
+\label{two}
+\end{equation}
+
+Момент импульса тела в главных его осях $x$, $y$, $z$ равен
+
+\begin{equation}
+\vec{L} = \vec{i}I_x\omega_x+\vec{j}I_y\omega_y+\vec{k}I_z\omega_z,
+\label{three}
+\end{equation}
+где $ I_x $, $ I_y $, $ I_z $ -- главные моменты инерции, $ \omega_x $, $ \omega_y $, $ \omega_z $ -- компоненты вектора угловой скорости $ \vec{\omega} $. Быстро вращающееся тело, для которого, например,
+
+\begin{equation}
+I_z\omega_z \gg I_x\omega_x,\;\;\;\;I_y\omega_y,
+\end{equation} 
+принято называть гироскопом. Гироскоп называется уравновешенным, если его центр масс неподвижен.
+
+В силу \eqref{two} приращение момента импульса определяется интегралом
+
+\begin{equation}
+\Delta\vec{L} = \int\vec{M} dt.
+\label{four}
+\end{equation}
+Если момент внешних сил действует в течение короткого промежутка времени, из интеграла \eqref{four} следует, что приращение $ \Delta \vec{L} $ момента импульса значительно меньше самого момента импульса:
+
+\begin{equation}
+\left|\Delta \vec{L}\right| \ll \left|\vec{L}\right| 
+\end{equation}
+
+\begin{wrapfigure}{r}{6cm}
+	\includegraphics[width=6cm]{mahovik.png}
+	\caption{Маховик}
+	\label{mahovik}
+\end{wrapfigure}
+
+С этим связана замечательная устойчивость, которую приобретает движение гироскопа после приведения его в быстрое вращение. 
+Выясним, какие силы надо приложить к гироскопу, чтобы изменить 
+направление его оси. Рассмотрим для 
+примера маховик, вращающийся вокруг оси $ z $, перпендикулярной к плоскости маховика (рис. \ref{mahovik}). Будем считать, что
+
+\begin{equation}
+\omega_z = \omega_0, \;\;\;\;\; \omega_x = 0, \;\;\;\;\; \omega_y = 0.
+\end{equation}
+
+\noindent Пусть ось вращения повернулась в плоскости $ zx $ по направлению к оси $ x $ на бесконечно малый угол $ d\varphi $. Такой поворот означает добавочное вращение маховика вокруг оси $ y $, так что
+
+\begin{equation}
+d\varphi=\Omega dt,
+\end{equation}
+где $ \Omega $ -- угловая скорость такого вращения. Будем предполагать, что
+
+\begin{equation}
+L_\Omega \ll L_{\omega_0}
+\label{five}
+\end{equation}
+Это означает, что момент импульса маховика, равный $ I_z\omega_0 $ до приложения внешних сил, только повернётся в плоскости $ zx $ по направлению к оси $ x $, не изменяя своей величины. Таким образом, 
+
+\begin{equation}
+\left|d\vec{L}\right| = Ld\varphi = L\Omega dt.
+\end{equation}
+Но это изменение направлено вдоль оси $ x $, поэтому вектор $ d\vec{L} $ можно представить в виде векторного произведения вектора угловой скорости $ \omega $, направленного вдоль оси $ y $, на вектор собственного момента импульса маховика, направленного вдоль оси $ z $,
+
+\begin{equation}
+d\vec{L}=\vec{\Omega} \times \vec{L} dt,
+\end{equation}
+т. е.
+
+\begin{equation}
+\frac{d\vec{L}}{dt} = \vec{\Omega} \times \vec{L}.
+\end{equation}
+В силу \eqref{two} имеем
+
+\begin{equation}
+\vec{M} = \vec{\Omega} \times \vec{L}.
+\label{six}
+\end{equation}
+Формула \eqref{six} справедлива, если выполнено условие \eqref{five}. Она позволяет определить момент сил $ \vec{M} $, который необходимо приложить к маховику для того, чтобы вызвать вращение оси маховика с угловой скоростью $ \vec{\Omega} $. Мы видим, таким образом, что для поворота оси вращающегося маховика к оси $ x $ необходимо приложить силы, направленные не вдоль оси $ x $, а вдоль оси $ y $, так чтобы их момент $ \vec{M} $ был направлен вдоль оси $ x $.
+
+Для гироскопа массой $ m_\text{г} $, у которого ось собственного вращения наклонена на угол $ \alpha $ от вертикали, скорость прецессии, происходящей вокруг вертикальной оси под действием силы тяжести, равна
+
+\begin{equation}
+\Omega = \frac{M}{I_z\omega_0\sin \alpha} = \frac{m_\text{г}gl_\text{ц}\sin\alpha}{I_z\omega_0\sin\alpha} = \frac{m_\text{г}gl_\text{ц}}{I_z\omega_0},
+\end{equation}
+где $ l_\text{ц} $ -- растояние от точки подвеса до центра масс гироскопа, т. е. скорость прецессии не зависит от угла $ \alpha $.
+
+Для изучения регулярной прецессии уравновешенного гироскопа к его оси подвешивают дополнительные грузы. Это смещает общий центр масс и создает момент сил тяжести, вызывающий прецессию. Скорость прецессии в этом случае равна
+
+\begin{equation}
+\Omega = \frac{mgl}{I_z\omega_0},
+\label{eight}
+\end{equation}
+где $ m $ -- масса груза, $ l $ -- расстояние от центра карданова подвеса до точки крепления груза на оси гироскопа.
+
+Измерение скорости прецессии гироскопа позволяет вычислить угловую скорость вращения его ротора. Расчет производится по формуле \eqref{eight}. Момент инерции ротора относительно оси симметрии $ I_0 $ измеряется по крутильным колебаниям точной копии ротора, подвешиваемой вдоль оси симметрии на жесткой проволоке. Период крутильных колебаний $ T_0 $ зависит от момента инерции $ I_0 $ и модуля кручения проволоки $ f $:
+
+\begin{equation}
+T_0 = 2\pi\sqrt{\frac{I_0}{f}}.
+\label{nine}
+\end{equation} 
+
+Чтобы исключить модуль кручения проволоки, вместо ротора гироскопа к той же проволоке подвешивают цилиндр правильной формы с известными размерами и массой, для которого легко можно вычислить момент инерции $ I_\text{ц} $. Для определения момента инерции ротора гироскопа имеем 
+
+\begin{equation}
+I_0=I_\text{ц}\frac{T_0^2}{T_\text{ц}^2},
+\label{ten}
+\end{equation}
+где $ T_\text{ц} $ --период крутильных колебаний цилиндра.
+
+\section{Оборудование и экспериментальные погрешности}
+
+\begin{itemize}
+	\item \textbf{Линейка:} $ \Delta_\text{лин} = 0,001 $ м
+	\item \textbf{Секундомер:} $ \Delta_\text{сек} = 0,5 $ с \textit{(с учётом реакции человека)}
+	\item \textbf{Электронные весы:} $ \Delta_\text{вес} = 0,001 $ кг
+\end{itemize}
+
+\section{Результаты измерений и обработка данных}
+
+\subsection{Определение момента инерции ротора гироскопа}
+
+Для определения момента инерции цилиндра по формуле \eqref{ten} необходимо измерить период крутильных колебаний пробного цилиндра известной массы, вычислить его момент инерции и измерить период крутильных колебаний ротора гироскопа на той же проволоке.
+
+\subsubsection{Вычисление момента инерции цилиндра}
+
+Момент инерции цилиндра можно вычислить по следующей формуле:
+
+\begin{equation}
+I_\text{ц} = \frac{1}{2}m_\text{ц}\left( \frac{d_\text{ц}}{2}\right)^2,
+\end{equation}
+где $ m_\text{ц} $ -- масса цилиндра, $ d_\text{ц} $ -- его диаметр.
+
+При измерении этих параметров получаем:
+\begin{itemize}
+	\item $ m_\text{ц} = \left( 1,618 \pm 0,001\right) $ кг
+	\item $ d_\text{ц} = \left( 0,078 \pm 0,001 \right) $ м
+\end{itemize}
+
+Тогда
+
+\begin{equation}
+I_\text{ц} = 0,00123 \text{ кг} \cdot \text{м}^2
+\end{equation}
+
+Погрешность вычисления момента инерции цилиндра может быть найдена по следующей формуле:
+
+\begin{equation}
+\sigma_{I_\text{ц}} = I_\text{ц}\sqrt{\left( \frac{\Delta_\text{вес}}{m_\text{ц}} \right)^2 + \left(2 \frac{\Delta_\text{лин}}{d_\text{ц}} \right)^2 } \approx 0,00003 \text{ кг} \cdot \text{м}^2
+\end{equation}
+
+В итоге получаем:
+
+\begin{itemize}
+	\item \underline{$ I_\text{ц} = \left(0,00123 \pm 0,00003 \right) \text{ кг} \cdot \text{м}^2 $, $ \left( \varepsilon = 2,6 \% \right) $}
+\end{itemize}
+
+\subsubsection{Измерение периода крутильных колебаний пробного цилиндра}
+
+Производим измерение времени 20 крутильных колебаний цилиндра и повторяем опыт $ N_\text{оп} = 3 $ раза. Полученные результаты заносим в таблицу \ref{krut_cil}.
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		№ & $ t $, с & $ N_\text{кол} $ & $ T $, с & $ \langle T \rangle $, с                & $ \sigma_T $, с             & $ \varepsilon_T, \% $                      \\ \hline
+		1 & 81,1 & 20              & 4,051      & \multirow{3}{*}{4,042} & \multirow{3}{*}{0,026} & \multirow{3}{*}{0,63} \\ \cline{1-4}
+		2 & 80,6 & 20              & 4,032      &                        &                        &                            \\ \cline{1-4}
+		3 & 80,9 & 20              & 4,045     &                        &                        &                            \\ \hline
+	\end{tabular}
+	\caption{Результат измерения периода крутильных колебаний цилиндра}
+	\label{krut_cil}
+\end{table}
+
+\label{formuli}
+
+Период колебаний цилиндра в отдельном опыте может быть рассчитан по формуле:
+
+\begin{equation}
+T = \frac{t}{N_\text{кол}}.
+\end{equation}
+
+Среднее значение периода крутильных колебаний можно найти по формуле:
+
+\begin{equation}
+\langle T \rangle = \frac{1}{N_\text{оп}}\sum_{i = 1}^{N_\text{оп}} T_i.
+\end{equation}
+
+Случайную погрешность определения периода крутильных колебаний рассчитываем по формуле:
+
+\begin{equation}
+\sigma^{\text{сл}}_T = \sqrt{\frac{1}{N_\text{оп} - 1} \sum_{i = 1}^{N_\text{оп}} \left(T_i - \langle T \rangle \right)^2}.
+\end{equation}
+
+Полная погрешность может быть вычислена по формуле:
+
+\begin{equation}
+\sigma_T = \sqrt{\left( \sigma^\text{сл}_T \right)^2 + \left( \Delta_\text{сек} \right)^2  }
+\end{equation}
+
+В итоге получаем:
+
+\begin{itemize}
+	\item \underline{$ T_\text{ц} = \left( 4,042 \pm 0,026\right) $ с, $ \left(\varepsilon = 0,63 \% \right)  $}
+\end{itemize}
+
+\subsubsection{Измерение периода крутильных колебаний ротора гироскопа}
+
+Производим измерение времени $ N_\text{кол} $ крутильных колебаний цилиндра и повторяем опыт $ N_\text{оп} = 3 $ раза. Полученные результаты заносим в таблицу \ref{krut_gir}.
+
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|}
+		\hline
+		№ & $ t $, с & $ N_\text{кол} $ & $ T $, с & $ \langle T \rangle $, с                & $ \sigma_T $, с             & $ \varepsilon_T , \%$                 \\ \hline
+		1 & 60,6 & 19              & 3,187     & \multirow{3}{*}{3,215} & \multirow{3}{*}{0,033} & \multirow{3}{*}{1,03} \\ \cline{1-4}
+		2 & 65,1 & 20              & 3,255     &                        &                        &                       \\ \cline{1-4}
+		3 & 64,1 & 20              & 3,204     &                        &                        &                       \\ \hline
+	\end{tabular}
+	\caption{Результат измерения периода крутильных колебаний ротора гироскопа}
+	\label{krut_gir}
+\end{table}
+
+Вычисления средних значений периода колебаний и погрешностей проводим по формулам, приведённым в п.п. \ref{formuli}.
+
+В итоге получаем:
+
+\begin{itemize}
+	\item \underline{$ T_0 = \left( 3,215 \pm 0,033 \right) $ с, $ \left( \varepsilon = 1,03 \% \right)  $}
+\end{itemize}
+
+\subsubsection{Вычисление момента инерции ротора гироскопа}
+
+По формуле \eqref{ten} вычислим момент инерции ротора гироскопа:
+
+\begin{equation}
+I_0=I_\text{ц}\frac{T_0^2}{T_\text{ц}^2} = 0,00078 \text{ кг} \cdot \text{м}^2.
+\end{equation}
+Погрешность вычисления момента инерции ротора гироскопа можно вычислить по формуле:
+
+\begin{equation}
+\sigma_{I_0} = I_0\sqrt{\left( \varepsilon_{I_\text{ц}} \right)^2 +\left( 2 \varepsilon_{T_0} \right)^2 + \left(2 \varepsilon_{T_\text{ц}} \right)^2} \approx 0,00003 \text{ кг} \cdot \text{м}^2.
+\end{equation}
+
+В итоге получаем: \label{inertion}
+
+\begin{itemize}
+	\item \underline{$ I_0 = \left( 0,00078 \pm 0,00003 \right) \text{ кг} \cdot \text{м}^2, \left( \varepsilon = 3,5   \% \right) $}
+\end{itemize}
+
+\subsection{Определение частоты вращения ротора гироскопа}
+
+Для определения частоты вращения ротора гироскопа будем исследовать зависимость скорости прецессии гироскопа в зависимости от момента силы, действующей на его ось. Результаты измерений представлены в таблице \ref{sk_pre}.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		№  & $ m $, кг          & $ l $, м            & $ M $, Н$\cdot$м      & $ \sigma_M $, Н$\cdot$м             & $ t $, с & $ N_\text{об} $ & $ T $, с & $ \langle T \rangle $, с   & $ \sigma_T $, с          &  $ \varepsilon_T, \%$   & $ \Omega $, $ \text{с}^{-1} $ & $ \sigma_\Omega $, $ \text{с}^{-1} $ \\ \hline
+	1  & \multirow{3}{*}{0,336} & \multirow{3}{*}{0,122} & \multirow{3}{*}{0,402} & \multirow{3}{*}{0,004} & 425,95            & 14             & 30,43              & \multirow{3}{*}{30,43} & \multirow{3}{*}{0,04} & \multirow{3}{*}{0,12}  & \multirow{3}{*}{0,2065}                   & \multirow{3}{*}{0,0003} \\ \cline{1-1} \cline{6-8}
+	2  &                        &                        &                        &                        & 426,23            & 14             & 30,45              &                        &                       &                        &                                           &                         \\ \cline{1-1} \cline{6-8}
+	3  &                        &                        &                        &                        & 425,76            & 14             & 30,41              &                        &                       &                        &                                           &                         \\ \hline \hline
+	4  & \multirow{3}{*}{0,269} & \multirow{3}{*}{0,122} & \multirow{3}{*}{0,322} & \multirow{3}{*}{0,003} & 264,57            & 7              & 37,80              & \multirow{3}{*}{37,87} & \multirow{3}{*}{0,08} & \multirow{3}{*}{0,21}  & \multirow{3}{*}{0,1659}                   & \multirow{3}{*}{0,0004} \\ \cline{1-1} \cline{6-8}
+	5  &                        &                        &                        &                        & 265,46            & 7              & 37,92              &                        &                       &                        &                                           &                         \\ \cline{1-1} \cline{6-8}
+	6  &                        &                        &                        &                        & 265,24            & 7              & 37,89              &                        &                       &                        &                                           &                         \\ \hline \hline
+	7  & \multirow{3}{*}{0,215} & \multirow{3}{*}{0,122} & \multirow{3}{*}{0,257} & \multirow{3}{*}{0,002} & 142,09            & 3              & 47,36              & \multirow{3}{*}{47,41} & \multirow{3}{*}{0,17} & \multirow{3}{*}{0,36}  & \multirow{3}{*}{0,1325}                   & \multirow{3}{*}{0,0005} \\ \cline{1-1} \cline{6-8}
+	8  &                        &                        &                        &                        & 142,39            & 3              & 47,46              &                        &                       &                        &                                           &                         \\ \cline{1-1} \cline{6-8}
+	9  &                        &                        &                        &                        & 142,23            & 3              & 47,41              &                        &                       &                        &                                           &                         \\ \hline \hline
+	10 & \multirow{3}{*}{0,174} & \multirow{3}{*}{0,122} & \multirow{3}{*}{0,208} & \multirow{3}{*}{0,002} & 116,81            & 2              & 58,41              & \multirow{3}{*}{58,39} & \multirow{3}{*}{0,25} & \multirow{3}{*}{0,43}  & \multirow{3}{*}{0,1076}                   & \multirow{3}{*}{0,0005} \\ \cline{1-1} \cline{6-8}
+	11 &                        &                        &                        &                        & 116,65            & 2              & 58,33              &                        &                       &                        &                                           &                         \\ \cline{1-1} \cline{6-8}
+	12 &                        &                        &                        &                        & 116,85            & 2              & 58,43              &                        &                       &                        &                                           &                         \\ \hline \hline
+	13 & \multirow{3}{*}{0,138} & \multirow{3}{*}{0,122} & \multirow{3}{*}{0,165} & \multirow{3}{*}{0,002} & 147,55            & 2              & 73,78              & \multirow{3}{*}{73,80} & \multirow{3}{*}{0,25} & \multirow{3}{*}{0,34}  & \multirow{3}{*}{0,0851}                   & \multirow{3}{*}{0,0003} \\ \cline{1-1} \cline{6-8}
+	14 &                        &                        &                        &                        & 147,51            & 2              & 73,76               &                        &                       &                        &                                           &                         \\ \cline{1-1} \cline{6-8}
+	15 &                        &                        &                        &                        & 147,76            & 2              & 73,88              &                        &                       &                        &                                           &                         \\ \hline
+	\end{tabular}
+	\caption{Результат измерения зависимости скорости прецессии от момента сил}
+	\label{sk_pre}
+\end{table}
+
+Момент силы, действующей на ось ротора гироскопа можно вычислить по следующей формуле:
+
+\begin{equation}
+M = mgl.
+\end{equation}
+Тогда погрешность вычисления момента силы определяется следующим соотношением:
+
+\begin{equation}
+\sigma_M = M\sqrt{\left( \frac{\Delta_\text{вес}}{m} \right)^2 + \left( \frac{\Delta_\text{лин}}{l} \right)^2}
+\end{equation}
+
+Период вращения гироскопа и погрешность его определения вычисляются по формулам, приведённым в п.п. \ref{formuli}.
+Тогда скорость прецессии гироскопа можно найти по формуле:
+
+\begin{equation}
+\Omega = \frac{2\pi}{T}.
+\end{equation}
+При этом погрешность вычисления скорости прецессии равна:
+\begin{equation}
+\sigma_\Omega = \Omega \varepsilon_T.
+\end{equation}
+Полученные результаты записываем в таблицу \ref{sk_pre}.
+
+Согласно уравнению \eqref{eight}, зависимость скорости прецессии $ \Omega $ от момента сил $ M $ должна быть линейной:
+
+\begin{equation}
+\Omega = kM,
+\end{equation}
+где
+\begin{equation}
+k = \frac{1}{I_0\omega_0}.
+\end{equation}
+
+Значит зависимость можно аппроксимировать с помощью метода наименьших квадратов. Перенесём все необходимые данные в таблицу \ref{mnk}:
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		№             & 1  & 2  & 3  & 4  & 5  \\
+		\hline \hline
+		$ M $, Н$\cdot$м             & 0,402  & 0,322  & 0,257  & 0,208  & 0,165  \\ \hline
+		$ \sigma_M $, Н$\cdot$м       & 0,004  & 0,003  & 0,002  & 0,002  & 0,002  \\ \hline
+		$ \varepsilon_M, \% $  & 0,87   & 0,90   & 0,94   & 1,00   & 1,09   \\ \hline \hline
+		$ \Omega, \text{ с}^{-1} $          & 0,2065 & 0,1659 & 0,1325 & 0,1076 & 0,0851 \\ \hline
+		$ \sigma_\Omega, \text{ с}^{-1} $    & 0,0003 & 0,0004 & 0,0005 & 0,0005 & 0,0003 \\ \hline
+		$ \varepsilon_\Omega, \% $ & 0,12   & 0,21   & 0,36   & 0,43   & 0,34   \\ \hline
+	\end{tabular}
+	\caption{Данные для аппроксимации зависимости}
+	\label{mnk}
+\end{table}
+
+По полученным данным построим график зависимости. Он представлен на рисунке \ref{graph}.
+
+\begin{figure}[h!]
+	\includegraphics[scale=0.388]{graph.jpg}
+	\caption{График зависимости скорости прецессии гироскопа от момента силы}
+	\label{graph}
+\end{figure}
+
+Коэффициент $ k $ можно вычислить по следующей формуле:\label{k}
+
+\begin{equation}
+k = \frac{\langle M\Omega\rangle}{\langle M^2 \rangle} \approx 0,5144 \text{ } \frac{1}{\text{Дж} \cdot \text{с}}.
+\end{equation}
+Случайную погрешность определения $ k $ можно вычислить по следующей формуле:
+
+\begin{equation}
+\sigma^\text{сл}_k = \frac{1}{\sqrt{N_\text{оп}-1}} \sqrt{\frac{\langle \Omega^2 \rangle}{\langle M^2 \rangle} - k^2} \approx 0,0005 \text{ } \frac{1}{\text{Дж} \cdot \text{с}},
+\end{equation}
+где $ N_\text{оп} = 5 $ -- число серий опытов.
+
+Систематическую погрешность определения $ k $ можно вычислить следующим образом:
+
+\begin{equation}
+\sigma^\text{сист}_k = k\sqrt{\left( \frac{\sigma_M}{M} \right)^2+\left(\frac{\sigma_\Omega}{\Omega} \right)^2} \approx 0,0048 \text{ } \frac{1}{\text{Дж} \cdot \text{с}}.
+\end{equation}
+
+Тогда полная погрешность определения $ k $ определяется следующим образом:
+
+\begin{equation}
+\sigma_k = \sqrt{\left( \sigma_k^\text{сл} \right)^2 + \left( \sigma_k^\text{сист} \right)^2  } \approx 0,0049 \text{ } \frac{1}{\text{Дж} \cdot \text{с}}.
+\end{equation}
+
+Таким образом, получаем:
+
+\begin{itemize}
+	\item \underline{$ k =\left( 0,5144 \pm 0,0049 \right) \frac{1}{\text{Дж} \cdot \text{с}} , \left( \varepsilon = 0,9 \% \right) $}
+\end{itemize}
+
+С помощью $ k $ можно вычислить угловую скорость вращения ротора гироскопа:
+
+\begin{equation}
+\omega_0 = \frac{1}{I_0 k} \approx 2490,4 \text{ с}^{-1},
+\end{equation}
+где $ I_0 $ -- момент инерции ротора гироскопа, вычисленный в п.п. \ref{inertion}.
+
+Тогда погрешность вычисления $ \omega_0 $ можно определить по формуле:
+
+\begin{equation}
+\sigma_{\omega_0} = \omega_0 \sqrt{\left( \frac{\sigma_{I_0}}{I_0} \right)^2 + \left( \frac{\sigma_k}{k} \right)^2} \approx 91,2 \text{ с}^{-1}.
+\end{equation}
+
+Таким образом, получаем:
+
+\begin{itemize}
+	\item \underline{$ \omega_0 =\left( 2490,4 \pm 91,2 \right) \text{ с}^{-1} , \left( \varepsilon = 3,7 \% \right) $}
+\end{itemize}
+
+Используя угловую скорость, можно определить частоту вращения ротора гироскопа:
+
+\begin{equation}
+\nu = \frac{\omega_0}{2\pi} \approx 396,4 \text{ Гц}.
+\end{equation}
+
+Погрешность определения частоты вращения вычисляется по следующей формуле:
+
+\begin{equation}
+\sigma_\nu = \nu \varepsilon_{\omega_0} \approx 14,5 \text{ Гц}.
+\end{equation}
+
+Таким образом, мы получили:
+
+\begin{itemize}
+	\item \underline{$ \nu = \left( 396,4 \pm 14,5 \right) \text{ Гц}, \left( \varepsilon = 3,7 \% \right)   $}
+\end{itemize}
+
+\section{Определение частоты вращения ротора гироскопа при помощи осциллографа}
+
+Скорость вращения ротора гироскопа можно определить и не прибегая к исследованию прецессии. У используемых в работе гироскопов статор имеет две обмотки, необходимые для быстрой раскрутки гироскопа. В данном случае одну обмотку используют для раскрутки гироскопа, а вторую -- для измерения числа оборотов ротора. Ротор электромотора всегда немного намагничен. Вращаясь, он наводит во второй обмотке переменную ЭДС индукции, частота которой равна частоте вращения ротора. Частоту этой ЭДС измеряем по фигурам Лиссажу, получаемым на экране осциллографа, если на один вход подать исследуемую ЭДС, а на другой — переменное напряжение с хорошо прокалиброванного генератора. При совпадении частот на экране получится неподвижный эллипс.\\
+При настройке генератора сигнала на частоту \underline{$ \nu_0 = 400$ Гц} на экране осциллографа виден  неподвижный эллипс, следовательно эта частота сигнала совпадает с частотой вращения ротора гироскопа.
+
+\section{Оценка момента силы трения}
+
+Для оценки момента силы трения, действующего на ось гироскопа, исследуем зависимость опускания оси гироскопа от времени. Результаты проведённых измерений записываем в таблицу 
+
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+		\hline
+		№ & $ \alpha, ^\circ $ & $ \alpha $, рад & $ \sigma_\alpha $, рад & $ t $, с & $ \sigma_t $, с & $ \langle T \rangle $, с & $ \sigma_T $, с & $ \Omega $, $ \frac{\text{рад}}{\text{с}} $ & $ \sigma_\Omega $,  $ \frac{\text{рад}}{\text{с}}  $ \\ \hline
+		1 & 14 & 0,244 & 0,017 & 425,95 & 0,5 & \multirow{3}{*}{425,98} & \multirow{3}{*}{0,52} & \multirow{3}{*}{0,00057} & \multirow{3}{*}{0,00004} \\ \cline{1-6}
+		2 & 14 & 0,244 & 0,017 & 426,23 & 0,5 &  &  &  &  \\ \cline{1-6}
+		3 & 14 & 0,244 & 0,017 & 425,76 & 0,5 &  &  &  &  \\ \hline
+	\end{tabular}
+	\caption{Результат измерения зависимости опускания оси гироскопа от времени}
+	\label{tab:my-table}
+\end{table}
+
+По полученным данным мы можем оценить момент силы трения, действующей на ось гироскопа по следующей формуле:
+
+\begin{equation}
+M = \Omega I_0\omega_0 = \frac{\Omega}{k} \approx 10^{-3} \text{ } \text{Н} \cdot \text{м},
+\end{equation}
+где $ k $ -- коэффициент, вычисленный в п.п. \ref{k}.
+
+Тогда погрешность определения момента силы трения равна:
+
+\begin{equation}
+\sigma_M = M\sqrt{\varepsilon_M^2+\varepsilon_\Omega^2} \approx 10^{-5} \text{ } \text{Н} \cdot \text{м}.
+\end{equation}
+
+\section{Обсуждение результатов и выводы}
+
+В ходе работы мы определили частоту вращения ротора гироскопа:
+
+\begin{itemize}
+	\item \underline{$ \nu = \left( 396,4 \pm 14,5 \right) \text{ Гц}, \left( \varepsilon = 3,7 \% \right)   $}
+\end{itemize}
+Полученная частота совпадает со значение частоты, измеренным с помощью осциллографа ($ \nu_\text{осц} = 400 $ Гц) в пределах погрешности.\\
+Также был оценен момент силы трения, действующий на ось гироскопа $ M \approx 10^{-3} \text{ } \text{Н} \cdot \text{м} $. Он оказался достаточно мал по сравнению с моментом силы тяжести груза, подвешенного на ось гироскопа, но достаточным для поворота гироскопа в сторону направления силы тяжести груза. Для его более точной оценки необходима более точная шкала определения отклонения гироскопа от начального уровня, которой, к сожалению, не было.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,73 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -0.00047347
+xMax = 0.4823549
+xTickUnit = 0.04
+xGridUnit = 0.04
+xShowGrid = 1
+xShowLabel = 0
+xAutoTick = 0
+xAutoGrid = 0
+yMin = 0.00017649
+yMax = 0.24797572
+yTickUnit = 0.02
+yGridUnit = 0.02
+yShowGrid = 1
+yShowLabel = 0
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,24,clBlack
+LegendFont = Times New Roman,16,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[Func1]
+FuncType = 0
+y = 0.51399485*x+0
+LegendText = Аппроксимация зависимости
+Color = clRed
+Size = 5
+
+[PointSeries1]
+FillColor = clFuchsia
+LineColor = clBlue
+Size = 11
+Style = 2
+LabelPosition = 6
+PointCount = 5
+Points = 0.402356976,0.206499353;0.322125079,0.165914584;0.257460565,0.132522481;0.208363434,0.107616431;0.165253758,0.085134167;
+xErrorBarType = 3
+xErrorBarData = 0.003508681;0.00289923;0.002426415;0.00208588;0.001807971;
+yErrorBarType = 3
+yErrorBarData = 0.000251252;0.000354954;0.000472798;0.000464233;0.000291828;
+ShowInLegend = 0
+LegendText = Ряд 1
+
+[Label1]
+Placement = 4
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset204{\\*\\fname Times New Roman;}Times New Roman CYR;}{\\f1\\fdecor\\fprq12\\fcharset0 Times New Roman;}{\\f2\\fdecor\\fprq12\\fcharset204{\\*\\fname Times New Roman;}Times New Roman CYR;}{\\f3\\fnil Times New Roman;}}\n\\viewkind4\\uc1\\pard\\f0\\fs60\\u937?\\lang1033\\f1 , \\lang1049\\f2\\'f1\\super -1\\nosupersub\\f3\\fs24\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label2]
+Placement = 0
+Pos = 0.434905150210053;0.0164140463817664
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}{\\f1\\fnil\\fcharset204{\\*\\fname Times New Roman;}Times New Roman CYR;}}\n\\viewkind4\\uc1\\pard\\lang1033\\f0\\fs60 M, \\lang1049\\f1\\'cd\\'b7\\'ec\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Data]
+TextLabelCount = 2
+FuncCount = 1
+PointSeriesCount = 1
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
