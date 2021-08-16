@@ -1,0 +1,63 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = 5.70155957
+xMax = 6.62065972
+xTickUnit = 0.05
+xGridUnit = 0.05
+xShowGrid = 1
+xShowLabel = 0
+yMin = 0.05498635
+yMax = 3.05146205
+yTickUnit = 0.2
+yGridUnit = 0.2
+yShowGrid = 1
+yShowLabel = 0
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,24,clBlack
+LegendFont = Times New Roman,26,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[PointSeries1]
+FillColor = clAqua
+LineColor = clAqua
+Size = 10
+Style = 0
+LineSize = 3
+LineStyle = 0
+LabelPosition = 1
+PointCount = 14
+Points = 5.77815125,0.304692654;5.903089987,0.411516846;6,0.562536245;6.079181246,0.685852965;6.176091259,0.775397497;6.204119983,0.85;6.230448921,0.927295218;6.278753601,1.015985294;6.361727836,1.570796327;6.397940009,1.888356756;6.462397998,2.366195157;6.477121255,2.5;6.505149978,2.65;6.544068044,2.801755744;
+ShowInLegend = 0
+LegendText = PointSeries1
+
+[Label1]
+Placement = 0
+Pos = 6.56863518644906;0.303602233436681
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset0 Times New Roman;}}\n\\viewkind4\\uc1\\pard\\f0\\fs60 lg f\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Label2]
+Placement = 0
+Pos = 5.70641519404875;2.9991218659607
+Text = {\\rtf1\\ansi\\ansicpg1251\\deff0\\deflang1049{\\fonttbl{\\f0\\fnil\\fcharset204{\\*\\fname Times New Roman;}Times New Roman CYR;}{\\f1\\fnil\\fcharset0 Times New Roman;}}\n\\viewkind4\\uc1\\pard\\f0\\fs60\\u916?\\u966?\\lang1033\\f1 , \\lang1049\\f0\\'f0\\'e0\\'e4\\f1\\par\n}\n
+BackgroundColor = clNone
+ShowInLegend = 0
+
+[Data]
+TextLabelCount = 2
+FuncCount = 0
+PointSeriesCount = 1
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+

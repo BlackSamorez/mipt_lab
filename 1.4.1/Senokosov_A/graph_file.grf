@@ -1,0 +1,60 @@
+;This file was created by Graph (http://www.padowan.dk)
+;Do not change this file from other programs.
+[Graph]
+Version = 4.4.2.543
+MinVersion = 2.5
+OS = Windows NT 6.2 
+
+[Axes]
+xMin = -2.23749625
+xMax = 1592.73806154
+xTickUnit = 100
+xGridUnit = 100
+xShowGrid = 1
+xAutoTick = 0
+xLabel = a^2, см^2
+yMin = 0.38884608
+yMax = 111.53490711
+yTickUnit = 10
+yGridUnit = 10
+yShowGrid = 1
+yLabel = a*T^2, см*с^2
+AxesColor = clBlue
+GridColor = 0x00FF9999
+NumberFont = Times New Roman,22,clBlack
+LabelFont = Times New Roman,26,clBlack,B
+LegendFont = Times New Roman,20,clBlack
+ShowLegend = 1
+Radian = 1
+AxesStyle = 2
+
+[Func1]
+FuncType = 0
+y = 0.04029459*x+33.79682433
+LegendText = Аппроксимация зависимости
+Color = clRed
+Size = 7
+
+[PointSeries1]
+FillColor = clFuchsia
+LineColor = clBlue
+Size = 11
+Style = 2
+LabelPosition = 1
+PointCount = 10
+Points = 25,35.12045045;100,37.83349174;225,42.88496816;400,49.88455945;625,58.935476;784,65.3834599;900,70.0526883;1089,77.62883906;1225,83.24197998;1369,88.95942092;
+xErrorBarType = 3
+xErrorBarData = 0.5;1;1.5;2;2.5;2.8;3;3.3;3.5;3.7;
+yErrorBarType = 3
+yErrorBarData = 0.351261031;0.189282772;0.143144083;0.124980886;0.118180056;0.117298683;0.117146549;0.11823932;0.119740461;0.121733406;
+ShowInLegend = 0
+LegendText = Ряд 1
+
+[Data]
+TextLabelCount = 0
+FuncCount = 1
+PointSeriesCount = 1
+ShadeCount = 0
+RelationCount = 0
+OleObjectCount = 0
+
