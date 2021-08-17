@@ -7,7 +7,7 @@ def get_subdirectories(path, ignore_dotfiles=False):
 
 
 def main():
-    root_dir = os.path.dirname(__file__)
+    root_dir = os.path.dirname(os.path.realpath(__file__))
     for task_rel_dir in get_subdirectories(root_dir, ignore_dotfiles=True):
         task_full_dir = os.path.join(root_dir, task_rel_dir)
         task_subdirectories = get_subdirectories(task_full_dir)
