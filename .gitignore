@@ -6,3 +6,4 @@
 *.synctex.gz
 *.ipynb_checkpoints/
 .~lock*
+.idea/
