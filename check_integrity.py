@@ -26,6 +26,10 @@ def main():
             assert False, f'in task {task_rel_dir} pdf files and source directories do not match: ' \
                           f'{sorted(pdf_names)} != {sorted(src_names)}'
 
+        trash_files = [_ for _ in os.listdir(task_full_dir) if os.path.isfile(os.path.join(task_full_dir, _))]
+
+        assert len(trash_files) == 0, f'trash files in {task_rel_dir}: {trash_files}'
+
 
 if __name__ == '__main__':
     main()
