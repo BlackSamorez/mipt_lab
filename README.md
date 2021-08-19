@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/BlackSamorez/mipt_lab/workflows/CI/badge.svg)](https://github.com/BlackSamorez/mipt_lab/actions?query=workflow)
+
 # mipt_lab
 **MIPT** physics laboratory works
 
