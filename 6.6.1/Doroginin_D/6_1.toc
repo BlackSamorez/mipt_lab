@@ -1,0 +1,6 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Теоретическая справка}{2}{section.1}%
+\contentsline {section}{\numberline {2}Экспериментальная установка}{3}{section.2}%
+\contentsline {section}{\numberline {3}Снятие спектра источника и его анализ}{3}{section.3}%
+\contentsline {section}{\numberline {4}Исследование резонансного поглощения}{6}{section.4}%
+\contentsline {section}{\numberline {5}Вывод}{8}{section.5}%
