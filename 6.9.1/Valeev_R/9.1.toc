@@ -1,0 +1,8 @@
+\babel@toc {russian}{}
+\contentsline {section}{\numberline {1}Теоретическая справка}{2}% 
+\contentsline {subsection}{\numberline {1.1}Феноменологическое описание ферромагнетиков: парамагнитная фаза и эффективное поле Вейсса}{2}% 
+\contentsline {subsection}{\numberline {1.2}Связь эффективного поля Вейсса с обменным интегралом.}{4}% 
+\contentsline {section}{\numberline {2}Экспериментальная установка и принцип измерений}{5}% 
+\contentsline {section}{\numberline {3}Измерения. Обработка результатов}{7}% 
+\contentsline {section}{\numberline {4}Анализ результатов и проверка закона Кюри-Вейсса}{9}% 
+\contentsline {section}{\numberline {5}Вывод}{9}% 
