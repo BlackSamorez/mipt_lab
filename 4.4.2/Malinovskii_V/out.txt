@@ -1,0 +1,12 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+$A_{max}-A_{min}\text{, В}$&$A_\text{бок}\text{, В}$&$m$&$k$\\\hline
+$0.2$&$0.0160$&$0.1$&$0.0497$\\\hline
+$0.6$&$0.0470$&$0.3$&$0.1460$\\\hline
+$1.0$&$0.0750$&$0.5$&$0.2329$\\\hline
+$1.4$&$0.1070$&$0.7$&$0.3323$\\\hline
+$1.8$&$0.1390$&$0.9$&$0.4317$\\\hline
+$2.0$&$0.1530$&$1.0$&$0.4752$\\\hline
+\end{tabular}\\~\\
+$\Delta A_{max}-A_{min}=0\,\text{В}, \Delta A_\text{бок}=0.0005\,\text{В}, \Delta m=0\,\text{}, \Delta k=0.0016\,\text{}$
+\end{center}
