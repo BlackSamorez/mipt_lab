@@ -1,0 +1,17 @@
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+$D\text{,\text{мм}}$&$D_1\text{,\text{мм}}$\\\hline
+$0.000$&$0.0$\\\hline
+$0.060$&$4.0$\\\hline
+$0.110$&$7.0$\\\hline
+$0.160$&$10.0$\\\hline
+$0.210$&$12.0$\\\hline
+$0.260$&$15.0$\\\hline
+$0.310$&$17.0$\\\hline
+$0.360$&$20.0$\\\hline
+$0.410$&$23.0$\\\hline
+$0.460$&$25.0$\\\hline
+$0.510$&$30.0$\\\hline
+\end{tabular}\\~\\
+$\Delta D,\text{мм}=0.007\,\text{}, \Delta D_1,\text{мм}=0.5\,\text{}$
+\end{center}

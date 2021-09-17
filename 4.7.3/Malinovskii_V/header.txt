@@ -1,0 +1,1 @@
+$N_\text{изм}$	$f, \text{кГц}$	\multicolumn{5}{c|}{$L, \text{мм}$}	$\lambda, \text{мм}$	$\Delta \lambda, \text{мм}$	$c, \text{м}/\text{с}$	$\Delta c, \text{м}/\text{с}$	примечание

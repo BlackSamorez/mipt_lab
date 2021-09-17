@@ -1,0 +1,10 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}\hline
+$\text{\#решетки}$&$Y\text{, мм}$&$K$&$\lambda F_2 K/Y\text{, 1/мм}$&$\Delta \lambda F_2 K/Y\text{, 1/мм}$&$d\text{, мкм}$&$\Delta d\text{, мкм}$\\\hline
+$2.0$&$80.0$&$7.0$&$0.088$&$0.006$&$29.34$&$0.09$\\\hline
+$3.0$&$40.0$&$7.0$&$0.175$&$0.013$&$59.81$&$0.16$\\\hline
+$4.0$&$20.0$&$6.0$&$0.30$&$0.03$&$115.9$&$0.3$\\\hline
+$5.0$&$15.0$&$7.0$&$0.47$&$0.03$&$162.5$&$0.4$\\\hline
+\end{tabular}\\~\\
+$\Delta \text{\#решетки}=0\,\text{}, \Delta Y=0.5\,\text{мм}, \Delta K=0\,\text{}$
+\end{center}
