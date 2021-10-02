@@ -1,0 +1,1088 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2021.2.21)  14 APR 2021 20:51
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"lab 4_7_2.tex"
+(./lab 4_7_2.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+\@input{head.aux}
+\openout2 = `head.aux'.
+
+No file head.tex.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count167
+\l__pdf_internal_box=\box45
+)
+(./lab 4_7_2.aux
+./lab 4_7_2.aux:3: Undefined control sequence.
+l.3 \bbl@cs
+           {beforestart}
+? 
+
+./lab 4_7_2.aux:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \bbl@cs{b
+             eforestart}
+? 
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no t in font nullfont!
+./lab 4_7_2.aux:21: Undefined control sequence.
+\reserved@a ->\babelprovide 
+                            {\languagename }
+l.21 \babel@aux{russian}{}
+                          
+? 
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+
+./lab 4_7_2.aux:21: Package babel Error: Unknown language `russian'. Either you
+ have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively. In
+(babel)                some cases, you may need to remove the aux file.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 \babel@aux{russian}{}
+                          
+? 
+./lab 4_7_2.aux:21: Undefined control sequence.
+\babel@aux ...->\select@language {#1}\bbl@foreach 
+                                                  \BabelContentsFiles {\@wri...
+l.21 \babel@aux{russian}{}
+                          
+? 
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+./lab 4_7_2.aux:22: Undefined control sequence.
+\reserved@a ->\babelprovide 
+                            {\languagename }
+l.22 \babel@aux{russian}{}
+                          
+? 
+Missing character: There is no r in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+
+./lab 4_7_2.aux:22: Package babel Error: Unknown language `russian'. Either you
+ have
+(babel)                misspelled its name, it has not been installed,
+(babel)                or you requested it in a previous run. Fix its name,
+(babel)                install it or just rerun the file, respectively. In
+(babel)                some cases, you may need to remove the aux file.
+
+See the babel package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \babel@aux{russian}{}
+                          
+? 
+./lab 4_7_2.aux:22: Undefined control sequence.
+\babel@aux ...->\select@language {#1}\bbl@foreach 
+                                                  \BabelContentsFiles {\@wri...
+l.22 \babel@aux{russian}{}
+                          
+? 
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+)
+\openout1 = `"lab 4_7_2.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+
+./lab 4_7_2.tex:3: LaTeX Error: The font size command \normalsize is not define
+d:
+               there is probably something wrong with the class file.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{document}
+                    
+? 
+./lab 4_7_2.tex:6: Undefined control sequence.
+l.6   \LARGE
+            {Работа 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character Р (U+0420)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Р
+               абота 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Ра
+                 бота 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character б (U+0431)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Раб
+                   ота 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Рабо
+                     та 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Работ
+                       а 4.7.2}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:6: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6   \LARGE{Работа
+                          4.7.2}\\[0.2cm]
+? 
+./lab 4_7_2.tex:7: Undefined control sequence.
+l.7   \LARGE
+            {Эффект Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character Э (U+042D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Э
+               ффект Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character ф (U+0444)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эф
+                 фект Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character ф (U+0444)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эфф
+                   ект Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффе
+                     кт Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character к (U+043A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффек
+                       т Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект
+                          Поккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character П (U+041F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект П
+                            оккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект По
+                              ккельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character к (U+043A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Пок
+                                кельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character к (U+043A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Покк
+                                  ельса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Покке
+                                    льса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character л (U+043B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Поккел
+                                      ьса}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character ь (U+044C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Поккель
+                                        са}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character с (U+0441)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Поккельс
+                                          а}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Поккельса
+                                            }\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7   \LARGE{Эффект Поккельса}\\
+                                               [0.2cm]
+? 
+./lab 4_7_2.tex:8: Undefined control sequence.
+l.8   \large
+            {Стрижак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character С (U+0421)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{С
+               трижак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Ст
+                 рижак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character р (U+0440)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стр
+                   ижак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стри
+                     жак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character ж (U+0436)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стриж
+                       ак Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижа
+                         к Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character к (U+043A)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак
+                            Даниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character Д (U+0414)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Д
+                              аниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Да
+                                ниил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character н (U+043D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Дан
+                                  иил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Дани
+                                    ил}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Дании
+                                      л}\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: Package inputenc Error: Unicode character л (U+043B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Даниил
+                                        }\\[0.2cm]
+? 
+
+./lab 4_7_2.tex:8: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8   \large{Стрижак Даниил}\\
+                                           [0.2cm]
+? 
+./lab 4_7_2.tex:12: Undefined control sequence.
+l.12 \section
+             {Аннотация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character А (U+0410)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{А
+                ннотация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character н (U+043D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Ан
+                  нотация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character н (U+043D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Анн
+                    отация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Анно
+                      тация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Аннот
+                        ация}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Аннота
+                          ция}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character ц (U+0446)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Аннотац
+                            ия}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Аннотаци
+                              я}
+? 
+
+./lab 4_7_2.tex:12: Package inputenc Error: Unicode character я (U+044F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 \section{Аннотация
+                                }
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character В (U+0412)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В
+        работе предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character р (U+0440)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В р
+          аботе предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В ра
+            боте предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character б (U+0431)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В раб
+              оте предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В рабо
+                те предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работ
+                  е предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе
+                     предстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character п (U+043F)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе п
+                       редстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character р (U+0440)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе пр
+                         едстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе пре
+                           дстоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character д (U+0434)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе пред
+                             стоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character с (U+0441)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предс
+                               тоит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предст
+                                 оит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предсто
+                                   ит исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстои
+                                     т исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит
+                                        исследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит и
+                                          сследовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character с (U+0441)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит ис
+                                            следовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character с (U+0441)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит исс
+                                              ледовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character л (U+043B)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит иссл
+                                                едовать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 В работе предстоит иссле
+                                                  довать интерф�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character д (U+0434)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...аботе предстоит исслед
+                                                  овать интерфе�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character о (U+043E)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...боте предстоит исследо
+                                                  вать интерфер�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character в (U+0432)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...оте предстоит исследов
+                                                  ать интерфере�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character а (U+0430)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...те предстоит исследова
+                                                  ть интерферен�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...е предстоит исследоват
+                                                  ь интерференц�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character ь (U+044C)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ... предстоит исследовать
+                                                   интерференци�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character и (U+0438)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...редстоит исследовать и
+                                                  нтерференцию �...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character н (U+043D)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...едстоит исследовать ин
+                                                  терференцию р�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character т (U+0442)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...дстоит исследовать инт
+                                                  ерференцию ра�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character е (U+0435)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...стоит исследовать инте
+                                                  рференцию рас�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character р (U+0440)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...тоит исследовать интер
+                                                  ференцию расс�...
+
+? 
+
+./lab 4_7_2.tex:14: Package inputenc Error: Unicode character ф (U+0444)
+(inputenc)                not set up for use with LaTeX.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 ...оит исследовать интерф
+                                                  еренцию рассе�...
+
+? 
+./lab 4_7_2.tex:14: Emergency stop.
+ ...                                              
+                                                  
+l.14 ...оит исследовать интерф
+                                                  еренцию рассе�...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+ 
+Here is how much of TeX's memory you used:
+ 205 strings out of 480608
+ 4695 string characters out of 5903630
+ 239610 words of memory out of 5000000
+ 16189 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 17i,1n,19p,392b,73s stack positions out of 5000i,500n,10000p,200000b,80000s
+./lab 4_7_2.tex:14:  ==> Fatal error occurred, no output PDF file produced!
