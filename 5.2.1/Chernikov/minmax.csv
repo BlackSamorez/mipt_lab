@@ -1,0 +1,4 @@
+vol,vmax1,vmax2,vmin1,vmin2,sigma,delta_max,delta_min
+4,0,14,4,17,1,14,13
+6,0,16,6,18,1,16,12
+8,0,15,5,19,2,15,14
