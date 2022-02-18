@@ -1,0 +1,2571 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    120855,       2563]
+NotebookOptionsPosition[    118275,       2514]
+NotebookOutlinePosition[    118723,       2531]
+CellTagsIndexPosition[    118680,       2528]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"err", "[", 
+     RowBox[{"expr_", ",", " ", "vars_"}], "]"}], ":=", 
+    RowBox[{"FullSimplify", "[", 
+     RowBox[{"Sqrt", "[", 
+      RowBox[{"Total", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"D", "[", 
+             RowBox[{"expr", ",", " ", "#"}], "]"}], "^", "2"}], "*", 
+           RowBox[{
+            SubscriptBox["\[Sigma]", "#"], "^", "2"}]}], ")"}], "&"}], "/@", 
+        "vars"}], "]"}], "]"}], "]"}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.8215135893762207`*^9, 3.821513752266155*^9}, {
+  3.8215138267897344`*^9, 3.821513865095141*^9}, {3.821513902643547*^9, 
+  3.8215139146545954`*^9}, {3.821513967877223*^9, 3.8215139698040094`*^9}, {
+  3.8215144656415653`*^9, 3.821514475074541*^9}, {3.8215145346369543`*^9, 
+  3.8215145356719284`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"7d0ffeb1-419f-42da-92be-b8a8b0265648"],
+
+Cell[BoxData[
+ RowBox[{"err", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"a", "*", 
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "x"}], "/", "t"}], "]"}]}], "+", "y0"}], ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"a", ",", " ", "x", ",", " ", "t", ",", " ", "y0"}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8465111560329275`*^9, 3.846511227090067*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"1710246a-eaa8-428d-a889-b88c09781f64"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SqrtBox[
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["\[ExponentialE]", 
+       RowBox[{"-", 
+        FractionBox[
+         RowBox[{"2", " ", "x"}], "t"]}]], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         SuperscriptBox["t", "4"], " ", 
+         SubsuperscriptBox["\[Sigma]", "a", "2"]}], "+", 
+        RowBox[{
+         SuperscriptBox["a", "2"], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            SuperscriptBox["x", "2"], " ", 
+            SubsuperscriptBox["\[Sigma]", "t", "2"]}], "+", 
+           RowBox[{
+            SuperscriptBox["t", "2"], " ", 
+            SubsuperscriptBox["\[Sigma]", "x", "2"]}]}], ")"}]}]}], ")"}]}], 
+     SuperscriptBox["t", "4"]], "+", 
+    SubsuperscriptBox["\[Sigma]", "y0", "2"]}]], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Sigma]", "a"], "->", "11"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "y0"], "->", "20"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "t"], "->", "18"}], ",", " ", 
+    RowBox[{"y0", "->", "3640"}], ",", " ", 
+    RowBox[{"a", "->", " ", "234"}], ",", " ", 
+    RowBox[{"t", "->", 
+     RowBox[{"-", "1105"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.8465112460819902`*^9, 3.8465112461420045`*^9}, {
+  3.8465112991052785`*^9, 3.8465113256339607`*^9}, {3.8465113803950753`*^9, 
+  3.8465115814106874`*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"88a3fa00-3df7-400d-b8b1-e09197a20150"],
+
+Cell[BoxData[
+ SqrtBox[
+  RowBox[{"400", "+", 
+   FractionBox[
+    RowBox[{
+     SuperscriptBox["\[ExponentialE]", 
+      RowBox[{
+       RowBox[{"2", " ", "x"}], "/", "1105"}]], " ", 
+     RowBox[{"(", 
+      RowBox[{"180399148125625", "+", 
+       RowBox[{"54756", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"324", " ", 
+           SuperscriptBox["x", "2"]}], "+", 
+          RowBox[{"1221025", " ", 
+           SubsuperscriptBox["\[Sigma]", "x", "2"]}]}], ")"}]}]}], ")"}]}], 
+    "1490902050625"]}]]], "Output",
+ CellChangeTimes->{
+  3.8465113207546396`*^9, 3.846511414726295*^9, 3.846511450870937*^9, 
+   3.8465115017034264`*^9, {3.8465115577996693`*^9, 3.8465115826375694`*^9}},
+ CellLabel->"Out[8]=",ExpressionUUID->"8d6d0a70-9476-428a-ba85-4458e0903ec2"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"y", "[", 
+   RowBox[{"x_", ",", " ", "\[Sigma]_"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"N", "[", 
+     RowBox[{"3640", "+", 
+      RowBox[{"234", " ", 
+       SuperscriptBox["\[ExponentialE]", 
+        RowBox[{"x", "/", "1105"}]]}]}], "]"}], ",", 
+    RowBox[{"N", "[", 
+     SqrtBox[
+      RowBox[{"400", "+", 
+       FractionBox[
+        RowBox[{
+         SuperscriptBox["\[ExponentialE]", 
+          RowBox[{
+           RowBox[{"2", " ", "x"}], "/", "1105"}]], " ", 
+         RowBox[{"(", 
+          RowBox[{"180399148125625", "+", 
+           RowBox[{"54756", " ", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"324", " ", 
+               SuperscriptBox["x", "2"]}], "+", 
+              RowBox[{"1221025", " ", 
+               SuperscriptBox["\[Sigma]", "2"]}]}], ")"}]}]}], ")"}]}], 
+        "1490902050625"]}]], "]"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.8465116021144433`*^9, 3.846511669362419*^9}, {
+  3.8465117014954476`*^9, 3.8465117085527477`*^9}, {3.846513341506081*^9, 
+  3.846513354194085*^9}},
+ CellLabel->"In[15]:=",ExpressionUUID->"055cd4c3-9c7d-4b63-ab4b-7ae81644fc7a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"a", "*", 
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "x"}], "/", "t"}], "]"}]}], "+", "y0"}], ")"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Sigma]", "a"], "->", "11"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "y0"], "->", "20"}], ",", " ", 
+    RowBox[{
+     SubscriptBox["\[Sigma]", "t"], "->", "18"}], ",", " ", 
+    RowBox[{"y0", "->", "3640"}], ",", " ", 
+    RowBox[{"a", "->", " ", "234"}], ",", " ", 
+    RowBox[{"t", "->", 
+     RowBox[{"-", "1105"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.846511683959998*^9, 3.846511690281891*^9}},
+ CellLabel->"In[11]:=",ExpressionUUID->"09ec5012-6c85-4318-8645-fe009f475391"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"3640", "+", 
+  RowBox[{"234", " ", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"x", "/", "1105"}]]}]}]], "Input",
+ CellChangeTimes->{3.8465133573663883`*^9},
+ CellLabel->"In[16]:=",ExpressionUUID->"5dfd80bb-d8bc-4361-9c0b-aa42c27079c1"],
+
+Cell[BoxData[
+ RowBox[{"3640", "+", 
+  RowBox[{"234", " ", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{"x", "/", "1105"}]]}]}]], "Output",
+ CellChangeTimes->{3.8465133574103975`*^9},
+ CellLabel->"Out[16]=",ExpressionUUID->"9f5a6f40-c017-45ae-89b0-7b9bc77e5a78"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"y", "[", 
+  RowBox[{"1961", ",", " ", "2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.846511712675866*^9, 3.8465117138018646`*^9}, {
+  3.846511756553385*^9, 3.8465117566804266`*^9}, {3.8465133274809494`*^9, 
+  3.8465133346492963`*^9}, {3.846513562974988*^9, 3.8465135687533956`*^9}, {
+  3.846513632886505*^9, 3.846513663409112*^9}, {3.846517764336012*^9, 
+  3.846517766514506*^9}, {3.846517818207962*^9, 3.84651781993718*^9}, {
+  3.846517905808335*^9, 3.846517907960836*^9}},
+ CellLabel->"In[32]:=",ExpressionUUID->"1f8d5a19-0122-455d-b255-518b36adce83"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"5020.197313657746`", ",", "78.78932978419584`"}], "}"}]], "Output",
+ CellChangeTimes->{3.846513335297619*^9, 3.8465133871882706`*^9, 
+  3.8465135697669835`*^9, 3.8465136351681705`*^9, 3.8465136674075456`*^9, 
+  3.8465177678792515`*^9, 3.8465178207501287`*^9, 3.8465179087326465`*^9},
+ CellLabel->"Out[32]=",ExpressionUUID->"0c67b908-76ea-4e2b-95c3-608062b49a04"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"err", "[", 
+  RowBox[{
+   RowBox[{"1", "/", "l"}], ",", 
+   RowBox[{"{", "l", "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.8465150872827616`*^9, 3.8465150965925207`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"b0593ae1-8629-444c-a229-0f358e10e97b"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"l", "[", 
+   RowBox[{"x_", ",", " ", "\[Sigma]_"}], "]"}], ":=", 
+  RowBox[{"N", "[", 
+   SqrtBox[
+    FractionBox[
+     SuperscriptBox["\[Sigma]", "2"], 
+     SuperscriptBox["x", "4"]]], "]"}]}]], "Input",
+ CellChangeTimes->{{3.846515111080418*^9, 3.846515140896806*^9}, {
+  3.846515177441501*^9, 3.846515178664962*^9}, {3.8465152301377916`*^9, 
+  3.8465152329627523`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"e950d4e6-5599-4323-84cd-cd603632efbc"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"l", "[", 
+  RowBox[{"6570", ",", " ", "190"}], "]"}]], "Input",
+ CellChangeTimes->{{3.8465151450357804`*^9, 3.8465151725763335`*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"d3559d95-1715-4e20-bff4-24b61631c099"],
+
+Cell[BoxData["4.4017245493444906`*^-6"], "Output",
+ CellChangeTimes->{3.8465152364534006`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"97e9280b-1921-4372-87a7-ed63e5bc376c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"N", "[", 
+  FractionBox["19", "4316490"], "]"}]], "Input",
+ CellChangeTimes->{{3.8465152196813974`*^9, 3.8465152259604197`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"3acd082e-f182-497b-9431-2b938fe3bd6c"],
+
+Cell[BoxData["4.4017245493444906`*^-6"], "Output",
+ CellChangeTimes->{3.8465152263696156`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"f8d6e10e-73d2-4075-9755-5f136862599a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["rydberg constant", "WolframAlphaLong",
+ CellChangeTimes->{{3.8465167768119006`*^9, 3.8465167835834913`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"7d3f3b57-09b7-4aa5-8484-ac26fec92fa1"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = "rydberg constant", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, Asynchronous -> All, 
+    TimeConstraint -> {20, Automatic, Automatic, Automatic}, 
+    Method -> {
+     "Formats" -> {"cell", "minput", "msound", "dataformats"}, "Server" -> 
+      "https://api.wolframalpha.com/v1/"}}, Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input interpretation", "scanner" -> "Identity", "id" -> 
+     "Input", "position" -> "100", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["minput", {}, {"Quantity[None, \"RydbergConstant\"]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 RowBox[{
+                   StyleBox[
+                    SubscriptBox[
+                    StyleBox["\"R\"", Italic, StripOnInput -> False], 
+                    "\[Infinity]"], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"Rydberg constant\"", "\[NoBreak]",
+                    "\")\""}], {
+                 FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], 
+              PolynomialForm[#, TraditionalOrder -> False]& ], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,minput,computabledata,formatteddata,numberdata,\
+quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod2$$ = XMLElement[
+   "pod", {"title" -> "Definition", "scanner" -> "Unit", "id" -> "Definition",
+      "position" -> "200", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                FractionBox[
+                 RowBox[{
+                   SuperscriptBox[
+                    StyleBox["\"e\"", Italic, StripOnInput -> False], "4"], 
+                   " ", 
+                   SubscriptBox[
+                    StyleBox["\"m\"", Italic, StripOnInput -> False], 
+                    StyleBox["\"e\"", Italic, StripOnInput -> False]]}], 
+                 RowBox[{"8", " ", 
+                   StyleBox["\"c\"", Italic, StripOnInput -> False], " ", 
+                   SubsuperscriptBox["\"\[CurlyEpsilon]\"", "0", "2"], " ", 
+                   SuperscriptBox[
+                    StyleBox["\"h\"", Italic, StripOnInput -> False], 
+                    "3"]}]]}, {
+                StyleBox[
+                 RowBox[{"\"(\"", "\[NoBreak]", 
+                   TemplateBox[{
+                    SubscriptBox["\"\[CurlyEpsilon]\"", "0"], "\": \"", 
+                    "\"electric constant\"", "\"; \"", 
+                    SubscriptBox[
+                    StyleBox["\"m\"", Italic, StripOnInput -> False], 
+                    StyleBox["\"e\"", Italic, StripOnInput -> False]], 
+                    "\": \"", "\"electron mass\"", "\"; \"", 
+                    StyleBox["\"e\"", Italic, StripOnInput -> False], 
+                    "\": \"", "\"elementary charge\"", "\"; \"", 
+                    StyleBox["\"h\"", Italic, StripOnInput -> False], 
+                    "\": \"", "\"Planck constant\"", "\"; \"", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False], 
+                    "\": \"", "\"speed of light\""}, "RowDefault"], 
+                   "\[NoBreak]", "\")\""}], {
+                 FontFamily -> "Verdana", FontSize -> 10, 
+                  GrayLevel[0.5], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, 
+              AllowScriptLevelChange -> False, DefaultBaseStyle -> "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Grid"}, {}], "\n  "}]}], 
+   Typeset`pod3$$ = XMLElement[
+   "pod", {"title" -> "Value", "scanner" -> "Unit", "id" -> "Value", 
+     "position" -> "300", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox[
+                    RowBox[{"1.0973731568", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "7"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"1.0973731568", "\[Times]", 
+                    SuperscriptBox["10", "7"]}], "SRString" -> 
+                    "1.0973731568 times 10 to the 7"], SyntaxForm -> 
+                    CenterDot], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    SuperscriptBox["\"m\"", 
+                    RowBox[{"-", "1"}]], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"reciprocal meters\"", 
+                   "\[NoBreak]", "\")\""}], {
+                 FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod4$$ = XMLElement[
+   "pod", {"title" -> "Interpretation", "scanner" -> "Unit", "id" -> 
+     "Interpretation", "position" -> "400", "error" -> "false", "numsubpods" -> 
+     "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TagBox["\"spectroscopic wavenumber\"", Identity], 
+             TraditionalForm], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod5$$ = XMLElement[
+   "pod", {"title" -> "Basic unit dimensions", "scanner" -> "Unit", "id" -> 
+     "BasicUnitDimensions", "position" -> "500", "error" -> "false", 
+     "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             TemplateBox[{"\"[length]\"", 
+               RowBox[{"-", "1"}]}, "Superscript", SyntaxForm -> 
+              SuperscriptBox], HoldForm], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod6$$ = XMLElement[
+   "pod", {"title" -> "Corresponding quantities", "scanner" -> "Unit", "id" -> 
+     "CorrespondingQuantity", "position" -> "600", "error" -> "false", 
+     "numsubpods" -> "4"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> True, "string" -> False}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Energy ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    "E", PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    " from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{"E", "\[LongEqual]", 
+                    
+                    RowBox[{"h", "\[InvisibleSpace]", "c", 
+                    "\[InvisibleSpace]", 
+                    OverscriptBox["\[Nu]", "~"]}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Energy ", 
+                    $CellContext`InlineForm["E"], " from ", 
+                    $CellContext`InlineForm[
+                    "E \[LongEqual] h c OverTilde[\[Nu]]"], ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"2.2", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "-18"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"2.2", "\[Times]", 
+                    SuperscriptBox["10", "-18"]}], "SRString" -> 
+                    "2.2 times 10 to the negative 18"], SyntaxForm -> 
+                    CenterDot], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"J\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"joules\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["14", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "14", "SRString" -> "14"]], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"eV\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"electronvolts\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["0.5", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "0.5", "SRString" -> "0.5"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    SubscriptBox[
+                    StyleBox["\"E\"", Italic, StripOnInput -> False], 
+                    "\"h\""], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"Hartree energies\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Frequency ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    "\[Nu]", PolynomialForm[#, TraditionalOrder -> False]& ]},
+                     "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    " from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{"\[Nu]", "\[LongEqual]", 
+                    RowBox[{"c", "\[InvisibleSpace]", 
+                    OverscriptBox["\[Nu]", "~"]}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Frequency ", 
+                    $CellContext`InlineForm["\[Nu]"], " from ", 
+                    $CellContext`InlineForm[
+                    "\[Nu] \[LongEqual] c OverTilde[\[Nu]]"], ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"3.29", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "15"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"3.29", "\[Times]", 
+                    SuperscriptBox["10", "15"]}], "SRString" -> 
+                    "3.29 times 10 to the 15"], SyntaxForm -> CenterDot], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"Hz\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"hertz\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Wavelength ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    "\[Lambda]", 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    " from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{"\[Lambda]", "\[LongEqual]", 
+                    
+                    RowBox[{"1", "\[InvisibleSpace]", "\"/\"", 
+                    "\[InvisibleSpace]", 
+                    OverscriptBox["\[Nu]", "~"]}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Wavelength ", 
+                    $CellContext`InlineForm["\[Lambda]"], " from ", 
+                    $CellContext`InlineForm[
+                    "\[Lambda] \[LongEqual] 1/OverTilde[\[Nu]]"], ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["91", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "91", "SRString" -> "91"]], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"nm\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"nanometers\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["911", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "911", "SRString" -> "911"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"\[CapitalARing]\"", FontFamily -> "Helvetica", 
+                    FontSize -> Smaller]}], Identity], #& , SyntaxForm -> 
+                    Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"\[ARing]ngstr\[ODoubleDot]ms\"",
+                     "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Spectroscopic wavenumber ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    OverscriptBox["\[Nu]", "~"], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Spectroscopic wavenumber ", 
+                    $CellContext`InlineForm["OverTilde[\[Nu]]"], ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["1.3", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "1.3", "SRString" -> "1.3"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    
+                    RowBox[{"\"MJ\"", "\[InvisibleSpace]", "\"/\"", 
+                    "\[InvisibleSpace]", "\"mol\""}], FontFamily -> 
+                    "Helvetica", FontSize -> Smaller]}], Identity], #& , 
+                    SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"megajoules per mole\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["314", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "314", "SRString" -> "314"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    
+                    RowBox[{"\"kcal\"", "\[InvisibleSpace]", "\"/\"", 
+                    "\[InvisibleSpace]", "\"mol\""}], FontFamily -> 
+                    "Helvetica", FontSize -> Smaller]}], Identity], #& , 
+                    SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", 
+                    "\"thermochemical kilocalories per mole\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "4"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`aux1$$ = {True, False, {False}, True}, Typeset`aux2$$ = {
+   True, False, {False}, True}, Typeset`aux3$$ = {True, False, {False}, True},
+    Typeset`aux4$$ = {True, False, {False}, True}, Typeset`aux5$$ = {
+   True, False, {False}, True}, Typeset`aux6$$ = {
+   True, False, {False, False, False, False}, True}, Typeset`asyncpods$$ = {},
+    Typeset`nonpods$$ = {
+    XMLElement["assumptions", {"count" -> "2"}, {
+      XMLElement[
+      "assumption", {
+       "type" -> "Clash", "word" -> "rydberg constant", "template" -> 
+        "Assuming \"rydberg constant\" is a unit${separator}Use as ${desc} \
+instead", "count" -> "2", "pulldown" -> "false", "default" -> 
+        "{\"C\", \"rydberg constant\"} -> {\"Unit\", \"dflt\"}"}, {
+        XMLElement[
+        "value", {
+         "name" -> "Unit", "desc" -> "a unit", "input" -> 
+          "{\"C\", \"rydberg constant\"} -> {\"Unit\"}"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "Word", "desc" -> "a word", "input" -> 
+          "{\"C\", \"rydberg constant\"} -> {\"Word\"}"}, {}]}], 
+      XMLElement[
+      "assumption", {
+       "type" -> "Unit", "word" -> "rydberg constant", "template" -> 
+        "Assuming Rydberg constant (infinity) for \"rydberg \
+constant\"${separator}Use ${desc} instead", "count" -> "2", "pulldown" -> 
+        "false", "default" -> 
+        "\"UnitClash\" -> {\"rydberg constant\", {\"RydbergConstant\", \"dflt\
+\"}}"}, {
+        XMLElement[
+        "value", {
+         "name" -> "RydbergConstant", "desc" -> "Rydberg constant (infinity)",
+           "input" -> 
+          "\"UnitClash\" -> {\"rydberg constant\", {\"RydbergConstant\"}}"}, \
+{}], 
+        XMLElement[
+        "value", {
+         "name" -> "RydbergConstantHydrogen", "desc" -> 
+          "hydrogen Rydberg constant", "input" -> 
+          "\"UnitClash\" -> {\"rydberg constant\", {\"RydbergConstantHydrogen\
+\"}}"}, {}]}]}]}, Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True], 
+   Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> 
+    "false", {"http://www.w3.org/XML/1998/namespace", "space"} -> "preserve", 
+    "numpods" -> "6", "datatypes" -> "Quantity", "timedout" -> "", 
+    "timedoutpods" -> "", "timing" -> "1.671", "parsetiming" -> "0.152", 
+    "parsetimedout" -> "false", "recalculate" -> "", "id" -> 
+    "MSP20211ah58c2b3c58daga0000114aeech8b2b4306", "host" -> 
+    "https://www3.wolframalpha.com", "server" -> "9", "related" -> 
+    "https://www3.wolframalpha.com/api/v1/relatedQueries.jsp?id=\
+MSPa20221ah58c2b3c58daga00002h60005e964686a17860174781561106147", "version" -> 
+    "2.6", "inputstring" -> "rydberg constant"}, Typeset`sessioninfo$$ = {
+   "TimeZone" -> 3., 
+    "Date" -> {2021, 11, 21, 23, 53, 12.4498695`8.847739755594128}, "Line" -> 
+    29, "SessionID" -> 30126531292857669463}, Typeset`showpods$$ = {1, 2, 3, 
+   4, 5, 6}, Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, 
+   Typeset`open$$ = False, Typeset`newq$$ = "rydberg constant"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$}, {
+        Typeset`aux1$$, Typeset`aux2$$, Typeset`aux3$$, Typeset`aux4$$, 
+         Typeset`aux5$$, Typeset`aux6$$}, Typeset`chosen$$, Typeset`open$$, 
+        Typeset`elements$$, Typeset`q$$, Typeset`opts$$, Typeset`nonpods$$, 
+        Typeset`queryinfo$$, Typeset`sessioninfo$$, Typeset`showpods$$, 
+        Typeset`failedpods$$, Typeset`newq$$}]], StandardForm],
+    ImageSizeCache->{691., {403., 408.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     And[
+      Not[Typeset`initdone$$ === True], 
+      Not[Typeset`initdone$$ === FrontEnd`SuppressEvaluationHash[True]]], 
+     Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{
+        Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$}], Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True]],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Print", "WolframAlphaFullOutput",
+ CellChangeTimes->{
+  3.846516792509882*^9},ExpressionUUID->"e375c3ca-90c6-4c25-9a10-\
+4b428c6b18d3"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.846519278690199*^9, 
+  3.8465192878980274`*^9}},ExpressionUUID->"6233bb72-4957-455e-97c5-\
+0616d37d2d91"],
+
+Cell[CellGroupData[{
+
+Cell["(-h*c/6096 angstrom+h*c/5880 angstrom)/5 in eV", "WolframAlphaLong",
+ CellChangeTimes->{{3.846519340298777*^9, 3.846519350495124*^9}, {
+  3.8465193848169775`*^9, 3.8465194654795666`*^9}},
+ CellLabel->"In[36]:=",ExpressionUUID->"2c598586-cf75-45e6-b4df-defeb0d73b2d"],
+
+Cell[BoxData[
+ NamespaceBox["WolframAlphaQueryResults",
+  DynamicModuleBox[{Typeset`q$$ = 
+   "(-h*c/6096 angstrom+h*c/5880 angstrom)/5 in eV", Typeset`opts$$ = {
+   AppearanceElements -> {
+     "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+      "Sources"}, Asynchronous -> All, 
+    TimeConstraint -> {20, Automatic, Automatic, Automatic}, 
+    Method -> {
+     "Formats" -> {"cell", "minput", "msound", "dataformats"}, "Server" -> 
+      "https://api.wolframalpha.com/v1/"}}, Typeset`elements$$ = {
+   "Warnings", "Assumptions", "Brand", "Pods", "PodMenus", "Unsuccessful", 
+    "Sources"}, Typeset`pod1$$ = XMLElement[
+   "pod", {"title" -> "Input interpretation", "scanner" -> "Identity", "id" -> 
+     "Input", "position" -> "100", "error" -> "false", "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement[
+       "minput", {}, {
+        "UnitConvert[(-Quantity[None, \"PlanckConstant\" \
+\"SpeedOfLight\"]/Quantity[6096, \"Angstroms\"] + Quantity[None, \
+\"PlanckConstant\" \"SpeedOfLight\"]/Quantity[5880, \"Angstroms\"])/5, \
+\"Electronvolts\"]"}], 
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             TagBox[
+              RowBox[{"\"convert \"", "\[InvisibleSpace]", 
+                TagBox[
+                 RowBox[{
+                   FractionBox["1", "5"], " ", 
+                   RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{"-", 
+                    FractionBox[
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    StyleBox["\"h\"", Italic, StripOnInput -> False], 
+                    "\[InvisibleSpace]", "\"\[ThinSpace]\"", 
+                    "\[InvisibleSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}], 
+                    FontFamily -> "Helvetica", FontSize -> Smaller]}], 
+                    Identity], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{"\"(\"", "\[NoBreak]", 
+                    "\"Planck constant\[Hyphen]speed of light product\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "UnitOnly", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False], 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{"\"6096\"", "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    StyleBox[
+                    "\"\[CapitalARing]\"", FontFamily -> "Helvetica", 
+                    FontSize -> Smaller], HoldForm]}], Identity], #& , 
+                    SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{"\"(\"", "\[NoBreak]", 
+                    "\"\[ARing]ngstr\[ODoubleDot]ms\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]]}], "+", 
+                    FractionBox[
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{
+                    StyleBox[
+                    RowBox[{
+                    StyleBox["\"h\"", Italic, StripOnInput -> False], 
+                    "\[InvisibleSpace]", "\"\[ThinSpace]\"", 
+                    "\[InvisibleSpace]", 
+                    StyleBox["\"c\"", Italic, StripOnInput -> False]}], 
+                    FontFamily -> "Helvetica", FontSize -> Smaller]}], 
+                    Identity], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{"\"(\"", "\[NoBreak]", 
+                    "\"Planck constant\[Hyphen]speed of light product\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "UnitOnly", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False], 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{"\"5880\"", "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    TagBox[
+                    StyleBox[
+                    "\"\[CapitalARing]\"", FontFamily -> "Helvetica", 
+                    FontSize -> Smaller], HoldForm]}], Identity], #& , 
+                    SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{"\"(\"", "\[NoBreak]", 
+                    "\"\[ARing]ngstr\[ODoubleDot]ms\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]]}], ")"}]}], HoldForm], 
+                "\[InvisibleSpace]", "\" to \"", "\[InvisibleSpace]", 
+                TagBox[
+                 StyleBox[
+                 "\"electronvolts\"", FontFamily -> "Helvetica", FontSize -> 
+                  Smaller, StripOnInput -> False], HoldForm]}], #& , 
+              SyntaxForm -> Plus], 
+             PolynomialForm[#, TraditionalOrder -> False]& ], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext,minput"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod2$$ = XMLElement[
+   "pod", {"title" -> "Result", "scanner" -> "Identity", "id" -> "Result", 
+     "position" -> "200", "error" -> "false", "numsubpods" -> "1", "primary" -> 
+     "true"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox["0.01494", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "0.01494", "SRString" -> "0.01494"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"eV\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"electronvolts\"", "\[NoBreak]", 
+                   "\")\""}], {FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,moutput,computabledata,formatteddata,numberdata,\
+quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod3$$ = XMLElement[
+   "pod", {"title" -> "Additional conversions", "scanner" -> "Unit", "id" -> 
+     "AdditionalConversion", "position" -> "300", "error" -> "false", 
+     "numsubpods" -> "4"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox["1.494", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "1.494", "SRString" -> "1.494"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"ceV\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"centielectronvolts\"", 
+                   "\[NoBreak]", "\")\""}], {
+                 FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox["14.94", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "14.94", "SRString" -> "14.94"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"meV\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"millielectronvolts\"", 
+                   "\[NoBreak]", "\")\""}], {
+                 FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox["0.1494", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "0.1494", "SRString" -> "0.1494"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"deV\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"decielectronvolts\"", 
+                   "\[NoBreak]", "\")\""}], {
+                 FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            StyleBox[
+             TagBox[
+              RowBox[{
+                TagBox[
+                 TagBox[
+                  RowBox[{
+                    TagBox[
+                    RowBox[{"2.394", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "-21"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"2.394", "\[Times]", 
+                    SuperscriptBox["10", "-21"]}], "SRString" -> 
+                    "2.394 times 10 to the negative 21"], SyntaxForm -> 
+                    CenterDot], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"J\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                StyleBox[
+                 
+                 RowBox[{
+                  "\"(\"", "\[NoBreak]", "\"joules\"", "\[NoBreak]", 
+                   "\")\""}], {FontFamily -> "Helvetica", FontSize -> Smaller, 
+                  GrayLevel[0.6], LinebreakAdjustments -> {1, 100, 1, 0, 100},
+                   LineIndent -> 0}]}], "Unit", SyntaxForm -> Dot], 
+             LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 0, 
+             ZeroWidthTimes -> False], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "4"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}], 
+     XMLElement["states", {"count" -> "2"}, {
+       XMLElement[
+       "state", {
+        "name" -> "More digits", "input" -> 
+         "AdditionalConversion__More digits"}, {}], 
+       XMLElement[
+       "state", {
+        "name" -> "Exact forms", "input" -> 
+         "AdditionalConversion__Exact forms"}, {}]}]}], Typeset`pod4$$ = 
+   XMLElement[
+   "pod", {"title" -> "Comparisons as energy", "scanner" -> "Unit", "id" -> 
+     "ComparisonAsEnergy", "position" -> "400", "error" -> "false", 
+     "numsubpods" -> "3"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TemplateBox[{"\" \[TildeTilde] \"", 
+               TemplateBox[{"\"\"", "0", "\".\"", "5", "8"}, "RowDefault"], 
+               "\" \"", 
+               StyleBox["\"\[Times]\"", 
+                GrayLevel[0.3], FontSize -> 10.219999999999999`, StripOnInput -> 
+                False], "\"\[MediumSpace]\"", 
+               StyleBox[
+               "\"Boltzmann constant\[Hyphen]temperature product at 25\
+\[Degree] C\"", FontFamily -> "Helvetica", FontSize -> Smaller, StripOnInput -> 
+                False], 
+               TemplateBox[{"\" \"", 
+                 StyleBox[
+                  RowBox[{"\"(\"", "\[NoBreak]", 
+                    TemplateBox[{"\"\[MediumSpace]\"", 
+                    StyleBox[
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["298.2", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "298.2", "SRString" -> "298.2"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    RowBox[{"\"K\"", "\[ThinSpace]", 
+                    StyleBox["\"k\"", Italic, StripOnInput -> False]}], 
+                    FontFamily -> "Helvetica", FontSize -> Smaller]}], 
+                    Identity], #& , SyntaxForm -> Dot], "Unit", SyntaxForm -> 
+                    Dot], LinebreakAdjustments -> {1, 100, 1, 0, 100}, 
+                    LineIndent -> 0, ZeroWidthTimes -> False], 
+                    "\"\[MediumSpace]\""}, "RowDefault"], "\[NoBreak]", 
+                    "\")\""}], {FontFamily -> "Verdana", FontSize -> 10, 
+                   GrayLevel[0.5], 
+                   LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                   0}]}, "RowDefault"]}, "RowDefault"], TraditionalForm], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TemplateBox[{"\" \[TildeTilde] \"", 
+               TemplateBox[{"\"\"", "0", "\".\"", "8", "4"}, "RowDefault"], 
+               "\" \"", 
+               StyleBox["\"\[Times]\"", 
+                GrayLevel[0.3], FontSize -> 10.219999999999999`, StripOnInput -> 
+                False], "\"\[MediumSpace]\"", 
+               StyleBox[
+               "\"minimum energy required to change one bit of information \
+according to Landauer's principle\"", FontFamily -> "Helvetica", FontSize -> 
+                Smaller, StripOnInput -> False], 
+               TemplateBox[{"\" \"", 
+                 StyleBox[
+                  RowBox[{"\"(\"", "\[NoBreak]", 
+                    
+                    TemplateBox[{
+                    "\"\[MediumSpace]\[TildeTilde]\[ThinSpace]\"", 
+                    StyleBox[
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"2.9", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "-21"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"2.9", "\[Times]", 
+                    SuperscriptBox["10", "-21"]}], "SRString" -> 
+                    "2.9 times 10 to the negative 21"], SyntaxForm -> 
+                    CenterDot], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"J\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "Unit", 
+                    SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False], "\"\[MediumSpace]\""}, 
+                    "RowDefault"], "\[NoBreak]", "\")\""}], {
+                  FontFamily -> "Verdana", FontSize -> 10, 
+                   GrayLevel[0.5], 
+                   LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                   0}]}, "RowDefault"]}, "RowDefault"], TraditionalForm], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TemplateBox[{"\" \[TildeTilde] \"", 
+               TemplateBox[{"\"\"", "1", "\".\"", "1"}, "RowDefault"], 
+               "\" \"", 
+               StyleBox["\"\[Times]\"", 
+                GrayLevel[0.3], FontSize -> 10.219999999999999`, StripOnInput -> 
+                False], "\"\[MediumSpace]\"", 
+               StyleBox[
+               "\"thermal energy in each degree of freedom of a molecule at \
+room temperature\"", FontFamily -> "Helvetica", FontSize -> Smaller, 
+                StripOnInput -> False], 
+               TemplateBox[{"\" \"", 
+                 StyleBox[
+                  RowBox[{"\"(\"", "\[NoBreak]", 
+                    
+                    TemplateBox[{
+                    "\"\[MediumSpace]\[TildeTilde]\[ThinSpace]\"", 
+                    StyleBox[
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"2.1", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "-21"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"2.1", "\[Times]", 
+                    SuperscriptBox["10", "-21"]}], "SRString" -> 
+                    "2.1 times 10 to the negative 21"], SyntaxForm -> 
+                    CenterDot], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"J\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "Unit", 
+                    SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False], "\"\[MediumSpace]\""}, 
+                    "RowDefault"], "\[NoBreak]", "\")\""}], {
+                  FontFamily -> "Verdana", FontSize -> 10, 
+                   GrayLevel[0.5], 
+                   LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                   0}]}, "RowDefault"]}, "RowDefault"], TraditionalForm], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["expressiontypes", {"count" -> "3"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod5$$ = XMLElement[
+   "pod", {"title" -> "Interpretations", "scanner" -> "Unit", "id" -> 
+     "Interpretation", "position" -> "500", "error" -> "false", "numsubpods" -> 
+     "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            FormBox[
+             TagBox["\"energy\"", Identity], TraditionalForm], 
+            TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement["dataformats", {}, {"plaintext"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}], 
+     XMLElement["states", {"count" -> "1"}, {
+       XMLElement[
+       "state", {
+        "name" -> "More", "input" -> "Interpretation__More"}, {}]}]}], 
+   Typeset`pod6$$ = XMLElement[
+   "pod", {"title" -> "Basic unit dimensions", "scanner" -> "Unit", "id" -> 
+     "BasicUnitDimensions", "position" -> "600", "error" -> "false", 
+     "numsubpods" -> "1"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             RowBox[{"\"[mass]\"", " ", 
+               
+               TemplateBox[{"\"[length]\"", "2"}, "Superscript", SyntaxForm -> 
+                SuperscriptBox], " ", 
+               TemplateBox[{"\"[time]\"", 
+                 RowBox[{"-", "2"}]}, "Superscript", SyntaxForm -> 
+                SuperscriptBox]}], HoldForm], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,formuladata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "1"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`pod7$$ = XMLElement[
+   "pod", {"title" -> "Corresponding quantities", "scanner" -> "Unit", "id" -> 
+     "CorrespondingQuantity", "position" -> "700", "error" -> "false", 
+     "numsubpods" -> "4"}, {
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Thermodynamic temperature ", 
+                    StyleBox["T", Italic, StripOnInput -> False], " from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    FormBox[
+                    StyleBox["\"E\"", Italic, StripOnInput -> False], 
+                    TraditionalForm], "\[LongEqual]", 
+                    RowBox[{"k", "\[InvisibleSpace]", "T"}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Thermodynamic temperature ", 
+                    Style["T", Italic], " from ", 
+                    $CellContext`InlineForm["capitalE \[LongEqual] k T"], 
+                    ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["173", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "173", "SRString" -> "173"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"K\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"kelvins\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Electromagnetic wave frequency \[Nu] from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    FormBox[
+                    StyleBox["\"E\"", Italic, StripOnInput -> False], 
+                    TraditionalForm], "\[LongEqual]", 
+                    RowBox[{"h", "\[InvisibleSpace]", "\[Nu]"}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Electromagnetic wave frequency \[Nu] from ", 
+                    $CellContext`InlineForm["capitalE \[LongEqual] h \[Nu]"], 
+                    ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["3.6", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "3.6", "SRString" -> "3.6"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"THz\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"terahertz\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"3.613", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "12"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"3.613", "\[Times]", 
+                    SuperscriptBox["10", "12"]}], "SRString" -> 
+                    "3.613 times 10 to the 12"], SyntaxForm -> CenterDot], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"Hz\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"hertz\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Photon wavelength \[Lambda] from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    FormBox[
+                    StyleBox["\"E\"", Italic, StripOnInput -> False], 
+                    TraditionalForm], "\[LongEqual]", 
+                    RowBox[{
+                    RowBox[{"h", "\[InvisibleSpace]", "c"}], 
+                    "\[InvisibleSpace]", "\"/\"", "\[InvisibleSpace]", 
+                    "\[Lambda]"}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Photon wavelength \[Lambda] from ", 
+                    $CellContext`InlineForm[
+                    "capitalE \[LongEqual] h c/\[Lambda]"], ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["83", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "83", "SRString" -> "83"]], "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    "\"\[Mu]m\"", FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"micrometers\"", "\[NoBreak]", 
+                    "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    RowBox[{"8.3", 
+                    StyleBox["\[Times]", 
+                    GrayLevel[0.5]], 
+                    SuperscriptBox["10", "-5"]}], 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> RowBox[{"8.3", "\[Times]", 
+                    SuperscriptBox["10", "-5"]}], "SRString" -> 
+                    "8.3 times 10 to the negative 5"], SyntaxForm -> 
+                    CenterDot], "\[InvisibleSpace]", " ", 
+                    StyleBox[
+                    "\"meters\"", {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], Identity], #& , SyntaxForm -> Dot], "Unit", 
+                    SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["subpod", {"title" -> ""}, {
+       XMLElement["cell", {"compressed" -> False, "string" -> True}, {
+         Cell[
+          BoxData[
+           FormBox[
+            TagBox[
+             GridBox[{{
+                InterpretationBox[
+                 Cell[
+                  TextData[{"Spectroscopic wavenumber ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    OverscriptBox["\[Nu]", "~"], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    " from ", 
+                    Cell[
+                    BoxData[
+                    FormBox[
+                    FormBox[
+                    TemplateBox[{
+                    TagBox[
+                    RowBox[{
+                    OverscriptBox["\[Nu]", "~"], "\[LongEqual]", 
+                    RowBox[{
+                    FormBox[
+                    StyleBox["\"E\"", Italic, StripOnInput -> False], 
+                    TraditionalForm], "\[InvisibleSpace]", "\"/\"", 
+                    "\[InvisibleSpace]", 
+                    RowBox[{"\"(\"", "\[InvisibleSpace]", 
+                    RowBox[{"h", "\[InvisibleSpace]", "c"}], 
+                    "\[InvisibleSpace]", "\")\""}]}]}], 
+                    PolynomialForm[#, TraditionalOrder -> False]& ]}, 
+                    "RowDefault"], TraditionalForm], TraditionalForm]]], 
+                    ":"}]], 
+                 TextCell[
+                  Row[{"Spectroscopic wavenumber ", 
+                    $CellContext`InlineForm["OverTilde[\[Nu]]"], " from ", 
+                    $CellContext`InlineForm[
+                    "OverTilde[\[Nu]] \[LongEqual] capitalE/(h c)"], 
+                    ":"}]]]}, {
+                TagBox[
+                 GridBox[{{"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["12052", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "12052", "SRString" -> "12052"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    SuperscriptBox["\"m\"", 
+                    RowBox[{"-", "1"}]], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"reciprocal meters\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}, {"", 
+                    StyleBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox[
+                    TagBox[
+                    RowBox[{
+                    TagBox["121", 
+                    $CellContext`TagBoxWrapper[
+                    "StringBoxes" -> "121", "SRString" -> "121"]], 
+                    "\[NoBreak]", 
+                    StyleBox[
+                    RowBox[{}], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller], "\[InvisibleSpace]", "\[ThickSpace]", 
+                    "\[InvisibleSpace]", 
+                    StyleBox[
+                    SuperscriptBox["\"cm\"", 
+                    RowBox[{"-", "1"}]], FontFamily -> "Helvetica", FontSize -> 
+                    Smaller]}], Identity], #& , SyntaxForm -> Dot], "  ", 
+                    StyleBox[
+                    
+                    RowBox[{
+                    "\"(\"", "\[NoBreak]", "\"reciprocal centimeters\"", 
+                    "\[NoBreak]", "\")\""}], {
+                    FontFamily -> "Helvetica", FontSize -> Smaller, 
+                    GrayLevel[0.6], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0}]}], "Unit", SyntaxForm -> Dot], 
+                    LinebreakAdjustments -> {1, 100, 1, 0, 100}, LineIndent -> 
+                    0, ZeroWidthTimes -> False]}}, 
+                  GridBoxAlignment -> {"Columns" -> {{Left}}}, AutoDelete -> 
+                  False, GridBoxItemSize -> {
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}, 
+                  GridBoxSpacings -> {
+                   "Columns" -> {{1}}, "Rows" -> {{Automatic}}}], "Grid"]}}, 
+              GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+              "Column", 
+              GridBoxItemSize -> {
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+             "Column"], TraditionalForm]], "Output", {
+          Background -> None, 
+           GraphicsBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics"}, 
+             DefaultAxesStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsAxes"], DefaultFrameStyle -> Directive[
+               GrayLevel[0, 0.35], FontColor -> GrayLevel[0.25], FontOpacity -> 
+               1, "GraphicsFrame"], DefaultFrameTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsFrameTicks"], 
+             DefaultTicksStyle -> 
+             Directive[
+              FontFamily -> "Times", FontSize -> 10, "GraphicsTicks"]}, 
+           Graphics3DBoxOptions -> {
+            DefaultBaseStyle -> {FontFamily -> "Times", "Graphics3D"}}}, 
+          NumberPoint -> ".", CellSize -> {550, Automatic}, 
+          AutoStyleOptions -> {"HighlightFormattingErrors" -> False}, 
+          RenderingOptions -> {
+           "3DRenderingMethod" -> "BSPTreeOrDepthBuffer"}]}], 
+       XMLElement[
+       "dataformats", {}, {
+        "plaintext,computabledata,formatteddata,numberdata,quantitydata"}]}], 
+     XMLElement["expressiontypes", {"count" -> "4"}, {"\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n   ", 
+       XMLElement["expressiontype", {"name" -> "Default"}, {}], "\n  "}]}], 
+   Typeset`aux1$$ = {True, False, {False}, True}, Typeset`aux2$$ = {
+   True, False, {False}, True}, Typeset`aux3$$ = {
+   True, False, {False, False, False, False}, True}, Typeset`aux4$$ = {
+   True, False, {False, False, False}, True}, Typeset`aux5$$ = {
+   True, False, {False}, True}, Typeset`aux6$$ = {True, False, {False}, True},
+    Typeset`aux7$$ = {True, False, {False, False, False, False}, True}, 
+   Typeset`asyncpods$$ = {}, Typeset`nonpods$$ = {
+    XMLElement["assumptions", {"count" -> "1"}, {
+      XMLElement[
+      "assumption", {
+       "type" -> "Unit", "word" -> "eV", "template" -> 
+        "Assuming electronvolts for \"eV\"${separator}Use ${desc} or \
+${pulldown} instead", "count" -> "4", "pulldown" -> "true", "pulldownlabel" -> 
+        "more >>", "pulldownlength" -> "2", "default" -> 
+        "\"UnitClash\" -> {\"eV\", {\"Electronvolts\", \"dflt\"}}"}, {
+        XMLElement[
+        "value", {
+         "name" -> "Electronvolts", "desc" -> "electronvolts", "input" -> 
+          "\"UnitClash\" -> {\"eV\", {\"Electronvolts\"}}"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "ElectronvoltsPerSpeedOfLightSquared", "desc" -> 
+          "electronvolts per speed of light squared", "input" -> 
+          "\"UnitClash\" -> {\"eV\", \
+{\"ElectronvoltsPerSpeedOfLightSquared\"}}"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "MolarElectronvolts", "desc" -> "molar electronvolts", 
+          "input" -> 
+          "\"UnitClash\" -> {\"eV\", {\"MolarElectronvolts\"}}"}, {}], 
+        XMLElement[
+        "value", {
+         "name" -> "ElectronvoltsPerBoltzmannConstant", "desc" -> 
+          "electronvolts per Boltzmann constant", "input" -> 
+          "\"UnitClash\" -> {\"eV\", \
+{\"ElectronvoltsPerBoltzmannConstant\"}}"}, {}]}]}]}, Typeset`initdone$$ = 
+   FrontEnd`SuppressEvaluationHash[True], Typeset`queryinfo$$ = {
+   "success" -> "true", "error" -> 
+    "false", {"http://www.w3.org/XML/1998/namespace", "space"} -> "preserve", 
+    "numpods" -> "7", "datatypes" -> "", "timedout" -> "", "timedoutpods" -> 
+    "", "timing" -> "2.591", "parsetiming" -> "1.106", "parsetimedout" -> 
+    "false", "recalculate" -> "", "id" -> 
+    "MSP841933fi444hi3cece00004aafb3bc2ec952b6", "host" -> 
+    "https://www5b.wolframalpha.com", "server" -> "31", "related" -> 
+    "https://www5b.wolframalpha.com/api/v1/relatedQueries.jsp?id=\
+MSPa851933fi444hi3cece00003d8fg4h7d2f4d8bb5282741642789771482", "version" -> 
+    "2.6", "inputstring" -> "(-h*c/6096 angstrom+h*c/5880 angstrom)/5 in eV"},
+    Typeset`sessioninfo$$ = {
+   "TimeZone" -> 3., 
+    "Date" -> {2021, 11, 22, 0, 37, 49.9406727`9.451029243504916}, "Line" -> 
+    36, "SessionID" -> 30126531292857669463}, Typeset`showpods$$ = {1, 2, 3, 
+   4, 5, 6, 7}, Typeset`failedpods$$ = {}, Typeset`chosen$$ = {}, 
+   Typeset`open$$ = False, Typeset`newq$$ = 
+   "(-h*c/6096 angstrom+h*c/5880 angstrom)/5 in eV"}, 
+   DynamicBox[ToBoxes[
+     AlphaIntegration`FormatAlphaResults[
+      Dynamic[{
+       1, {Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$, Typeset`pod7$$}, {
+        Typeset`aux1$$, Typeset`aux2$$, Typeset`aux3$$, Typeset`aux4$$, 
+         Typeset`aux5$$, Typeset`aux6$$, Typeset`aux7$$}, Typeset`chosen$$, 
+        Typeset`open$$, Typeset`elements$$, Typeset`q$$, Typeset`opts$$, 
+        Typeset`nonpods$$, Typeset`queryinfo$$, Typeset`sessioninfo$$, 
+        Typeset`showpods$$, Typeset`failedpods$$, Typeset`newq$$}]], 
+     StandardForm],
+    ImageSizeCache->{691., {485., 490.}},
+    TrackedSymbols:>{Typeset`showpods$$, Typeset`failedpods$$}],
+   DynamicModuleValues:>{},
+   Initialization:>If[
+     And[
+      Not[Typeset`initdone$$ === True], 
+      Not[Typeset`initdone$$ === FrontEnd`SuppressEvaluationHash[True]]], 
+     Null; WolframAlphaClient`Private`doAsyncUpdates[
+       Hold[{
+        Typeset`pod1$$, Typeset`pod2$$, Typeset`pod3$$, Typeset`pod4$$, 
+         Typeset`pod5$$, Typeset`pod6$$, Typeset`pod7$$}], 
+       Typeset`asyncpods$$, 
+       Dynamic[Typeset`failedpods$$]]; Typeset`asyncpods$$ = {}; 
+     Typeset`initdone$$ = FrontEnd`SuppressEvaluationHash[True]],
+   SynchronousInitialization->False],
+  BaseStyle->{Deployed -> True},
+  DeleteWithContents->True,
+  Editable->False,
+  SelectWithContents->True]], "Print", "WolframAlphaFullOutput",
+ CellChangeTimes->{
+  3.846519469986683*^9},ExpressionUUID->"e977338e-058b-4f80-8380-\
+2f00945a13cb"]
+}, Open  ]]
+},
+WindowSize->{760, 833},
+WindowMargins->{{Automatic, 100}, {1, Automatic}},
+TaggingRules->Association["TryRealOnly" -> False],
+FrontEndVersion->"12.3 for Microsoft Windows (64-bit) (May 11, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"32483a1e-9d69-428b-beed-90f6fb94f4b9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 996, 24, 64, "Input",ExpressionUUID->"7d0ffeb1-419f-42da-92be-b8a8b0265648"],
+Cell[1557, 46, 451, 12, 44, "Input",ExpressionUUID->"1710246a-eaa8-428d-a889-b88c09781f64"],
+Cell[CellGroupData[{
+Cell[2033, 62, 1495, 42, 94, InheritFromParent,ExpressionUUID->"88a3fa00-3df7-400d-b8b1-e09197a20150"],
+Cell[3531, 106, 783, 21, 58, "Output",ExpressionUUID->"8d6d0a70-9476-428a-ba85-4458e0903ec2"]
+}, Open  ]],
+Cell[4329, 130, 1173, 32, 95, "Input",ExpressionUUID->"055cd4c3-9c7d-4b63-ab4b-7ae81644fc7a"],
+Cell[5505, 164, 754, 21, 46, "Input",ExpressionUUID->"09ec5012-6c85-4318-8645-fe009f475391"],
+Cell[CellGroupData[{
+Cell[6284, 189, 267, 6, 30, InheritFromParent,ExpressionUUID->"5dfd80bb-d8bc-4361-9c0b-aa42c27079c1"],
+Cell[6554, 197, 268, 6, 34, "Output",ExpressionUUID->"9f5a6f40-c017-45ae-89b0-7b9bc77e5a78"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6859, 208, 576, 9, 29, "Input",ExpressionUUID->"1f8d5a19-0122-455d-b255-518b36adce83"],
+Cell[7438, 219, 402, 6, 33, "Output",ExpressionUUID->"0c67b908-76ea-4e2b-95c3-608062b49a04"]
+}, Open  ]],
+Cell[7855, 228, 276, 6, 29, "Input",ExpressionUUID->"b0593ae1-8629-444c-a229-0f358e10e97b"],
+Cell[8134, 236, 488, 12, 76, InheritFromParent,ExpressionUUID->"e950d4e6-5599-4323-84cd-cd603632efbc"],
+Cell[CellGroupData[{
+Cell[8647, 252, 236, 4, 29, "Input",ExpressionUUID->"d3559d95-1715-4e20-bff4-24b61631c099"],
+Cell[8886, 258, 173, 2, 34, "Output",ExpressionUUID->"97e9280b-1921-4372-87a7-ed63e5bc376c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9096, 265, 231, 4, 61, InheritFromParent,ExpressionUUID->"3acd082e-f182-497b-9431-2b938fe3bd6c"],
+Cell[9330, 271, 173, 2, 34, "Output",ExpressionUUID->"f8d6e10e-73d2-4075-9755-5f136862599a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9540, 278, 193, 2, 41, "WolframAlphaLong",ExpressionUUID->"7d3f3b57-09b7-4aa5-8484-ac26fec92fa1"],
+Cell[9736, 282, 43137, 887, 821, "Print",ExpressionUUID->"e375c3ca-90c6-4c25-9a10-4b428c6b18d3"]
+}, Open  ]],
+Cell[52888, 1172, 154, 3, 29, "Input",ExpressionUUID->"6233bb72-4957-455e-97c5-0616d37d2d91"],
+Cell[CellGroupData[{
+Cell[53067, 1179, 272, 3, 41, "WolframAlphaLong",ExpressionUUID->"2c598586-cf75-45e6-b4df-defeb0d73b2d"],
+Cell[53342, 1184, 64917, 1327, 985, "Print",ExpressionUUID->"e977338e-058b-4f80-8380-2f00945a13cb"]
+}, Open  ]]
+}
+]
+*)
+
