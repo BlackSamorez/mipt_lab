@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04, custom)"
+   sodipodi:docname="nasos_sketchsvg.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="1.4237103"
+     inkscape:cx="396.85039"
+     inkscape:cy="368.75479"
+     inkscape:window-width="1920"
+     inkscape:window-height="989"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-center="true"
+     inkscape:snap-object-midpoints="true"
+     inkscape:object-paths="true" />
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="marker19392"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path19390" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker19382"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path19380" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="marker19302"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path19300" />
+    </marker>
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect19298"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="2,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <marker
+       style="overflow:visible;"
+       id="marker15153"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path15151" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path14679" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8) rotate(180) translate(12.5,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path14661" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.6) rotate(180) translate(0,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path14685" />
+    </marker>
+    <inkscape:path-effect
+       effect="skeletal"
+       id="path-effect14506"
+       is_visible="true"
+       lpeversion="1"
+       pattern="M 0,4.9921382 C 0,2.2364779 2.2364779,0 4.9921382,0 c 2.7556604,0 4.9921383,2.2364779 4.9921383,4.9921382 0,2.7556604 -2.2364779,4.9921383 -4.9921383,4.9921383 C 2.2364779,9.9842765 0,7.7477986 0,4.9921382 Z"
+       copytype="single_stretched"
+       prop_scale="1"
+       scale_y_rel="false"
+       spacing="0"
+       normal_offset="0"
+       tang_offset="0"
+       prop_units="false"
+       vertical_pattern="false"
+       hide_knot="false"
+       fuse_tolerance="0" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect1539"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect1183"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect1146"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect1109"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+    <inkscape:path-effect
+       effect="powerstroke"
+       id="path-effect1072"
+       is_visible="true"
+       lpeversion="1"
+       offset_points="0,1"
+       not_jump="false"
+       sort_points="true"
+       interpolator_type="CubicBezierJohan"
+       interpolator_beta="0.2"
+       start_linecap_type="zerowidth"
+       linejoin_type="extrp_arc"
+       miter_limit="4"
+       scale_width="1"
+       end_linecap_type="zerowidth" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264583"
+       id="rect870"
+       width="28.914703"
+       height="37.317379"
+       x="22.803801"
+       y="80.373413"
+       ry="10.89124"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264583"
+       id="rect872"
+       width="62.854977"
+       height="15.534907"
+       x="51.718502"
+       y="91.264664"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:0.264583"
+       id="rect874"
+       width="53.834465"
+       height="66.227058"
+       x="114.57348"
+       y="65.918579"
+       ry="15.39159"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 77.311876,91.264653 47.68689,63.32668 h 53.95005"
+       id="path1829"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:5.04737px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="79.472542"
+       y="55.743984"
+       id="text3453"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan3451"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="79.472542"
+         y="55.743984">Трубопровод с прорускной</tspan><tspan
+         sodipodi:role="line"
+         style="text-align:center;text-anchor:middle;stroke-width:0.264583"
+         x="79.472542"
+         y="62.053196"
+         id="tspan3455">способностью C</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:5.04737px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="-121.47198"
+       y="19.501637"
+       id="text6057"
+       transform="rotate(-90)"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan6055"
+         style="stroke-width:0.264583"
+         x="-121.47198"
+         y="19.501637">Откачиваемый объем</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.264583"
+         x="-121.47198"
+         y="25.810848"
+         id="tspan6059" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.0947px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="31.92609"
+       y="101.62646"
+       id="text7834"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan7832"
+         style="font-size:10.0947px;stroke-width:0.264583"
+         x="31.92609"
+         y="101.62646">P<tspan
+   style="font-size:10.0947px;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan9354">1</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.0947px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="135.32285"
+       y="101.62646"
+       id="text13648"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan13646"
+         style="font-size:10.0947px;stroke-width:0.264583"
+         x="135.32285"
+         y="101.62646">P<tspan
+   style="font-size:10.0947px;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan14100">2</tspan></tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.665;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker15153)"
+       d="m 55.991486,119.21681 c 4.977032,1.50147 18.697909,9.21581 35.34511,3.00348 15.441374,-5.76233 18.111524,-6.75877 18.111524,-6.75877"
+       id="path14576"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:12.1137px;line-height:1.25;font-family:sans-serif;baseline-shift:baseline;stroke-width:0.264583"
+       x="55.542477"
+       y="136.78856"
+       id="text16981"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan16979"
+         style="font-size:12.1137px;baseline-shift:baseline;stroke-width:0.264583"
+         x="55.542477"
+         y="136.78856">C(P<tspan
+   style="font-size:12.1137px;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan17636">1</tspan>-P<tspan
+   style="font-size:12.1137px;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan17631">2</tspan>)</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.465;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker19392)"
+       d="m 140.8741,89.134673 c 5.62949,-5.865135 18.69819,-18.786186 26.95534,-12.035265 9.81658,8.025885 16.31132,15.189875 16.31132,15.189875"
+       id="path19378"
+       sodipodi:nodetypes="csc"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300" />
+    <text
+       xml:space="preserve"
+       style="font-size:10.0947px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="175.20079"
+       y="101.91703"
+       id="text22726"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan22724"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0947px;font-family:sans-serif;-inkscape-font-specification:sans-serif;stroke-width:0.264583"
+         x="175.20079"
+         y="101.91703">W<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0947px;font-family:sans-serif;-inkscape-font-specification:sans-serif;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan23720">н</tspan>P<tspan
+   style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.0947px;font-family:sans-serif;-inkscape-font-specification:sans-serif;baseline-shift:sub;stroke-width:0.264583"
+   id="tspan23718">2</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10.0947px;line-height:1.25;font-family:sans-serif;stroke-width:0.264583"
+       x="128.19121"
+       y="140.39632"
+       id="text26004"
+       inkscape:export-filename="/home/artash/Documents/Labs_sem2/2.3.1/pictures/nasos_sketch.png"
+       inkscape:export-xdpi="300"
+       inkscape:export-ydpi="300"><tspan
+         sodipodi:role="line"
+         id="tspan26002"
+         style="font-size:10.0947px;stroke-width:0.264583"
+         x="128.19121"
+         y="140.39632">Насос</tspan></text>
+  </g>
+</svg>
