@@ -10,6 +10,9 @@ def main():
     logging.getLogger().setLevel(logging.INFO)
     root_dir = os.path.dirname(os.path.realpath(__file__))
     for task_rel_dir in get_subdirectories(root_dir, ignore_dotfiles=True):
+        if task_rel_dir == 'labs_guide':
+            continue
+
         task_full_dir = os.path.join(root_dir, task_rel_dir)
         task_subdirectories = get_subdirectories(task_full_dir)
         if 'pdf' not in task_subdirectories:
@@ -18,6 +21,14 @@ def main():
 
         src_names = set(task_subdirectories)
         src_names.remove('pdf')
+
+        for src_name in src_names:
+            if ' ' in src_name:
+                logging.error(f'"{os.path.join(task_rel_dir, src_name)}" should not contain spaces')
+                sys.exit(1)
+            if '_' not in src_name:
+                logging.error(f'"{os.path.join(task_rel_dir, src_name)}" should contain "_" separator')
+                sys.exit(1)
 
         pdf_filenames = {_ for _ in os.listdir(os.path.join(task_full_dir, 'pdf'))}
         for pdf_filename in pdf_filenames:
