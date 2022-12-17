@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage[a4paper, total={6in, 9.4in}]{geometry}
+
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{mathtext}
+\usepackage{amsmath}
+\usepackage{siunitx} % Required for alignment
+\usepackage{subfigure}
+\usepackage{multirow}
+\usepackage{rotating}
+\usepackage{afterpage}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{caption}
+\usepackage[arrowdel]{physics}
+\usepackage{booktabs}
+
+\graphicspath{{pictures/}}
+
+\title{\begin{center}Лабораторная работа №3.7.1\end{center}
+Магнитометр}
+\author{Гёлецян А.Г.}
+\date{\today}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\maketitle
+\newpage
+\pagenumbering{arabic}
+
+\textbf{Цель работы:} Определить горизонтальную составляющую магнитного поля Земли,
+и установить количественное соотношение между единицами электрического тока в системах
+СИ и СГС
+
+\section{Измерение горизонтальной состовляющей магнитного поля Земли}
+Параметры установки
+\begin{align*}
+    L &= 102\ м\\
+    R &= 20\ см\\
+\end{align*}
+Параметры магнита
+\begin{align*}
+    m &= 5.861\ г\\
+    l &= 4.00\ см\\
+    d &= 0.49\ см\\
+\end{align*}
+Момент инерции магнита
+\begin{equation*}
+    J = \frac{ml^2}{12}\left[1+3\left({\frac{d}{2l}}\right)^2\right]=7.902\ г\cdotсм^2
+\end{equation*}
+Период колебания магнита в горизонтальной плоскости
+\begin{equation*}
+    T = \frac{217.1с}{20} = 10.855\ с
+\end{equation*}
+Смещение зайчика после вставки магнита в рамку
+\begin{align*}
+    x_1 &= 10.1\ см\\
+    x_2 &= -9.1\ см\\
+    \bar{x} = \frac{x_1 - x_2}{2} &= 9.6\ см\\
+\end{align*}
+Горизонтальное магнитное поле Земли
+\begin{equation*}
+    B_0 = \frac{2\pi}{TR}\sqrt{\frac{\mu_0 JL}{2\pi R\bar{x}}}=8.4\cdot10^{-6}\ [ед. СИ]
+\end{equation*}
+
+\newpage
+\section{Определение электродинамической постоянной}
+Параметры установки
+\begin{align*}
+    N &= 44\\
+    \nu &= 50\ Гц\\
+    U &= 90\ В = 0.3\ [ед. СГС]\\
+    C &= 9 \cdot 10^5 см
+\end{align*}
+Смещение зайчика после подачи тока
+\begin{align*}
+    x_1 &= 17.6\ см\\
+    x_2 &= -15.5\ см\\
+    \bar{x} = \frac{x_1 - x_2}{2} &= 16.55\ см\\
+\end{align*}
+
+Ток в системе СИ
+\begin{equation*}
+    I_{[СИ]} = \frac{2 B_0 R}{\mu_0 N} \cdot \frac{\bar{x}}{2L} = 4.93 \cdot 10^{-3}\ [ед. СИ]
+\end{equation*}
+
+Ток в системе СГС
+\begin{equation*}
+    I_{[СГС]} = CU\nu = 1.35 \cdot 10^7 [ед. СГС]
+\end{equation*}
+
+Электродинамическая постоянная
+\begin{equation*}
+    c\ \left[\frac{м}{с}\right] = \frac{1}{10} \frac{I_{[СГС]}}{I_{[СИ]}}=2.74\cdot10^8
+\end{equation*}
+
+\section{Выводы}
+Получили значение электродинамической постоянной $c=2.74 \cdot 10^8\ м/с$, что отличется
+от истинного значения $2.998 \cdot 10^8 м/с$ на 9\%. Учитывая погрешности, связанные с
+предварительной настройкой устройства, а так же условия, при которых проводились
+измерения, считаю результаты эксперимента удовлетворительными в пределах погрешности.
+\end{document}
