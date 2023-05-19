@@ -20,7 +20,8 @@ python3 check_integrity.py
 
 # Гайд, который упростит вам построение графиков и таблиц
 
-Находится в папаке [labs_guide](https://github.com/BlackSamorez/mipt_lab/blob/master/labs_guide/guide/Guide.ipynb)
+Находится в папаке labs_guide: [Guide.ipynb](https://github.com/BlackSamorez/mipt_lab/blob/master/labs_guide/guide/Guide.ipynb)
+и [Guide2.ipynb](https://github.com/BlackSamorez/mipt_lab/blob/master/labs_guide/guide/Guide2.ipynb)
 
 # Благодарности авторам:
 * Валеев Рауф - **ФОПФ**(2018 - 2022)
