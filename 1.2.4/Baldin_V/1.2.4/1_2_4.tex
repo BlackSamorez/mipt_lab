@@ -1,6 +1,7 @@
 \documentclass[a4paper, 12pt]{article}
 
-\usepackage{cmap} % поиск в PDF lusepackage[2A]{fontenc} % кодировка
+\usepackage{cmap} % поиск в PDF l
+\usepackage[T2A]{fontenc} % кодировка
 
 \usepackage[utf8]{inputenc} % кодировка исходного текста
 \usepackage[english,russian]{babel} % локализация и переносы
@@ -18,7 +19,7 @@
 \graphicspath{pictures}
 
 \author{Балдин Виктор}
-\title{Работа 1.2.4 \\ Определении главных моментов инерции твердых тел с помощью крутильных колебаний}
+\title{Работа 1.2.4 \\ Определение главных моментов инерции твердых тел с помощью крутильных колебаний}
 
 \begin{document}
 
@@ -27,7 +28,7 @@
 	\textbf{Цель работы:} измерить периоды крутильных колебаний рамки при различных положениях закрепленного
 	в ней тела, проверить теоретическую зависимость между периодами крутильных колебаний тела
 	относительно различных осей, определить моменты инерции относительно нескольких осей для каждого тела,
-	по ним найти главные моменты инерции тела и посторить эллипсоид инерции.
+	по ним найти главные моменты инерции тела и построить эллипсоид инерции.
 	\bigskip\\
 	\textbf{Оборудование:} установка для получения крутильных колебаний, набор исследуемых твердых тел, секундомер.
 
@@ -132,8 +133,106 @@
 	Установка для получения крутильных колебаний, набор исследуемых твердых тел, секундомер.
 
 %
-%	\section{Результаты измерений и обработка данных}
-%
+	\section{Результаты измерений и обработка данных}
+	\begin{enumerate}
+		\item Измерим период сначала для ненагруженной рамки (здесь и далее
+		период измеряем $N = 15$ раз, погрешность секундомера считаем приблизительно
+		равной $\sigma_t^{\text{ сист }} = 0.20$ с):
+		\begin{table}[H]
+			\centering
+			\caption{Колебания рамки}
+			\begin{tabular}{|c|c|c|c|c|c|}
+			\hline
+			$t$, c & 38.4 & 38.6 & 38.6 & 38.6 & 38.5 \\ \hline
+			$T$, c & 2.56 & 2.57 & 2.57 & 2.57 & 2.57 \\ \hline
+			\end{tabular}
+		\end{table}
+
+		Отсюда средний период
+		$$ \overline {T}_{p} = \frac{1}{N}\sum_{i} T_i = 2.57\; \text{с}, $$
+		Среднеквадратичное отклонение
+		$$ \sigma_T^{\text{ случ }} = \sqrt{\frac{ \sum_{i} (T_i - \overline {T})^2}{N} } = 0.01\; \text{с} $$
+	%
+		Общая погрешность таким образом равна:
+		$$ \sigma_T = \frac{\sigma_t^{\text{ сист }}}{N} + \sigma_T^{\text{ случ }} = 0.03\; \text{с}$$
+
+		\item Измерим размеры и массу цилиндра:
+		\begin{table}[H]
+			\centering
+			\caption{Измерения размеров цилиндра}
+			\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+			\hline
+			№       & 1    & 2    & 3    & 4    & 5    & 6    & 7    & 8    & 9    & 10   & Среднее & $\sigma$ \\ \hline
+			$h$, мм & 49.1 & 49.5 & 49.3 & 49.3 & 49.2 & 49.2 & 49.2 & 49.4 & 49.2 & 49.2 & 49.3    & 0.2                    \\ \hline
+			$d$, мм & 88.3 & 88.1 & 88.1 & 88.1 & 88.1 & 88.1 & 88.1 & 88.1 & 88.1 & 88.0 & 88.1    & 0.2                    \\ \hline
+			\end{tabular}
+		\end{table}
+
+		Масса $m_{\text{цил}} = 2.264\pm0.001$ кг.
+		Отсюда момент инерции
+		$$I_{\text{цил}} = \frac{1}{8}md^2 = 2197\; \text{кг} \cdot \text{мм} ^2, $$
+		$$ \sigma_I = I\sqrt{\left( \frac{\sigma_m}{m} \right) ^ 2 + 2\left( \frac{\sigma_d}
+		{\overline{d}} \right) ^ 2} = 8\; \text{кг} \cdot \text{мм} ^2 $$
+
+		\item Измерим период колебаний цилиндра
+		\begin{table}[H]
+			\centering
+			\caption{Колебания цилиндра}
+			\begin{tabular}{|cccccc|}
+			\hline
+			\multicolumn{6}{|c|}{Главная ось}                                                                                                                   \\ \hline
+			\multicolumn{1}{|c|}{$t$, c} & \multicolumn{1}{c|}{47.9} & \multicolumn{1}{c|}{47.6} & \multicolumn{1}{c|}{47.2} & \multicolumn{1}{c|}{47.4} & 47.6 \\ \hline
+			\multicolumn{1}{|c|}{$T$, c} & \multicolumn{1}{c|}{3.19} & \multicolumn{1}{c|}{3.17} & \multicolumn{1}{c|}{3.15} & \multicolumn{1}{c|}{3.16} & 3.17 \\ \hline
+			\multicolumn{6}{|c|}{Боковая ось}                                                                                                                   \\ \hline
+			\multicolumn{1}{|c|}{$t$, c} & \multicolumn{1}{c|}{45.1} & \multicolumn{1}{c|}{45.0} & \multicolumn{1}{c|}{45.3} & \multicolumn{1}{c|}{45.0} & 44.9 \\ \hline
+			\multicolumn{1}{|c|}{$T$, c} & \multicolumn{1}{c|}{3.01} & \multicolumn{1}{c|}{3.00} & \multicolumn{1}{c|}{3.02} & \multicolumn{1}{c|}{3.00} & 2.99 \\ \hline
+			\end{tabular}
+		\end{table}
+
+		$$ \overline{T}_{z}^{\text{цил}} = 3.17 \; \text{с}, \\\ \overline{T}_{x}^{\text{цил}} = 3.00\; \text{с} $$
+
+		\item Найдем момент инерции рамки через формулу (8):
+		$$ \frac{T_p}{T_{z}^{\text{цил}}} = \sqrt{\frac{I_p}{I_p + I_{\text{цил}}}}, $$
+		$$ I_p = I_{\text{цил}} \frac{T_p^2}{(T_z^{\text{цил}})^2 - T_p^2} = 4213\; \text{кг} \cdot \text{мм} ^2 $$
+		$$ \varepsilon_{I_p} = \frac{\sigma_I}{I} + 4\varepsilon_T = 0.06 $$
+
+		\item Повторим все те же действия теперь для куба:
+		\begin{table}[H]
+			\centering
+			\caption{Измерения для куба}
+			\begin{tabular}{|ccccccccccccc|}
+			\hline
+			\multicolumn{13}{|c|}{Измерения длины}                                                                                                                                                                                                                                                                                                                                        \\ \hline
+			\multicolumn{1}{|c|}{№}       & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & \multicolumn{1}{c|}{5}    & \multicolumn{1}{c|}{6}       & \multicolumn{1}{c|}{7}    & \multicolumn{1}{c|}{8}    & \multicolumn{1}{c|}{9}    & \multicolumn{1}{c|}{10}   & \multicolumn{1}{c|}{$\overline{a}$} & $\sigma_{a}$ \\ \hline
+			\multicolumn{1}{|c|}{$a$, мм} & \multicolumn{1}{c|}{92.7} & \multicolumn{1}{c|}{92.8} & \multicolumn{1}{c|}{92.8} & \multicolumn{1}{c|}{92.6} & \multicolumn{1}{c|}{92.6} & \multicolumn{1}{c|}{92.6}    & \multicolumn{1}{c|}{92.6} & \multicolumn{1}{c|}{92.6} & \multicolumn{1}{c|}{92.7} & \multicolumn{1}{c|}{92.8} & \multicolumn{1}{c|}{92.7}           & 0.1          \\ \hline
+			\multicolumn{13}{|c|}{Ось $AA’$}                                                                                                                                                                                                                                                                                                                                              \\ \hline
+			\multicolumn{1}{|c|}{№}       & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & \multicolumn{1}{c|}{5}    & \multicolumn{1}{c|}{Среднее} & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$t$, с}  & \multicolumn{1}{c|}{45.4} & \multicolumn{1}{c|}{45.4} & \multicolumn{1}{c|}{45.3} & \multicolumn{1}{c|}{45.3} & \multicolumn{1}{c|}{45.2} & \multicolumn{1}{c|}{45.3}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$T$, c}  & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.02} & \multicolumn{1}{c|}{3.02} & \multicolumn{1}{c|}{3.01} & \multicolumn{1}{c|}{3.02}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{13}{|c|}{Ось $MM’$}                                                                                                                                                                                                                                                                                                                                              \\ \hline
+			\multicolumn{1}{|c|}{№}       & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & \multicolumn{1}{c|}{5}    & \multicolumn{1}{c|}{Среднее} & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$t$, c}  & \multicolumn{1}{c|}{45.6} & \multicolumn{1}{c|}{45.6} & \multicolumn{1}{c|}{45.5} & \multicolumn{1}{c|}{45.3} & \multicolumn{1}{c|}{45.5} & \multicolumn{1}{c|}{45.5}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$T$, c}  & \multicolumn{1}{c|}{3.04} & \multicolumn{1}{c|}{3.04} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.02} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.03}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{13}{|c|}{Ось $DD’$}                                                                                                                                                                                                                                                                                                                                              \\ \hline
+			\multicolumn{1}{|c|}{№}       & \multicolumn{1}{c|}{1}    & \multicolumn{1}{c|}{2}    & \multicolumn{1}{c|}{3}    & \multicolumn{1}{c|}{4}    & \multicolumn{1}{c|}{5}    & \multicolumn{1}{c|}{Среднее} & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$t$, c}  & \multicolumn{1}{c|}{45.5} & \multicolumn{1}{c|}{45.7} & \multicolumn{1}{c|}{45.4} & \multicolumn{1}{c|}{45.5} & \multicolumn{1}{c|}{45.5} & \multicolumn{1}{c|}{45.5}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\multicolumn{1}{|c|}{$T$, c}  & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.05} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.03} & \multicolumn{1}{c|}{3.03}    & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}     & \multicolumn{1}{c|}{}               &              \\ \hline
+			\end{tabular}
+		\end{table}
+
+		Вычислим моменты инерции:
+		$$ I_{AA'} = I_p \frac{T_{AA'}^2 - T_p^2}{T_p^2} = 1605\; \text{кг} \cdot \text{мм} ^2, $$
+		$$ I_{MM'} = I_p \frac{T_{MM'}^2 - T_p^2}{T_p^2} = 1643\; \text{кг} \cdot \text{мм} ^2, $$
+		$$ I_{DD'} = I_p \frac{T_{DD'}^2 - T_p^2}{T_p^2} = 1643\; \text{кг} \cdot \text{мм} ^2  $$
+		Так как они примерно одинаковые, можно рассчитать погрешность лишь для одного случая:
+		$$ \varepsilon_I = \varepsilon_{I_p} + 4\varepsilon_{T} = 0.12 $$
+
+		\item Нарисуем сечения эллипсоида инерции главными плоскостями:
+
+
+	\end{enumerate}
+
+
 %	\section{Обсуждение результатов}
 %	\section{Вывод}
 \end{document}
