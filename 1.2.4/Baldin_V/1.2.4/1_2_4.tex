@@ -196,6 +196,18 @@
 		$$ I_p = I_{\text{цил}} \frac{T_p^2}{(T_z^{\text{цил}})^2 - T_p^2} = 4213\; \text{кг} \cdot \text{мм} ^2 $$
 		$$ \varepsilon_{I_p} = \frac{\sigma_I}{I} + 4\varepsilon_T = 0.06 $$
 
+		\item Вычислим величины $1/\sqrt{T^2 - T_p^2}$ для осей $x$ и $z$.
+		$$ \frac{1}{\sqrt{T_x^2 - T_p^2}} = 0.64 \;\text{c} ^{-2} $$
+		$$ \frac{2}{\sqrt{T_z^2 - T_p^2}} = 0.54 \;\text{c} ^{-2}$$
+
+		\item Нарисуем сечения эллипсоида инерции плоскостью $XOZ$ для цилиндра:
+		\begin{figure}
+			\centering
+			\caption{Сечение плоскостью $AA'M$}
+			\includegraphics[scale = 0.8]{pictures/graph.png}
+		\end{figure}
+
+
 		\item Повторим все те же действия теперь для куба:
 		\begin{table}[H]
 			\centering
@@ -226,9 +238,6 @@
 		$$ I_{DD'} = I_p \frac{T_{DD'}^2 - T_p^2}{T_p^2} = 1643\; \text{кг} \cdot \text{мм} ^2  $$
 		Так как они примерно одинаковые, можно рассчитать погрешность лишь для одного случая:
 		$$ \varepsilon_I = \varepsilon_{I_p} + 4\varepsilon_{T} = 0.12 $$
-
-		\item Нарисуем сечения эллипсоида инерции главными плоскостями:
-
 
 	\end{enumerate}
 
