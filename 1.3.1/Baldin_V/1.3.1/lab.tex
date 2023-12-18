@@ -1,0 +1,320 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[english, russian]{babel}
+\usepackage{graphicx, float, multicol, hyperref, pgfplots, amsmath}
+
+\graphicspath{{pictures/}}
+
+\title{Лабораторная работа 1.3.1 \\
+       Определение модуля Юнга на основе исследования деформаций растяжения и изгиба}
+\author{Балдин Виктор Б01-303}
+
+\begin{document}
+    \maketitle
+
+    \section{Aннотация}
+    \par \textbf{Цель работы:} экспериментально получить зависимость между напряжением и деформацией
+    для двух простейших напряженных состояний упругих тел: одностороннего сжатия и чистого изгиба;
+    по результатам эксперимента вычислить модул Юнга.\\
+    \par \noindent \textbf{В работе используются:} в первой части - прибор Лермантова, проволока
+    из исследуемого материала,
+     зрительная трубка со шкалой,
+    набор грузов, микрометр, рулетка;  во второй части - стойка для изгибания балки, индикатор для
+    измерения величин прогиба,
+набор исследуемых стержней, грузы, линейка, штангенциркуль.
+
+    \section{Определение модуля Юнга по измерениям растяжения проволоки}
+    \subsection{Теоретические сведения}
+    Растяжение проволоки соответствует напряженному состоянию вдоль одной оси, которое описывается формулой:
+\begin{equation}
+    \frac{F}{S} = E \frac{\Delta l}{l}
+    \label{lermantov}
+\end{equation}
+    Эту формулу можно переписать также в следующем виде:
+    \begin{equation}
+        F = k\Delta l,
+    \end{equation}
+    где $k = ES / l$ -- жесткость проволоки.
+    Измерения производятся на установке Лермантова.
+    Направим зрительную трубку на зеркальце.
+    Выведем формулу для расчета растяжения длины проволоки по показаниям шкалы
+    прибора (см. рис. 1).
+    Так как мы считаем проволоку слабо растяжимой, справедлива оценка $\Delta l \ll r$, где
+    $r$ -- длина рычага. С учетом этого, угол наклона зеркальца к горизонтали можно
+    найти как $\alpha = \Delta l/r$. С другой стороны, из соображений геометрической оптики
+    угол $\alpha$ можно найти как угол между продолжениями соответствующих лучей:
+    \begin{equation}
+        \alpha = \frac{n}{2h},
+    \end{equation}
+    где $n$ -- показания шкалы, $h$ -- расстояние от шкалы до
+    зеркальца.
+    \par Таким образом, удлинение проволоки можно выразить как:
+    \begin{equation}
+        \Delta l = n\frac{r}{2h}
+        \label{dlina}
+    \end{equation}
+
+    Отсюда формулу (1) можно переписать как
+    \begin{equation}
+        F = \frac{ESr}{2lh}n
+    \end{equation}
+
+    \subsection{Методика измерений}
+    \par Для определения модуля Юнга используется прибор Лермонтова,
+    схема которого изображена на рис. 1. Верхний конец проволоки П, изготовленной
+    из исследуемого материала, прикреплен к консоли К, а
+    нижний -- к цилиндру, которым оканчивается шарнирный кронштейн
+    Ш. На этот же цилиндр опирается рычаг $r$, связанный с зеркальцем
+    3. Таким образом, удлинение проволоки можно измерить по углу
+    поворота зеркальца.\\
+    \par Натяжение проволоки можно менять перекладыванием грузов
+    с площадки О на площадку М, не меняя при этом нагрузку на кронштейн,
+    и, как следствие, его деформацию.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.3]{pictures/lermantov.png}
+        \caption{Прибор Лермантова}
+    \end{figure}
+
+    \subsection{Используемое оборудование}
+    Параметры используемого оборудования представим в таблице:
+    \begin{table}[H]
+        \centering
+        \caption{Оборудование}
+        \begin{tabular}{|c|c|}
+        \hline
+        Прибор         & Точность \\ \hline
+        Штангенциркуль & $\pm 0.05$ мм \\ \hline
+        Индикатор      & $\pm 0.01$ мм \\ \hline
+        Рулетка        & $\pm 5$ мм \\ \hline
+        Линейка        & $\pm 0.5$ мм \\ \hline
+        Прибор Лермантова & $\pm 1$ мм \\ \hline
+        \end{tabular}
+    \end{table}
+
+
+    \subsection{Результаты измерений и обработка данных}
+    \begin{enumerate}
+    \item Сведем характеристики установки в таблицу:
+    \begin{table}[H]
+        \centering
+        \caption{Параметры прибора Лермантова}
+        \begin{tabular}{|c|c|c|c|c|}
+        \hline
+        $d_{\tiny{\mbox{пр}}}$, мм & $r$, мм & $l$, см & $h$, см & $\sigma_{\tiny{\mbox{пр}}}$, Н/мм$^2$\\ \hline
+        $0.46 \pm 0.01$            & $15 \pm 1$ & $177.6 \pm 0.5$  & $144.0\pm 0.5$   & 900\\ \hline
+        \end{tabular}
+    \end{table}
+    \item Оценим, сколько грузов можно подвесить к проволоке. Для этого найдем площадь
+    сечения проволоки и погрешность: \[S = \frac{\pi d^2}{4} = 0.17\;\mbox{мм}^2,\]
+    \[\sigma_S = 2S\frac{\sigma_d}{d} = 0.01\;\mbox{мм}^2\]
+    Предельная нагрузка на разрушение:
+    \[ P_{max} = 0.3\sigma_{\mbox{\tiny{пр}}}S = 45,9\; \mbox{Н},\]
+    \[ \sigma_{P_{max}} = 2.7\; \mbox{Н} \]
+    Согласно полученному значению, можно подвесить все грузы.
+    \item Теперь проверим предыдущую оценку на практике. Для этого будем подвешивать
+    каждый раз на 1 груз больше и следить при помощи шкалы прибора, чтобы проволока
+    возвращалась в исходное состояние. На практике деформация была замечена уже после
+    подвешивания первых 6 грузов.
+    \item Перейдем к измерениям. Будем последовательно класть одни и те же грузы,
+    потом поочередно их снимать по принципу стека. Проведем этот цикл 2 раза:
+    \begin{table}[H]
+    \centering
+    \caption{Зависимость показаний шкалы от нагрузки}
+    \begin{tabular}{|c|c|c|c|c|c|}
+    \hline
+    $\Delta m$, гр & $P$, Н & $n_1 \downarrow$, см & $n_1\uparrow$, см & $n_2 \downarrow$, см & $n_2 \uparrow$, см \\ \hline
+    501.4          & 4.9    & 13.5                 & 15.8              & 15.8                 & 15.2               \\ \hline
+    245.6          & 7.3    & 16.1                 & 18.7              & 18.9                 & 18.4               \\ \hline
+    245.3          & 9.7    & 18.6                 & 21.6              & 21.3                 & 21.3               \\ \hline
+    245.6          & 12.1   & 21.8                 & 23.9              & 24.2                 & 24.1               \\ \hline
+    245.5          & 14.5   & 24.4                 & 26.5              & 26.8                 & 26.8               \\ \hline
+    \end{tabular}
+    \end{table}
+    \item Построим графики зависимости $n(F)$ для первого и второго эксперимента.
+    \begin{figure}[H]
+        \centering
+        \caption{Графики зависимости для $n(F)$}
+        \input{graphs/lermant.pgf}
+    \end{figure}
+    \end{enumerate}
+    По МНК можно найти коэффициент наклона графика $k$, который по формуле (5) равен:
+    \begin{equation}
+        k = \frac{2lh}{ESr}
+    \end{equation}
+    Отсюда
+    \begin{equation}
+        E =\frac{2lh}{kSr}
+    \end{equation}
+    В нашем случае логично использовать усредненное значение $\langle k \rangle = 1.13 \cdot
+    10^{-2}
+    $ м/Н, т. к. у нас есть график для уменьшения и увеличения нагрузки.
+    Погрешность можно рассчитать как
+    \[ \varepsilon_k = \frac{1}{k\sqrt{N - 2}}\sqrt{\frac{\langle n^2 \rangle -\langle n \rangle^2}{
+    \langle P^2 \rangle - \langle P \rangle^2} - k^2} = 0.03\]
+
+    Найдем модуль Юнга и его погрешность:
+    \[ E = 178\; \mbox{ГПа}, \]
+    \begin{equation*}
+        \varepsilon_E = \sqrt{\varepsilon_l^2 + \varepsilon_h^2 +
+    \varepsilon_k^2 + \varepsilon_S^2 + \varepsilon_r^2} \approx \sqrt{
+    \varepsilon_k^2 + \varepsilon_S^2 + \varepsilon_r^2} \approx 0.10, \\\
+    \sigma_E = E \varepsilon_E \approx 18\;\mbox{ГПа}
+    \end{equation*}
+
+    \section{Определение модуля Юнга по измерениям изгиба балки}
+    \subsection{Теоретические сведения}
+    Модуль Юнга материала стержня $E$ связан с величиной
+    прогиба $y_{max}$ как:
+    \begin{equation}\label{balka}
+        E=\frac{Pl^3}{4ab^3y_{max}}
+    \end{equation}
+    где $P$ - нагрузка на стержень, $l$ - расстояние меду точками опоры,
+    $a$ - ширина балки, $b$ - высота балки.
+
+    \subsection{Экспериментальная установка}
+    \par Экспериментальная установка состоит из прочной стойки с
+    опорными призмами А и Б (рис. 2). На ребра призм опирается исследуемый
+    стержень В. В середине стержня на призме Д подвешена площадка
+    П с грузами. Измерять величину
+    прогиба можно с помощью индикатора И, укрепляемого
+    на отдельной штанге. Полный оборот большой
+    стрелки индикатора соответствует 1 мм и одному делению малого циферблата.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.25]{pictures/balka.png}
+        \caption{Схема установки для измерения модуля Юнга}
+    \end{figure}
+
+    \subsection{Используемое оборудование}
+    Линейка, штангенциркуль для измерения параметров установки;
+    индикатор для измерения стрелы прогиба.
+    \par Для уменьшения погрешности вследствие прогиба стола
+    при изменении нагрузки на стержень, грузы перед началом эксперимента
+    лучше расположить на рейке над нижней полкой опорной стойки.
+
+    \subsection{Результаты измерений и обработка данных}
+    \begin{enumerate}
+        \item Измерим расстояние между опорами $l = (50.1 \pm 0.5)$ см.
+        \item Измерим ширину $a$ и высоту $b$ балок из различных
+        материалов при помощи штангенциркуля:
+        \begin{table}[H]
+            \centering
+            \caption{Размеры исследумеых балок}
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+                    & Дерево & Сталь & Латунь \\ \hline
+            $a$, мм & 20.4   & 21.3  & 21.6   \\ \hline
+            $b$, мм & 9.9    & 3.9   & 3.9    \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \item Теперь опытным путем выясним, сколько грузов можно подвешивать
+        к каждой балке. Для этого будем наблюдать, вернулась ли стрела индикатора
+        в исходное положение (0), после убирания груза. Заметим, что каждый груз
+        из набора имеет массу примерно 500 г, с небольшими отклонениями.
+        Для дерева невозврат наступил уже после 3 грузов, для стали -- после 7,
+        для латуни -- после 5.
+        \item Перейдем непосредственно к измерениям. Обозначим за $\Delta m$ массу
+        последнего положенного груза. Результаты измерений приведены
+        в таблице 5.
+        \item Построим графики для каждого из материалов.
+        \begin{figure}[H]
+            \centering
+            \caption{Графики для деревянной балки}
+            \input{graphs/tree.pgf}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \caption{Графики для стальной балки}
+            \input{graphs/steel.pgf}
+        \end{figure}
+        \begin{figure}[H]
+            \centering
+            \caption{Графики для латунной балки}
+            \input{graphs/latun.pgf}
+        \end{figure}
+        \begin{table}[H]
+            \centering
+            \caption{Измерения зависимости $P(y_{max})$}
+            \begin{tabular}{|ccccccccc|}
+            \hline
+            \multicolumn{9}{|c|}{Дерево}                                                                                                                                                                                                                          \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{6.00} & \multicolumn{1}{c|}{5.26}  & \multicolumn{1}{c|}{4.51}  & \multicolumn{1}{c|}{3.86}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{0.74}  & \multicolumn{1}{c|}{1.49}  & \multicolumn{1}{c|}{2.14}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{482.5} & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{4.9}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{9}{|c|}{Перевернутое дерево}                                                                                                                                                                                                             \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{6.00} & \multicolumn{1}{c|}{5.26}  & \multicolumn{1}{c|}{4.47}  & \multicolumn{1}{c|}{3.73}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{0.74}  & \multicolumn{1}{c|}{1.53}  & \multicolumn{1}{c|}{2.27}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{482.5} & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{4.9}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{9}{|c|}{Сталь}                                                                                                                                                                                                                           \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{9.00} & \multicolumn{1}{c|}{8.35}  & \multicolumn{1}{c|}{7.61}  & \multicolumn{1}{c|}{6.98}  & \multicolumn{1}{c|}{6.31}  & \multicolumn{1}{c|}{5.67}  & \multicolumn{1}{c|}{5.01}  & 4.39  \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{0.65}  & \multicolumn{1}{c|}{1.39}  & \multicolumn{1}{c|}{2.02}  & \multicolumn{1}{c|}{2.69}  & \multicolumn{1}{c|}{3.33}  & \multicolumn{1}{c|}{3.99}  & 4.61  \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{483.3} & \multicolumn{1}{c|}{503.1} & \multicolumn{1}{c|}{467.9} & \multicolumn{1}{c|}{478.0} & 466.7 \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{5.0}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{19.6}  & \multicolumn{1}{c|}{24.2}  & \multicolumn{1}{c|}{28.9}  & 33.5  \\ \hline
+            \multicolumn{9}{|c|}{Перевернутая сталь}                                                                                                                                                                                                              \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{9.00} & \multicolumn{1}{c|}{8.35}  & \multicolumn{1}{c|}{7.50}  & \multicolumn{1}{c|}{6.95}  & \multicolumn{1}{c|}{6.29}  & \multicolumn{1}{c|}{5.71}  & \multicolumn{1}{c|}{4.99}  & 4.47  \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{0.65}  & \multicolumn{1}{c|}{1.50}  & \multicolumn{1}{c|}{2.05}  & \multicolumn{1}{c|}{2.71}  & \multicolumn{1}{c|}{3.29}  & \multicolumn{1}{c|}{4.01}  & 4.53  \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{483.3} & \multicolumn{1}{c|}{503.1} & \multicolumn{1}{c|}{467.9} & \multicolumn{1}{c|}{478.0} & 466.7 \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{5.0}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{19.6}  & \multicolumn{1}{c|}{24.2}  & \multicolumn{1}{c|}{28.9}  & 33.5  \\ \hline
+            \multicolumn{9}{|c|}{Латунь}                                                                                                                                                                                                                          \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{9.00} & \multicolumn{1}{c|}{7.80}  & \multicolumn{1}{c|}{6.53}  & \multicolumn{1}{c|}{5.37}  & \multicolumn{1}{c|}{4.14}  & \multicolumn{1}{c|}{3.02}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{1.20}  & \multicolumn{1}{c|}{2.47}  & \multicolumn{1}{c|}{3.63}  & \multicolumn{1}{c|}{4.86}  & \multicolumn{1}{c|}{5.98}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{482.5} & \multicolumn{1}{c|}{503.1} & \multicolumn{1}{c|}{467.9} & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{4.9}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{19.6}  & \multicolumn{1}{c|}{24.2}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{9}{|c|}{Перевернутая латунь}                                                                                                                                                                                                             \\ \hline
+            \multicolumn{1}{|c|}{$y$, мм}       & \multicolumn{1}{c|}{9.00} & \multicolumn{1}{c|}{7.76}  & \multicolumn{1}{c|}{6.56}  & \multicolumn{1}{c|}{5.38}  & \multicolumn{1}{c|}{4.13}  & \multicolumn{1}{c|}{3.01}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$y_{max}$, мм} & \multicolumn{1}{c|}{0.00} & \multicolumn{1}{c|}{1.24}  & \multicolumn{1}{c|}{2.44}  & \multicolumn{1}{c|}{3.62}  & \multicolumn{1}{c|}{4.87}  & \multicolumn{1}{c|}{5.99}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$\Delta m$, г} & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{503.3} & \multicolumn{1}{c|}{511.0} & \multicolumn{1}{c|}{482.5} & \multicolumn{1}{c|}{503.1} & \multicolumn{1}{c|}{467.9} & \multicolumn{1}{c|}{}      &       \\ \hline
+            \multicolumn{1}{|c|}{$P$, Н}        & \multicolumn{1}{c|}{0.0}  & \multicolumn{1}{c|}{4.9}   & \multicolumn{1}{c|}{9.9}   & \multicolumn{1}{c|}{14.7}  & \multicolumn{1}{c|}{19.6}  & \multicolumn{1}{c|}{24.2}  & \multicolumn{1}{c|}{}      &       \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \item Модуль Юнга через угловой кэффицент $\gamma$ можно
+        вычислить по формуле
+        \begin{equation}
+            E = \frac{\gamma l^3}{4ab^3}
+        \end{equation}
+        Отсюда погрешность:
+        \begin{equation*}
+            \varepsilon_E = \sqrt{\varepsilon_{\gamma}^2 + (3\varepsilon_l)^2
+            +\varepsilon_a^2 + (3\varepsilon_b)^2} \approx
+            \varepsilon_{\gamma} + 3\varepsilon_b
+        \end{equation*}
+        \item Сведем все средние значения угловых коэффицентов и модулей
+        Юнга в таблицу:
+        \begin{table}[H]
+            \centering
+            \caption{Значения модуля Юнга}
+            \begin{tabular}{|c|c|c|c|}
+            \hline
+            Материал               & Дерево & Сталь & Латунь \\ \hline
+            $\gamma$, Н/мм         & 6.65   & 7.30  & 4.04   \\ \hline
+            $\varepsilon_{\gamma}$ & 0.02   & 0.02  & 0.01   \\ \hline
+            $a$, мм                & 20.40  & 21.30 & 21.60  \\ \hline
+            $b$, мм                & 9.9    & 3.9   & 3.9    \\ \hline
+            $E$, Гпа               & 10     & 181   & 99     \\ \hline
+            $\varepsilon_E$        & 0.05   & 0.10  & 0.09   \\ \hline
+            $\sigma_E$, Гпа        & 1      & 17    & 9      \\ \hline
+            \end{tabular}
+        \end{table}
+
+    \end{enumerate}
+
+    \section{Обсуждение результатов}
+    Достаточно сравнить полученные результаты с табличными значениями
+    модуля Юнга $E_{\mbox{\tiny{ст}}} = 180$ ГПа, $E_{\mbox{\tiny{лт}}}
+    = 95$ ГПа (источник \url{https://en.wikipedia.org/wiki/Young%27s_modulus}).
+    Полученные значения очень близки к табличным.
+
+    \section{Вывод}
+    В результате работы были исследованы упргуие деформации
+    твердых тел. Подтверждена теоретическая модель, предсказывающая
+    линейную зависимость. Получены значения модуля Юнга, практически
+    совпдадающие с табличными.
+
+\end{document}

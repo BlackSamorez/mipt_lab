@@ -1,0 +1,323 @@
+\documentclass[a4paper, 12pt]{article}
+
+\usepackage[warn]{mathtext}
+\usepackage{cmap}	
+\usepackage[T2A]{fontenc}			
+\usepackage[utf8]{inputenc}		
+\usepackage[english,russian]{babel}
+
+\usepackage{caption} 
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+
+\author{Богданов Александр Б05-001}
+\title{Работа 1.1.6}
+\date{08.10.20}
+
+\begin{document}
+	
+\maketitle
+
+\begin{center}
+\textbf{\Large Изучение электронного осциллографа}
+\end{center}
+
+\textbf{Цель работы:}
+ознакомление с устройством и работой осциллографа и изучение его основных характеристик.
+
+\textbf{Оборудование:}
+осциллограф, генераторы электрических сигналов, соединительные кабели.
+
+\textbf{1.Подготовка к работе.}
+
+\textbf{2.Наблюдение периодического сигнала от генератора и измерение его частоты.}
+
+\begin{center}
+	\begin{tabular}{*{7}{| c} |}
+		\hline
+		$f_{зг}$, Гц & T, дел & с/дел, $10^{-3}$ c & T, $10^{-3}$ c & f, Гц & $\delta$f, Гц & f -$f_{зг}$, Гц\\
+		\hline
+		1000 & 1	& 1 & 1 & 1000 & 20 & 0 \\
+		\hline
+		 430 & 1,2 & 2 & 2,4 & 417 &  7 & 10 \\
+		\hline
+		2160 & 0,9& 0,5 & 0,45 & 2222 & 48 & 40\\
+		\hline		
+		4600 & 1,1 & 0,2 & 0,22 & 4545 & 83 & 160\\
+		\hline
+	\end{tabular}
+\end{center}
+\begin{center}
+$\delta f=\varepsilon f \times f = \varepsilon T \times \frac{1}{T}  = \frac{\delta T}{T^2}\text{, где }\delta T = \frac{\text{цена деления}}{10} $
+\end{center}
+
+\textbf{3.Измерение амплитуды сигнала.}
+
+$\\$
+$f=1 кГц$
+
+$\\$
+$U_{min} = 6 мВ$
+
+$\\$
+$\delta U_{min} = \frac{5 \times 10^{-3} В}{2} = 2,5 \times 10^{-3}В \approx  3 мВ$
+
+$\\$
+$\varepsilon U_{min} = \frac{3мВ}{6мВ} = 50\%$
+
+$\\$
+$U_{max} = 10,5 В$
+
+$\\$
+$\delta U_{max} = \frac{5 В}{2} = 2,5 В$
+
+$\\$
+$\varepsilon U_{max} = \frac{2,5В}{10,5В} = 24\%$
+
+$\\$
+Т.е. $U_{min} = (6 \pm 3 ) мВ, U_{max} = (10,5 \pm 2,5) В$
+
+$\\$
+$\beta = 10\lg\frac{P_2}{P_1} = 20\lg\frac{U_{max}}{U_{min}} = 20\lg\frac{10,5В}{6\times 10^{-3}В}\approx 64,9дб$
+
+$\\$
+\textbf{4.Измерение амплитудно-частотной характеристики осциллографа.}
+
+\[k(f)=\frac{u(f)}{U_0}; 2u_0=20В, \frac{В}{дел} = 5\]
+\begin{center}
+	\begin{tabular}{*{6}{| c} |}
+		\hline
+		f, Гц & $\lg f$ & 2$U_{AC}$, дел & $K_{AC} $ &2$U_{DC}$, дел & $K_{DC}$\\
+		\hline
+		2 & 0,3	& 2 & 0,5 & 4 & 1  \\
+		\hline
+		5 & 0,7 & 3,2 & 0,8 & 4 &  1 \\
+		\hline
+		7 & 0,85 & 3,6 & 0,9 & 4 & 1 \\
+		\hline		
+		9 & 0,95 & 3,6 & 0,9 & 4 & 1 \\
+		\hline
+		10 & 1 & 3,8 & 0,95 & 4 & 1 \\
+		\hline
+		$10^2$ & 2 & 4 & 1 & 4 & 1 \\
+		\hline
+		$10^3$ & 3 & 4 & 1 & 4 & 1 \\
+		\hline
+		$10^5$ & 5 & 4 & 1 & 4 & 1 \\
+		\hline
+		$10^6$ & 6 & 4 & 1 & 4 & 1 \\
+		\hline
+		$2\times 10^6$ & 6,3  & 4 & 1 & 4 & 1 \\
+		\hline
+		$3\times10^6$& 6,5 & 4 & 1 & 4 & 1 \\
+		\hline
+		$6\times10^6$ & 6,8 & 4 & 1 & 4 & 1 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+
+
+\begin{figure}[h!]
+\centering	
+\includegraphics[scale=0.1] {KK.jpg}
+\end{figure}
+ 
+Различие возникает из-за того, что при закрытом входе у конденстора присутсвует реактивное сопротивление, которое зависит от частоты. 
+
+\textbf{5.Изучение влияния АЧХ на искажение сигнала.}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.1] {BB.jpg}
+\end{figure}
+При низких частотах при открытом входе меандр сглаживается и становится похож на синусоиду из-за того, что растет реактивное сопротивление конденсатора. При больших частотах искажений не наблюдалось.
+$\\$
+
+
+\textbf{6.Измерение разности фазово-частотных характеристик каналов осциллографа.}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.1] {FF.jpg}
+\end{figure}
+
+\[x(t)=A_x \sin (\omega t + \varphi_x); y(t)=A_y \sin (\omega t + \varphi_y)\]
+\[\text{Положим }  \omega t = - \varphi_x, \text{тогда } \sin |\varDelta| = |\frac{y_0}{A_y}|\]
+\[|\varDelta \varphi| = \arcsin |\frac{y_0}{A_y}|, \text{если элипс направлен вправо}\]
+\[|\varDelta \varphi| = \pi - \arcsin |\frac{y_0}{A_y}|, \text{если элипс направлен влево}\]
+\begin{center}
+	\begin{tabular}{*{6}{| c} |}
+		\hline
+		f, $10^6$Гц & $\lg f$ & $|2y_0|$, дел & $|2A_y|$, дел & $\arcsin |\frac{y_0}{A_y}|$, рад & $|\varDelta \varphi|, рад $\\
+		\hline
+		0,2 & 5,3 & 0,4 & 4 & 0,1 & 0,1 \\
+		\hline
+		0,4 & 5,6 & 0,8 & 4 & 0,2 & 0,2 \\
+		\hline
+		0,6 & 5,8 & 1,2 & 4 & 0,3 & 0,3 \\
+		\hline		
+		0,8 & 5,9 & 1,6 & 4 & 0,4 & 0,4 \\
+		\hline
+		1,0 & 6,0 & 2,0 & 4 & 0,5& 0,5 \\
+		\hline
+		1,2 & 6,1 & 2,4 & 4 & 0,6 & 0,6 \\
+		\hline
+		1,4 & 6,1 & 2,8 & 4 & 0,8 & 0,8 \\
+		\hline
+		1,6 & 6,2 & 3,2 & 4 & 0,9 & 0,9 \\
+		\hline
+		1,8 & 6,3 & 3,5 & 4 & 1,1 & 1,1 \\
+		\hline
+		2,0 & 6,3 & 3,6 & 4 & 1,1 & 1,1 \\
+		\hline
+		2,2 & 6,3 & 3,8 & 4 & 1,3 & 1,3 \\
+		\hline
+		2,4 & 6,4 & 4,0 & 4 & 1,6 & 1,6 \\
+		\hline
+		2,6 & 6,4 & 4,0 & 4 & 1,6 & 1,6 \\
+		\hline
+		2,8 & 6,4 & 4,0 & 4 & 1,6 & 1,6 \\
+		\hline
+		3,0 & 6,5 & 3,8 & 4 & 1,3 & 1,8 \\
+		\hline
+		3,2 & 6,5 & 3,6 & 4 & 1,1 &  2,0 \\
+		\hline
+		3,4 & 6,5 & 3,2 & 4 & 0,9 & 2,2\\
+		\hline
+		3,6 & 6,6 & 2,8 & 4 & 0,8 & 2,3 \\
+		\hline
+		3,8 & 6,6 & 2,4 & 4 & 0,6 & 2,5 \\
+		\hline
+		4,0 & 6,6 & 2,0 & 4 & 0,5 & 2,6 \\
+		\hline
+		4,2 & 6,6 & 1,8 & 4 & 0,5 & 2,6 \\
+		\hline
+		4,4 & 6,6 & 1,6 & 4 & 0,4 & 2,7 \\
+		\hline
+		4,6 & 6,7 & 1,2 & 4 & 0,3 & 2,8 \\
+		\hline
+		4,8 & 6,7 & 0,8 & 4 & 0,2 & 2,9 \\
+		\hline
+		5,0 & 6,7 & 0,6 & 4 & 0,2 & 2,9 \\
+		\hline
+		5,2 & 6,7 & 0,4 & 4 & 0,1 & 3,0 \\
+		\hline		
+	\end{tabular}
+\end{center}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.15] {QQ.jpg}
+\end{figure}
+
+$\\$
+$\\$
+$\\$
+$\\$
+$\\$
+$\\$
+
+\textbf{7. Наблюдение фигур Лиссажу и измерение частоты.}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.1] {PP.jpg}
+\end{figure}
+
+Проведем вертикальную и горизонтальную прямые так, чтобы они перескали фигуру не в узлах. Отношение количества пересечений по разным осям и есть отношение частот сигналов.
+
+
+\textbf{8. Измерение АЧХ интегрирующей и дифференцирующей RC-цепочек}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.1] {MM.jpg}
+\end{figure}
+
+\[a)K_a= \frac{1}{\sqrt{(\omega t)^2 + 1}} = \frac{1}{\sqrt{(2\pi f RC)^2 + 1}}\]
+
+\begin{center}
+	\begin{tabular}{*{4}{| c} |}
+		\hline
+		f, кГц & Вход, дел &  Выход, дел & $K_a$ \\
+		\hline
+		0,83 & 4 & 4,0 & 1,0  \\
+		\hline
+		2,4 & 4 & 3,6 & 0,9 \\
+		\hline
+		3,9 & 4 & 3,2 & 0,8 \\
+		\hline		
+		5,3 & 4 & 2,8 & 0,7  \\
+		\hline
+		7,3 & 4 & 2,4 & 0,6   \\
+		\hline
+		10 & 4 & 2,0 & 0,5  \\
+		\hline
+		12,5 & 4 & 1,6 & 0,4  \\
+		\hline
+		17,1& 4 & 1,2 & 0,3  \\
+		\hline
+		27 & 4 & 0,8 & 0,2 \\
+		\hline
+		52,7 & 4 & 0,4 & 0,1 \\
+        \hline
+        285 & 4 & 0,2 & 0,05 \\
+        \hline
+	\end{tabular}
+\end{center}
+
+\[a)K_b= \frac{1}{\sqrt{(\omega t)^{-2} + 1}} = \frac{1}{\sqrt{\frac{1}{(2\pi f RC)^2} + 1}}\]
+
+\begin{center}
+	\begin{tabular}{*{4}{| c} |}
+		\hline
+		f, кГц & Вход, дел &  Выход, дел & $K_b$ \\
+		\hline
+		1600 & 4 & 4,0 & 1,0  \\
+		\hline
+		16,7 & 4 & 3,6 & 0,9 \\
+		\hline
+		8,5 & 4 & 3,2 & 0,8 \\
+		\hline		
+		5,7 & 4 & 2,8 & 0,7  \\
+		\hline
+		4,4 & 4 & 2,4 & 0,6   \\
+		\hline
+		3,3 & 4 & 2,0 & 0,5  \\
+		\hline
+		2,3 & 4 & 1,6 & 0,4  \\
+		\hline
+		1,7  & 4 & 1,2 & 0,3  \\
+		\hline
+		1 & 4 & 0,8 & 0,2 \\
+		\hline
+		0,4 & 4 & 0,4 & 0,1 \\
+		\hline
+		0,2 & 4 & 0,3 & 0,08 \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.15] {M1.jpg}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.15] {M2.jpg}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.15] {M4.jpg}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering	
+	\includegraphics[scale=0.15] {M3.jpg}
+\end{figure}
+\centering
+Записи с работы и подпись
+\end{document}
