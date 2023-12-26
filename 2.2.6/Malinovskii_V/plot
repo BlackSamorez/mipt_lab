@@ -1,0 +1,10 @@
+f(x) = a * x + b
+g(x) = c * x + d
+set xlabel "1000К/T"
+set ylabel "ln(\eta / (1 Пa * с))"
+
+fit f(x) 'steel' u 1:2 via a, b
+fit g(x) 'glass' u 1:2 via c, d
+plot 'steel' u 1:2:3:4 w xyerrorbars title "steel", 'glass' u 1:2:3:4 w xyerrorbars title "glass", f(x) title "steel-fit", g(x) title "glass-fit"
+
+pause -1
