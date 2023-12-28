@@ -1,0 +1,15 @@
+\begin{center}
+\begin{tabular}{|c|c|c|}\hline
+$I\text{, \text{мА}}$&$k\text{, \text{мТл}/\text{А}}$&$\Delta k\text{, \text{мТл}/\text{А}}$\\\hline
+$0.26$&$-0.115$&$0.003$\\\hline
+$0.30$&$-0.133$&$0.003$\\\hline
+$0.40$&$-0.180$&$0.004$\\\hline
+$0.50$&$-0.227$&$0.005$\\\hline
+$0.60$&$-0.271$&$0.005$\\\hline
+$0.70$&$-0.31$&$0.01$\\\hline
+$0.80$&$-0.361$&$0.008$\\\hline
+$0.90$&$-0.408$&$0.008$\\\hline
+$1.00$&$-0.45$&$0.01$\\\hline
+\end{tabular}\\~\\
+$\Delta I=0.01\,\text{\text{мА}}$
+\end{center}
