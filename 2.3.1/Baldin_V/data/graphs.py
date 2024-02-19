@@ -22,12 +22,19 @@ def drawGraphs(data, files):
         raise 'mismatch of sizes'
     for i in range(data.__len__()):
         plt.figure(figsize=(7, 4))
-        x = data[i]['t']
-        y = [np.log(data[i]['P'][j]) for j in range(data[i].__len__())]
-        plt.scatter(x, y)
-        plt.grid()
         plt.xlabel('$t$, c')
-        plt.ylabel('$\ln P$')
+        x = data[i]['t']
+        z = np.linspace(0, max(x), num=1000)
+        if i % 2 == 0:
+            y = data[i]['P']
+            plt.ylabel('$P$, $10^{-4}$ torr')
+        else:
+            y = [np.log(data[i]['P'][j]) for j in range(data[i].__len__())]
+            plt.ylabel('$\ln P$')
+        plt.scatter(x, y)
+        [a, b] = np.polyfit(x, y, deg=1)
+        plt.plot(z, a * z + b, label=f'$y={a:.2f}x+{b:.2f}')
+        plt.grid()
         plt.legend()
         plt.savefig(files[i])
 
