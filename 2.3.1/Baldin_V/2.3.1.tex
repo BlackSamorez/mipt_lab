@@ -13,6 +13,7 @@
 \usepackage{setspace} 
 \usepackage{indentfirst}
 \usepackage{subfigure} 
+\usepackage{hyperref}
 
 \title{ 
 Лабораторная работа 2.3.1 \\
@@ -64,7 +65,8 @@
 	Для количества газа, протекающего через трубу длины $l$ и радиуса $r$ в
 	условиях высокого вакуума, справедлива формула: \begin{equation}
 	\frac{d(PV)}{dt} = \frac{4}{3}r^3\sqrt{\frac{2\pi RT}{\mu}}\cdot\frac{P_2 -
-	P_1}{l} \end{equation} Если труба соединяет установку с насосом, то
+	P_1}{l} \label{kap} \end{equation} Если труба соединяет установку с 
+    насосом, то
 	давлением $P_1$ у его конца можно пренебречь. Давление в сосуде $P = P_2$.
 	Тогда пропускная способность трубы: \begin{equation} C_\text{тр} =
 	\left(\frac{dV}{dt}\right)_\text{тр} = \frac{4r^3}{3l}\sqrt{\frac{2\pi
@@ -148,21 +150,51 @@
             \centering
             \input{data/data2.pgf}
             \caption{Откачка 1}
+            \label{graph1}
         \end{figure}
         \begin{figure}[H]
             \centering
             \input{data/data1.pgf}
             \caption{Ухудшение вакуума 1}
+            \label{graph2}
         \end{figure}
         \begin{figure}[H]
             \centering
             \input{data/data4.pgf}
             \caption{Откачка 2}
+            \label{graph3}
         \end{figure}
         \begin{figure}[H]
             \centering
             \input{data/data3.pgf}
             \caption{Ухудшение вакуума 2}
+            \label{graph4}
         \end{figure}
+        \item По графикам \ref{graph1} и \ref{graph3} 
+        $W = -\overline{k}V_{\text{вв}} = (207\pm 15)$ см$^3$/с.
+        \item По графикам \ref{graph2} и \ref{graph4}
+        $Q_{\text{н}} + Q_{\text{д}} = \overline{k}V_{\text{вв}} = 
+        (19{,}5\pm 0{,}1)\cdot 10^{-3}$ торр $\cdot$ см$^3$/с. Пренебрегая 
+        эффектом десорбации, считаем $Q_{\text{н}} 
+        \approx Q_{\text{н}} + Q_{\text{д}}$.
+        \item Теперь попробуем получить тот же результат для $W$ методом 
+        создания искусственной течи. Для этого откроем кран К6 и подождем, 
+        пока
+        давление установится.
+        Используя формулу \ref{kap} для расчета
+        скорости истечения газа, получаем:
+        $$ (P_{\text{уст}} - P_{\text{пр}})W = \frac{4}{3}r^3
+        \sqrt{\frac{2\pi RT}{\mu}}\frac{P_{\text{фв}}}{L}, $$
+        \item В результате создания искусственной течи получим 
+        $P_{\text{уст}} = (5{,}9\pm0{,}2)\cdot 10^{-5}$ торр,
+        откуда $W = (114 \pm 20)$ см$^3$/c.
     \end{enumerate}
+
+    \section{Выводы}
+    В данной работе мы получили вычислили параметры установки: объемы баллонов,
+    производительность насоса $W$, обратный ток газа через насос 
+    $Q_{\text{н}}$. Как можно видеть, при создании искусственной течи $W$ 
+    существенно изменяется. Это можно обосновать тем, что после открытия К6 
+    эффективная пропусная способность системы вместе с капилляром снижается,
+    что не позволяет достичь максимальной производительности насоса.
 \end{document}

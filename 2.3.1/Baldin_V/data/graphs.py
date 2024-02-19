@@ -28,10 +28,15 @@ def drawGraphs(data, files):
         if i % 2 == 0:
             y = data[i]['P']
             plt.ylabel('$P$, $10^{-4}$ torr')
+            plt.errorbar(x, y, xerr=0, yerr=0.1, fmt='k.')
         else:
-            y = [np.log(data[i]['P'][j]) for j in range(data[i].__len__())]
-            plt.ylabel('$\ln P$')
-        plt.scatter(x, y)
+            P_LIM = 0.56
+            y = [np.log(data[i]['P'][j] - P_LIM) 
+                 for j in range(data[i].__len__())]
+            plt.errorbar(x, y, xerr=0, yerr=[np.abs(0.2/(j - P_LIM)) 
+                                             for j in data[i]['P']], fmt='k.')
+            plt.ylabel('$\ln (P - P_{{lim}})$')
+        plt.scatter(x, y, s=5)
         [a, b] = np.polyfit(x, y, deg=1)
         plt.plot(z, a * z + b, label=f'$y={a:.2f}x+{b:.2f}')
         plt.grid()
