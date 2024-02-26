@@ -35,4 +35,4 @@ def drawFreq(dfs, files):
         plt.savefig(files[i])
 
 dfs = readFiles(['air.csv', 'co2.csv', 'temp.csv'])
-drawFreq(dfs[:1], ['air.pgf', 'co2.pgf'])
+drawFreq(dfs[:2], ['air.pgf', 'co2.pgf'])
