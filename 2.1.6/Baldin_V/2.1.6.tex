@@ -1,0 +1,60 @@
+\documentclass[12pt]{article} 
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb} 
+\usepackage[utf8]{inputenc} 
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english, russian]{babel} 
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{wrapfig}
+\usepackage{pgfplots} 
+\usepackage{setspace} 
+\usepackage{indentfirst}
+\usepackage{subfigure} 
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    urlcolor=magenta,
+}
+
+\graphicspath{{pictures}}
+
+\title{ 
+    Лабораторная работа 2.1.6 \\
+    <<Эффект Джоуля-Томсона>>
+}
+
+\author{Балдин Виктор, Б01-303}
+
+\begin{document}
+    \maketitle
+    \paragraph{Цель работы}
+    \begin{enumerate}
+        \item Определение изменения температуры углекислого газа при протекании
+        через малопроницаемую перегородку при разных начальных значениях.
+        \item Вычисление по результатам опытов коэффициентов Ван-дер-Ваальса 
+        $a$ и $b$.
+    \end{enumerate}
+    \paragraph{Оборудование} Трубка с пористой перегородкой; труба Дьюара;
+    термостат, термометры; дифференицальная термопара; микровольтметр; 
+    балластный баллон; манометр.
+
+    \section{Теоретическая часть}
+    Рассмотрим стационарный поток газа между произвольными сечениями трубки
+    и пористой перегородкой. Для 1 моля можно записать первое начало термодинамики:
+    \begin{equation}
+        A_1 - A_2 = \left(U_2 + \frac{\mu v_2^2}{2}\right) - \left(U_1 + \frac{\mu v_1^2}{2}\right),
+        \label{term1}
+    \end{equation}
+    где $A_1 = P_1V_1$ -- работа над газом, необходимая для внесения его в 
+    первое сечение трубки, $A_2 = P_2V_2$ -- работа газа по прохождению второго
+    сечения. Используя уравнение \ref{term1}, получим: 
+    \begin{equation}
+        H_1 - H_2 = (U_1 + P_1V_1) - (U_2 + P_2V_2) = \frac{1}{2}\mu (v_2^2 - v_1^2)
+    \end{equation}
+
+\end{document}
