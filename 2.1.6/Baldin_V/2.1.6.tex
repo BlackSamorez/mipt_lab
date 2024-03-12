@@ -73,6 +73,26 @@
     Таким образом, для углекислого газа оценка по формуле \ref{dT} дает 
     $\Delta T = 7 \cdot 10^{-4}$ К, что ничтожно мало по сравнению с измеряемым
     эффектом. 
+    \paragraph{Эффект Джоуля-Томсона} Для дифференциального эффекта Джоуля-Томсона
+    имеем:
+    \begin{equation}
+        \Delta T = \frac{\frac{2a}{RT} - b}{C_P}\Delta P,
+    \end{equation}
+    где $a$ и $b$ -- коэффициенты в уравнении Ван-дер-Ваальса:
+    \begin{equation}
+        \left(P + \frac{a}{V^2}\right)(V - b) = RT
+    \end{equation}
+    Таким образом, $a$ и $b$ можно получить из нескольких пар значений 
+    $(\mu, T)$, где 
+    \begin{equation}
+        \mu = \frac{\frac{2a}{RT} - b}{C_P}
+        \label{mu}
+    \end{equation}
+    Через коэффициенты Ван-дер-Ваальса находим температуру инверсии эффекта
+    Джоуля-Томсона:
+    \begin{equation}
+        T_i = \frac{2a}{Rb}
+    \end{equation}
 
     \section{Экспериментальная установка}
     \begin{figure}[h]
@@ -102,16 +122,83 @@
         \item Включим термостат.
         \item Включим вольтметр 7. Получим показания вольтметра при $\Delta P = 0$,
         используем ее для корректировки: $\mathscr{E} = U(P) - U(0)$.
-        \item Графики:
+        \item Проведем измерения при температурах $T_1 = 17$ \textdegree C,
+        $T_2 = 30$ \textdegree C, $T_3 = 40$ \textdegree C, $T_4 = 50$ \textdegree C.
+        Полученные данные представим в таблице \ref{tabT}.
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|c|c|}
+            \hline
+            $P$, A   & 4.0  & 3.5  & 3.0  & 2.5  & 2.0  & 1.5  \\ \hline
+            $U_1$, мкВ  & 136  & 105  & 85   & 64   & 44   & 29   \\ \hline
+            $U_2$, мкВ  & 107  & 89   & 70   & 49   & 34   & 18   \\ \hline
+            $U_3$, мкВ  & 101  & 80   & 63   & 43   & 27   & 15   \\ \hline
+            $U_4$, мкВ  & 94   & 73   & 56   & 41   & 26   & 13   \\ \hline
+            $\Delta T_1$, K  & 3.42 & 2.64 & 2.14 & 1.61 & 1.11 & 0.73 \\ \hline
+            $\sigma_{\Delta T_1}$, K & 0.06 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ \hline
+            $\Delta T_2$, K  & 2.58 & 2.14 & 1.69 & 1.18 & 0.82 & 0.43 \\ \hline
+            $\sigma_{\Delta T_2}$, K & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ \hline
+            $\Delta T_3$, K  & 2.38 & 1.89 & 1.49 & 1.01 & 0.64 & 0.35 \\ \hline
+            $\sigma_{\Delta T_3}$, K & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 & 0.05 \\ \hline
+            $\Delta T_4$, K  & 2.18 & 1.69 & 1.30 & 0.95 & 0.60 & 0.30 \\ \hline
+            $\sigma_{\Delta T_4}$, K & 0.05 & 0.04 & 0.04 & 0.04 & 0.04 & 0.04 \\ \hline
+            \end{tabular}
+            \caption{Значения $\Delta T(P)$ при разных температурах}
+            \label{tabT}
+        \end{table}
+        \item По результатам измерений построим графики $\Delta T(P)$ на рисунке
+        \ref{graphT}.
         \begin{figure}[h]
             \centering
             \input{data/T.pgf}
             \caption{Графики $\Delta T(\Delta P)$}
+            \label{graphT}
         \end{figure}
+
+        \item Найдем коэффициенты Джоуля-Томсона методом наименьших квадратов.
+        Погрешности рассчитаем по формулам:
+        \begin{eqnarray}
+            \sigma_{\mu}^{\text{случ}} = \sqrt{\frac{1}{N - 1}\left(\frac{\left<\Delta T^2\right>}{\left<P^2\right>}
+                - \mu^2\right)}, \\
+            \sigma_{\mu}^{\text{сист}} = \mu\sqrt{\varepsilon_{\Delta T}^2 + \varepsilon_{P}^2}, \\
+            \sigma_{\mu} = \sqrt{(\sigma_{\mu}^{\text{случ}})^2 + (\sigma_{\mu}^{\text{сист}})^2}
+        \end{eqnarray}
+        \item Результаты для разных температур представим в таблице \ref{tabmu} и
+        и на графике $\mu(T^{-1})$ (рис. \ref{graphmu}).
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|c|c|c|c|}
+            \hline
+            $T$, \textdegree C & $T^{-1}$, $10^{-3}$ K$^{-1}$ & $\mu$, $10^{-5}$ К/Па & $\sigma_\mu$, $10^{-5}$ К/Па & $\varepsilon_\mu$, \% \\ \hline
+            17     & 3.45                   & 1.06  & 0.05        & 5      \\ \hline
+            30     & 3.30                   & 0.87  & 0.04        & 5      \\ \hline
+            40     & 3.19                   & 0.82  & 0.04        & 5      \\ \hline
+            50     & 3.10                   & 0.74  & 0.03        & 5      \\ \hline
+            \end{tabular}
+            \caption{Значения $\mu(T)$}
+            \label{tabmu}
+        \end{table}
+        
         \begin{figure}[h]
             \centering
             \input{data/mu.pgf}
-            \caption{График $\mu(T)$}
+            \caption{График $\mu(T^{-1})$}
+            \label{graphmu}
         \end{figure}
+        
+        \item По графику \ref{graphmu} и с помощью формулы \ref{mu} найдем $a$ и $b$ 
+        (см. таблицу \ref{tabcoeffs}).
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|c|c|c|}
+            \hline
+              & $a$, $\frac{\text{Па}\cdot\text{м}^6}{\text{K}\cdot\text{моль}^2}$    & $b$, $10^{-4}$ $\frac{\text{м}^3}{\text{моль}}$    \\ \hline
+            Значение & 1.06 & 5.77 \\ \hline
+            $\sigma$ & 0.14 & 0.75 \\ \hline
+            $\varepsilon$, \% & 13   & 13   \\ \hline
+            \end{tabular}
+            \caption{Коэффициенты Ван-дер-Ваальса}
+            \label{tabcoeffs}
+        \end{table}
     \end{enumerate}
 \end{document}
