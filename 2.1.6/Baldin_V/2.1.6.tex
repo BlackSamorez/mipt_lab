@@ -14,6 +14,7 @@
 \usepackage{indentfirst}
 \usepackage{subfigure} 
 \usepackage{hyperref}
+\usepackage{mathrsfs}
 
 \hypersetup{
     colorlinks=true,
@@ -95,4 +96,22 @@
     дифференциальной термопарой медь -- константан.
 
     \section{Ход работы}
+    \begin{enumerate}
+        \item Убедимся, что термостат залит водой, все электрические приборы
+        заземлены.
+        \item Включим термостат.
+        \item Включим вольтметр 7. Получим показания вольтметра при $\Delta P = 0$,
+        используем ее для корректировки: $\mathscr{E} = U(P) - U(0)$.
+        \item Графики:
+        \begin{figure}[h]
+            \centering
+            \input{data/T.pgf}
+            \caption{Графики $\Delta T(\Delta P)$}
+        \end{figure}
+        \begin{figure}[h]
+            \centering
+            \input{data/mu.pgf}
+            \caption{График $\mu(T)$}
+        \end{figure}
+    \end{enumerate}
 \end{document}
