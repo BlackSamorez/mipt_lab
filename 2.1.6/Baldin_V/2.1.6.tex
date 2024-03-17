@@ -81,6 +81,7 @@
     где $a$ и $b$ -- коэффициенты в уравнении Ван-дер-Ваальса:
     \begin{equation}
         \left(P + \frac{a}{V^2}\right)(V - b) = RT
+        \label{vdv}
     \end{equation}
     Таким образом, $a$ и $b$ можно получить из нескольких пар значений 
     $(\mu, T)$, где 
@@ -92,8 +93,25 @@
     Джоуля-Томсона:
     \begin{equation}
         T_i = \frac{2a}{Rb}
+        \label{ti}
     \end{equation}
 
+    Критическая точка газа определяется условиями:
+    \begin{eqnarray}
+        \left(\frac{\partial P}{\partial V}\right)_T = 0, \ \left(\frac{\partial^2 P}{\partial V^2}\right)_T = 0,
+    \end{eqnarray}
+    откуда, используя уравнение \ref{vdv}, получим все параметры газа в
+    критической точке:
+    \begin{eqnarray}
+        V_{\text{к}} = 3b, \ T_{\text{к}} = \frac{8a}{27Rb}, \ P_{\text{к}} = \frac{a}{27b^2}
+        \label{tk}
+    \end{eqnarray}
+    
+    Связывая формулы \ref{ti} и \ref{tk}, получим:
+    \begin{equation}
+        T_i = \frac{27}{4}T_{\text{к}}
+    \end{equation}
+    
     \section{Экспериментальная установка}
     \begin{figure}[h]
         \centering
@@ -200,5 +218,8 @@
             \caption{Коэффициенты Ван-дер-Ваальса}
             \label{tabcoeffs}
         \end{table}
+        
+        \item По формуле \ref{ti} найдем температуру инверсии для углекислого
+        газа $T_i = (442\pm115)$ К, $\varepsilon_{T_i} = \varepsilon_a + \varepsilon_b = 26$\%.
     \end{enumerate}
 \end{document}
