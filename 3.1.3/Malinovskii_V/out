@@ -1,0 +1,11 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|}\hline
+$N$&$m\text{, г}$&$M\text{, дин см}$&$\Delta M\text{, дин см}$\\\hline
+$12.0$&$0.183$&$891$&$18$\\\hline
+$10.0$&$0.178$&$693$&$14$\\\hline
+$8.0$&$0.148$&$432$&$9$\\\hline
+$6.0$&$0.165$&$321$&$7$\\\hline
+$4.0$&$0.222$&$216$&$4$\\\hline
+\end{tabular}\\~\\
+$\Delta N=0\,\text{}, \Delta m=0.001\,\text{г}$
+\end{center}

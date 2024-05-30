@@ -1,0 +1,9 @@
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+$I_p\text{, мА}$&$B\text{, 1/В}$&$\Delta B\text{, 1/В}$&$T\text{, К*10^3}$&$\Delta T\text{, К*10^3}$\\\hline
+$5.0$&$0.111$&$0.012$&$52$&$6$\\\hline
+$3.0$&$0.136$&$0.012$&$43$&$4$\\\hline
+$1.5$&$0.14$&$0.01$&$40$&$3$\\\hline
+\end{tabular}\\~\\
+$\Delta I_p=0\,\text{мА}$
+\end{center}
