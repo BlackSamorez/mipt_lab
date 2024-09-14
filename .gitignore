@@ -6,9 +6,8 @@
 *.synctex.gz
 *.ipynb_checkpoints/
 .~lock*
-.idea
-*.fdb_latexmk
-*.fls
+.idea/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
