@@ -1,7 +1,7 @@
-PWD /home/victor56/mipt_lab_fork/mipt_lab/3.5.1/Baldin_V
+PWD /home/victor56/mipt_lab/3.5.1/Baldin_V
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/victor56/mipt_lab_fork/mipt_lab/3.5.1/Baldin_V/3.5.1.tex
+INPUT /home/victor56/mipt_lab/3.5.1/Baldin_V/3.5.1.tex
 OUTPUT 3.5.1.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
