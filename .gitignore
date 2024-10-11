@@ -3,6 +3,8 @@
 *.log
 *.gz
 *.DS_Store
+*.fdb_latexmk
+*.fls
 *.synctex.gz
 *.ipynb_checkpoints/
 .~lock*
