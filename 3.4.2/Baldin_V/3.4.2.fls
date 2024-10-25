@@ -145,6 +145,10 @@ INPUT ./1.png
 INPUT /home/victor56/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0800.tfm
 INPUT /home/victor56/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm0600.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
+INPUT ./Veys.png
+INPUT ./Veys.png
+INPUT ./Veys.png
+INPUT ./Veys.png
 INPUT 3.4.2.aux
 INPUT /home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm0800.600pk
 INPUT /home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk
@@ -152,8 +156,10 @@ INPUT /home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk
 INPUT /home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1440.600pk
 INPUT /home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm2074.600pk
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb

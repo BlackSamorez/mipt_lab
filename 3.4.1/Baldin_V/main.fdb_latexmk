@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1729862346.73993 "/home/victor56/mipt_lab/3.4.1/Baldin_V/main.tex" "main.pdf" "main" 1729862347.82537 0
+["pdflatex"] 1729862481.58031 "/home/victor56/mipt_lab/3.4.1/Baldin_V/main.tex" "main.pdf" "main" 1729862482.46441 0
   "/home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk" 1726135296.06319 29452 485728acae511ef2de3eabd713aa9cc7 ""
   "/home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1440.600pk" 1726135295.35652 36828 abfff2f988c58187fed003e6c24a8fc0 ""
   "/home/victor56/.texlive/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1728.600pk" 1726135294.73652 45148 7c9e4478ca4409b8c2f3b614ad2188de ""
@@ -16,7 +16,7 @@
   "/home/victor56/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1440.tfm" 1726135293.16986 3256 3daaa33cf35cf3f354983aa3214ecd7f ""
   "/home/victor56/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm1728.tfm" 1726135294.07319 3252 92d08740ce00199d6cf9ff4aaada81d1 ""
   "/home/victor56/.texlive/texmf-var/fonts/tfm/lh/lh-t2a/larm2074.tfm" 1726135291.96986 3264 03c2b9e4787a40d3b9c197c38b93b558 ""
-  "/home/victor56/mipt_lab/3.4.1/Baldin_V/main.tex" 1729862345.40504 9692 24cfc6e27c4c2ab2f30dcba4f4dcdf63 ""
+  "/home/victor56/mipt_lab/3.4.1/Baldin_V/main.tex" 1729862481.31504 9231 7658c93969c4b8fffcea3532e68255f3 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1727349926 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1727349926 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1727349926 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -83,8 +83,8 @@
   "1.png" 1729274442.00666 14626 3a5d77ac717930cae9042e4da914303b ""
   "al-cu.png" 1729274442.00666 27137 8f6255937b4eaa53b18bac1ac0abee63 ""
   "c.png" 1729274442.00666 24204 322c53b3d8af96bbefb89c41be64f7a9 ""
-  "main.aux" 1729862347.72837 132 d59914f928483ceabf5405032219390a "pdflatex"
-  "main.tex" 1729862345.40504 9692 24cfc6e27c4c2ab2f30dcba4f4dcdf63 ""
+  "main.aux" 1729862482.35837 132 d59914f928483ceabf5405032219390a "pdflatex"
+  "main.tex" 1729862481.31504 9231 7658c93969c4b8fffcea3532e68255f3 ""
   "plot.png" 1729274442.00999 22700 96cf11ec99db45623c7f8c3b5df0798f ""
   "setup.png" 1729274442.00999 20294 6538d18319c2ce5ab73ba86619520924 ""
   (generated)
