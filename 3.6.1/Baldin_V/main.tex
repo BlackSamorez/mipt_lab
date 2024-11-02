@@ -502,80 +502,80 @@ $a_{\text{бок}}/a_{\text{осн}}$ & 0.05 & 0.10 & 0.16 & 0.21 & 0.27 & 0.42 
 
 
 
-\subsection*{Е. Изучение фильтрации сигналов}
+% \subsection*{Е. Изучение фильтрации сигналов}
 
 
 
-\begin{enumerate}
+% \begin{enumerate}
 
 
-\item [\textbf{1.}] Подключаем $RC$ цепочку с сопротивлением $R = 3$ кОм и ёмкостью $C = 1000$ пФ. Получаем характерное время $\tau_{RC} = RC = 3 $ мкс. Подаём на вход $RC$-цепочки последовательность прямоугольных импульсов с периодом повторения $T \sim \tau_{RC}$.
+% \item [\textbf{1.}] Подключаем $RC$ цепочку с сопротивлением $R = 3$ кОм и ёмкостью $C = 1000$ пФ. Получаем характерное время $\tau_{RC} = RC = 3 $ мкс. Подаём на вход $RC$-цепочки последовательность прямоугольных импульсов с периодом повторения $T \sim \tau_{RC}$.
 
 
-\item [\textbf{2.}] Получаем на экране спектр (Преобразование Фурье) сигнала.
+% \item [\textbf{2.}] Получаем на экране спектр (Преобразование Фурье) сигнала.
 
-\begin{figure}[h]
-\begin{minipage}[h]{0.44\linewidth}
-\center{\includegraphics[width=1\linewidth]{E_sign_300k_510ns.jpg}} Сигнал при $\nu_0 = $ 300 кГц и $\tau$ = 510 нс.  \\
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.44\linewidth}
-\center{\includegraphics[width=1\linewidth]{E_spectr_300k_510ns.jpg}} \\  Спектр при $\nu_0 = $ 300 кГц и $\tau$ = 510 нс.
-\end{minipage}
-\vfill
-\begin{minipage}[h]{0.44\linewidth}
-\center{\includegraphics[width=1\linewidth]{E_sign_400k_510ns.jpg}} Сигнал при $\nu_0 = $ 400 кГц и $\tau$ = 510 нс.  \\
-\end{minipage}
-\hfill
-\begin{minipage}[h]{0.44\linewidth}
-\center{\includegraphics[width=1\linewidth]{E_spectr_400k_510ns.jpg}} Спектр при $\nu_0 = $ 400 кГц и $\tau$ = 510 нс. \\
-\end{minipage}
-\vfill
-\caption{}
-\label{ris:experimentalcorrelationsignals}
-\end{figure}
+% \begin{figure}[h]
+% \begin{minipage}[h]{0.44\linewidth}
+% \center{\includegraphics[width=1\linewidth]{E_sign_300k_510ns.jpg}} Сигнал при $\nu_0 = $ 300 кГц и $\tau$ = 510 нс.  \\
+% \end{minipage}
+% \hfill
+% \begin{minipage}[h]{0.44\linewidth}
+% \center{\includegraphics[width=1\linewidth]{E_spectr_300k_510ns.jpg}} \\  Спектр при $\nu_0 = $ 300 кГц и $\tau$ = 510 нс.
+% \end{minipage}
+% \vfill
+% \begin{minipage}[h]{0.44\linewidth}
+% \center{\includegraphics[width=1\linewidth]{E_sign_400k_510ns.jpg}} Сигнал при $\nu_0 = $ 400 кГц и $\tau$ = 510 нс.  \\
+% \end{minipage}
+% \hfill
+% \begin{minipage}[h]{0.44\linewidth}
+% \center{\includegraphics[width=1\linewidth]{E_spectr_400k_510ns.jpg}} Спектр при $\nu_0 = $ 400 кГц и $\tau$ = 510 нс. \\
+% \end{minipage}
+% \vfill
+% \caption{}
+% \label{ris:experimentalcorrelationsignals}
+% \end{figure}
 
-\item [\textbf{3.}]
-При фиксированной частоте $\nu = 300$ кГц проведем измерения отношений амплитуд соответствующих спектральных гармоник (для 7–9 гармоник) фильтрованного и исходного сигналов: $K_n = |a_n^\text{ф}|/|a_n^0|$. Для измерения
-амплитуд $a_n^0$ спектра исходного сигнала переподключим генератор к осциллографу напрямую.
+% \item [\textbf{3.}]
+% При фиксированной частоте $\nu = 300$ кГц проведем измерения отношений амплитуд соответствующих спектральных гармоник (для 7–9 гармоник) фильтрованного и исходного сигналов: $K_n = |a_n^\text{ф}|/|a_n^0|$. Для измерения
+% амплитуд $a_n^0$ спектра исходного сигнала переподключим генератор к осциллографу напрямую.
 
-\begin{table}[h!]
-    \centering
-    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-\hline
-$n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
-$a_n^\text{ф}$, мВ & 695.0 & 295.4 & 166.6 & 82.17 & 27.76 & 0 & 15.55 & 12.28 & 19.15 \\ \hline
-$a_n^0$, мВ & 4452 & 3768 & 3151 & 1991 & 891 & 0 & 647 & 897 & 1008 \\ \hline
-$K_n = |a_n^\text{ф}|/|a_n^0|$ & 0.156 & 0.078 & 0.0529 & 0.041 & 0.031 & ? & 0.024 &0.014 & 0.019 \\ \hline
-\end{tabular}
-    \caption{}
-    \label{table4}
-\end{table}
+% \begin{table}[h!]
+%     \centering
+%     \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+% \hline
+% $n$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 \\ \hline
+% $a_n^\text{ф}$, мВ & 695.0 & 295.4 & 166.6 & 82.17 & 27.76 & 0 & 15.55 & 12.28 & 19.15 \\ \hline
+% $a_n^0$, мВ & 4452 & 3768 & 3151 & 1991 & 891 & 0 & 647 & 897 & 1008 \\ \hline
+% $K_n = |a_n^\text{ф}|/|a_n^0|$ & 0.156 & 0.078 & 0.0529 & 0.041 & 0.031 & ? & 0.024 &0.014 & 0.019 \\ \hline
+% \end{tabular}
+%     \caption{}
+%     \label{table4}
+% \end{table}
 
-Построим график зависимости амплитудного коэффициента фильтрации $K(\nu)$ от частоты $\nu = n\nu_0$.
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=\textwidth]{K(nu).png}
-    \caption{Зависимость $K(\nu)$}
-    \label{grafic3}
-\end{figure}
-
-
-
-
-
-Проверим, что экспериментальная зависимость
-совпадает с теоретической $K = \frac{1}{\tau_\text{RC}} \int_0^t f(t')dt'$. Т.к. мы подаём последовательность прямоугольных импульсов, то права часть зависит линейно от $t$, т.е. обратно пропорционально $\nu$. График соответствует этой зависимости
+% Построим график зависимости амплитудного коэффициента фильтрации $K(\nu)$ от частоты $\nu = n\nu_0$.
+% \begin{figure}[h]
+%     \centering
+%     \includegraphics[width=\textwidth]{K(nu).png}
+%     \caption{Зависимость $K(\nu)$}
+%     \label{grafic3}
+% \end{figure}
 
 
 
 
 
+% Проверим, что экспериментальная зависимость
+% совпадает с теоретической $K = \frac{1}{\tau_\text{RC}} \int_0^t f(t')dt'$. Т.к. мы подаём последовательность прямоугольных импульсов, то права часть зависит линейно от $t$, т.е. обратно пропорционально $\nu$. График соответствует этой зависимости
 
 
 
 
-\end{enumerate}
+
+
+
+
+
+% \end{enumerate}
 
 
 
