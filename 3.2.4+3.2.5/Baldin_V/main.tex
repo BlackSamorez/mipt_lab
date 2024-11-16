@@ -13,8 +13,8 @@
 \usepackage{floatrow}
 \usepackage{setspace}
 \usepackage[headings]{fancyhdr}
-\usepackage[margin=10pt,font={small,stretch=0,9},labelfont=bf,labelsep=period,
-justification=centerlast]{caption}
+%\usepackage[margin=10pt,font={small,stretch=0,9},labelfont=bf,labelsep=period,
+%justification=centerlast]{caption}
 \usepackage{array,tabularx,tabulary,booktabs}
 \RequirePackage{multirow}
 \RequirePackage{multicol}
@@ -46,7 +46,7 @@ justification=centerlast]{caption}
 \usepackage[T2A]{fontenc}
 \usepackage{subfigure}
 \usepackage{fancyhdr}
-\usepackage{caption}
+%\usepackage{caption}
 
 \usepackage{tabularx}
 \usepackage{floatrow}
@@ -55,14 +55,12 @@ justification=centerlast]{caption}
 
 
 % Настройка отчёркиваний и нумерации
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\fancyhf{}
+% \usepackage{fancyhdr}
+% \pagestyle{fancy}
+% \fancyhf{}
 
-\fancyhead[L]{\nouppercase{\leftmark\hfill}}
-\fancyfoot[RO, RE]{Страница \thepage \ из \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
+% \renewcommand{\headrulewidth}{0.5pt}
+% \renewcommand{\footrulewidth}{0.5pt}
 
 \usepackage{titlesec}
 \titlelabel{\thetitle.\quad}
@@ -396,31 +394,31 @@ $$\sigma = \frac{1}{\sqrt{n}} \cdot \sqrt{\sum_i(x_i - x_\text{ср})^2}.$$
 \section{Вывод}
 \begin{enumerate}
     \item В ходе сравнения зависимости с теоретической была обнаружена некоторая небольшая ёмкость колебательной системы (исключая магазин ёмкостей), которая смещает зависимость $T(C)$ на некоторую константу, однако, достаточно мала, чтобы изменить характер зависимости (изменений установить не удалось).
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{T(C).png}
-    \caption{График зависимости периода собственных колебаний от корня из ёмкости системы}
-    \end{figure}
-    \item Удалось снять зависимость логарифмического декремента затухания от активного сопротивления цепи (погрешность составила порядка $5\%$), основной причиной такой погрешности послужили наводки, которые <<размазывали сигнал>>, особенно на пиках амплитуд, делая невозможным поддерживать точность на уровне точности приборов. График данной зависимости в линеализирующих координатах:
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{th(r).png}
-    \caption{График зависимости логарифмического коэффициента затухания от сопротивления цепи в линеализирующих координатах}
-    \end{figure}
-    \newpage
+    % \begin{figure}[h!]
+    % \centering
+    % \includegraphics[width=0.6\linewidth]{T(C).png}
+    % \caption{График зависимости периода собственных колебаний от корня из ёмкости системы}
+    % \end{figure}
+    \item Удалось снять зависимость логарифмического декремента затухания от активного сопротивления цепи (погрешность составила порядка $5\%$), основной причиной такой погрешности послужили наводки, которые <<размазывали сигнал>>, особенно на пиках амплитуд, делая невозможным поддерживать точность на уровне точности приборов.
+    % \begin{figure}[h!]
+    % \centering
+    % \includegraphics[width=0.6\linewidth]{th(r).png}
+    % \caption{График зависимости логарифмического коэффициента затухания от сопротивления цепи в линеализирующих координатах}
+    % \end{figure}
+    %\newpage
     \item Определили критическое сопротивление, при котором характер колебаний меняется на апериодический, тремя способами: теоретическим $R_\text{кр} = 8,16 \pm 0,07 \ \text{кОм},$ по наклону графика зависимости логарифмического декремента затухания от сопротивления цепи $R_\text{кр} = 6,2 \pm 0,4 \ \text{кОм},$ с помощью наблюдением за картиной колебаний $R_\text{кр} = 3 \ \text{кОм}.$ Как видим, значения довольно сильно отличаются, это связано с неточностью $R_\text{кр}$ по своей природе.
 
     \item Были сняты АЧХ и ФЧХ для вынужденных колебаний в цепи, проведена аппроксимация соответствующих теоретических зависимостей к экспериментальным точкам, функции из теории хорошо ложатся на точки, однако при этих измерениях возникли ещё большие наводки, сделали случайную погрешность кратно больше системной ($\sigma_\text{случ} \sim 7 \sigma_\text{сист}$), однако из-за аппроксимации они не имею большого вклада в итоговые результаты.
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{ACHH.png}
-    \caption{Амплитудно-частотная характеристика системы при $R = 140$ Ом -- красная кривая, при $R = 280$ Ом -- синяя кривая}
-    \end{figure}
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.6\linewidth]{FCHH.png}
-    \caption{Фазо-частная характеристика системы при $R = 140$ Ом -- красная кривая, при $R = 280$ Ом -- синяя кривая}
-    \end{figure}
+    % \begin{figure}[h!]
+    % \centering
+    % \includegraphics[width=0.6\linewidth]{ACHH.png}
+    % \caption{Амплитудно-частотная характеристика системы при $R = 140$ Ом -- красная кривая, при $R = 280$ Ом -- синяя кривая}
+    % \end{figure}
+    % \begin{figure}[h!]
+    % \centering
+    % \includegraphics[width=0.6\linewidth]{FCHH.png}
+    % \caption{Фазо-частная характеристика системы при $R = 140$ Ом -- красная кривая, при $R = 280$ Ом -- синяя кривая}
+    % \end{figure}
 
     \item Удалось определить логарифмические декременты затухания по установлению и затуханию вынужденных колебаний, получены значения декремента для двух значений сопротивления магазина:
 
@@ -431,27 +429,28 @@ $$\sigma = \frac{1}{\sqrt{n}} \cdot \sqrt{\sum_i(x_i - x_\text{ср})^2}.$$
     Как видим, значения хорошо совпадают в пределах погрешностей.
 
     \item Удалось понять, что такая картина биений получается из-за комбинации установления вынужденных колебаний, и только после этого классических биений. Однако на установке посылались цуги довольно большой длины, так что последняя часть данной картины была уже простыми затухающими колебаниями.
-    \begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.8\linewidth]{bien.jpg}
-    \caption{Картина наблюдаемых биений}
-    \end{figure}
+    % \begin{figure}[h!]
+    % \centering
+    % \includegraphics[width=0.8\linewidth]{bien.jpg}
+    % \caption{Картина наблюдаемых биений}
+    % \end{figure}
 
     \item Результаты измерения добротности вышеизложенными способами изложены в таблице:
 
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|c|}
+                \hline
+                $R$, Ом & $f(L, C, R)$ & $f(\theta)$ & Фаз. спираль & АЧХ & ФЧХ \\ \hline
+                443 & $9,20 \pm 0,10$ & $8,25 \pm 0,65$& $8,20 \pm 0,86$ & $8,33 \pm 0,69$ & $8,70\pm 0,76$ \\
+                & $(1\%)$ & $(8\%)$ & $(10\%)$ & $(8\%)$ & $(9\%)$  \\ \hline
+                1668 & $2,40 \pm 0,01$ & $ 2,46 \pm 0,06$ & $ 2,35 \pm 0,18$ & $2,33 \pm 0,16  $ & $2,41 \pm 0,17 $ \\
+                & $(0,3 \%)$ & $(2\%) $ & $(8\%) $ & $(7 \%) $ & $(7 \%) $ \\ \hline
+        \end{tabular}
+    \end{table}
 
-\begin{table}[h!]
-\begin{tabular}{|l|lll|llll|}
-\hline
-\rowcolor[HTML]{343434}
-\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} }                    & \multicolumn{3}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} Свободные колебания}}                                                                                                                                                                 & \multicolumn{4}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} Вынужденные колебания}}                                                                                                                                                                             \\ \cline{2-8}
-\rowcolor[HTML]{343434}
-\multirow{-2}{*}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} R}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} Теоретическое}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} \begin{tabular}[c]{@{}l@{}}Декремент \\ затухания\end{tabular}}} & {\color[HTML]{FFFFFF} Спираль} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} АЧХ}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} ФЧХ}} & \multicolumn{1}{l|}{\cellcolor[HTML]{343434}{\color[HTML]{FFFFFF} Нарастание}} & {\color[HTML]{FFFFFF} Затухание} \\ \hline
-\begin{tabular}[c]{@{}l@{}}$R_1 = \\ 169 \ \text{Ом}$\end{tabular} & \multicolumn{1}{l|}{$24,1 \pm 0,3$}                                               & \multicolumn{1}{l|}{$19 \pm 1$}                                                                                                    & $18 \pm 1$                     & \multicolumn{1}{l|}{$18,7 \pm 2$}                                       & \multicolumn{1}{l|}{$43 \pm 0,4$}                                       & \multicolumn{1}{l|}{$17,6 \pm 1$}                                              & $16,5 \pm 1$                     \\ \hline
-\begin{tabular}[c]{@{}l@{}}$R_2 = \\ 309 \ \text{Ом}$\end{tabular} & \multicolumn{1}{l|}{$ 13,2 \pm 0,1$}                                              & \multicolumn{1}{l|}{$10,8 \pm 0,6$}                                                                                                & $10,7 \pm 0,3$                 & \multicolumn{1}{l|}{$11,2 \pm 0,6$}                                     & \multicolumn{1}{l|}{-}                                                  & \multicolumn{1}{l|}{$10,9 \pm 1$}                               & $10,7 \pm 0,5$                   \\ \hline
-\end{tabular}
-\end{table}
     Как видим, почти все добротности хорошо совпали (максимальное различие $1 \sigma$), однако добротность ФЧХ сильно выбивается из результатов, вероятно, где-то потерян коэффициент, так же, как и ожидалось, теоретическая добротность выше практической, что связано с лишними сопротивлениями в реальной цепи.
+
 
 \end{enumerate}
 
