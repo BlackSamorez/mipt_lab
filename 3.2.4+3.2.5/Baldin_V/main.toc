@@ -1,0 +1,7 @@
+\babel@toc {russian}{}\relax 
+\contentsline {section}{\numberline {1}Введение}{3}{section.1}%
+\contentsline {section}{\numberline {2}Теоретическая часть}{4}{section.2}%
+\contentsline {section}{\numberline {3}Экспериментальная установка}{6}{section.3}%
+\contentsline {section}{\numberline {4}Практическая часть}{7}{section.4}%
+\contentsline {section}{\numberline {5}Погрешности измерений}{12}{section.5}%
+\contentsline {section}{\numberline {6}Вывод}{13}{section.6}%
