@@ -4,7 +4,7 @@
 from lab_cheat import *
 from lab_cheat.advanced_functions import curve_fit
 # Библиотеку можно найти по ссылке: https://github.com/Vistog/lab_cheat
-c, tables = shredder(read_data("C:/Users/McTuT/OneDrive/Рабочий стол/Lab 3.2.5 ProgramLikeEdition.xlsx"))
+c, tables = shredder(read_data("data.xlsx"))
 
 tab = []
 for i in tables:
