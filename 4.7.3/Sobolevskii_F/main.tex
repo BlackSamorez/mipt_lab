@@ -1,0 +1,54 @@
+\documentclass{article}
+%-------Header------------------------
+%Math, Pics, links, Tables
+%--------------------------------------
+\usepackage{amsmath}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage[table,xcdraw]{xcolor}
+
+\usepackage{svg}
+%--------------------------------------
+%Geometry
+%--------------------------------------
+\usepackage[
+    left=10mm,
+    right=10mm,
+    top=20mm,
+    bottom=20mm,
+]{geometry}
+%--------------------------------------
+%Russian-specific packages
+%--------------------------------------
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+%--------------------------------------
+%Plus-minus
+%--------------------------------------
+\usepackage[
+  separate-uncertainty = true,
+  multi-part-units = repeat
+]{siunitx}
+%--------------------------------------
+%Parting
+%--------------------------------------
+\setlength{\parindent}{1mm}
+\setlength{\parskip}{2mm}
+\setcounter{secnumdepth}{1} % only chapter and sections will be numbered
+%--------------------------------------%--------------------------------------
+
+
+\begin{document}
+%-------Title--------------------------
+\title{Лабораторная работа 4.7.3
+\par{<<Поляризация>>}}
+\author{Старокожко Иван, Соболевский Федор \\ Б05-111}
+\date{17/02/2023}
+\maketitle
+
+\input{text.tex}
+
+\end{document}
