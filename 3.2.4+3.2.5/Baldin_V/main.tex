@@ -62,63 +62,14 @@
 % \renewcommand{\headrulewidth}{0.5pt}
 % \renewcommand{\footrulewidth}{0.5pt}
 
-\usepackage{titlesec}
-\titlelabel{\thetitle.\quad}
+\title{Лабораторная работа №3.2.5\\
+       <<Свободные и вынужденные колебания в электрическом контуре>>}
+\author{Балдин Виктор}
 
-\pgfplotsset{compat=1.18}
 \begin{document}
 
-\thispagestyle{empty}
-\begin{center}
-	\textit{Федеральное государственное автономное образовательное\\ учреждение высшего образования }
+\maketitle
 
-	\vspace{0.5ex}
-
-	\textbf{«Московский физико-технический институт\\ (национальный исследовательский университет)»}
-\end{center}
-
-\vspace{10ex}
-\begin{figure}[!h]
-  \begin{center}
-    \includegraphics[width = 0.8\textwidth]{MIPT.png}
-  \end{center}
-\end{figure}
-
-\begin{center}
-
-	\textbf{Лабораторная работа №3.2.5}
-
-	\vspace{1ex}
-
-	по курсу общей физики
-
-	на тему:
-
-	\textbf{\textit{<<Свободные и вынужденные
-колебания в электрическом контуре>>}}
-
-	\vspace{20ex}
-
-	\begin{flushright}
-		\noindent
-		\textit{Работу выполнил:}\\
-		\textit{Балдин Виктор \\(группа Б01-303)}
-	\end{flushright}
-	\vfill
-	Долгопрудный \\ \today
-	\setcounter{page}{1}
-\end{center}
-\newpage
-
-
-\setcounter{page}{2} %это нумерация страницы
-\let \savenumberline \numberline
-\def \numberline#1{\savenumberline{#1.}}
-\tableofcontents
-\bigskip
-
-% Конец шаблона
-\newpage
 \section{Введение}
 \textit{Свободные колебания} -- колебания, происходящие за счёт энергии заранее запасённой в системе (в процессе колебаний энергия в систему не попадает). Обозначим как $\gamma = \frac{R}{2L}$ -- коэффициент затухания, тогда возникает классификация <<режимов>> колебаний в контуре:
 \begin{enumerate}
@@ -260,6 +211,21 @@ $$a = U_0 \text{cos} \varphi_0, \qquad b = - U_0 \text{sin} \varphi_0.$$
 \end{figure}
 
 Как видим, прямая практических измерений лежит выше теоретической, это связано в первую очередь с неидеальностью контура, из-за этого период возрастает, так же с тем, что реальная ёмкость цепи несколько больше, чем ёмкость конденсатора.
+
+\begin{table}[h]
+        \centering
+        \begin{tabular}{|c|c|c|c|c|}
+                \hline
+                $R_{\text{вн}}$, Ом & $R = R_{\text{вн}} + R_L$, Ом& $\theta = \ln \frac{U_k}{U_{k+1}}$ & $Q = \frac{\pi}{\theta}$ & $\sigma_{Q}$ \\ \hline
+                  408 & 443 & 0,38 & 8,25 & 0,65 \\ \hline
+                653,2 & 688,2 & 0,54 & 5,81 & 0,32  \\ \hline
+                898,2 & 933,2 & 0,73 & 4,3 & 0,18 \\ \hline
+                1143,1 & 1178,1 & 0,92 & 3,42 & 0,11 \\ \hline
+                1633 & 1668 & 1,27 & 2,46 & 0,06 \\ \hline
+        \end{tabular}
+        \caption{Декремент затухания свободных колебаний}
+\end{table}
+
 
 Снимем зависимость амплитуды от количества колебаний при разных сопротивлениях контура (данные см. в приложении п. 2). По каждому измерению рассчитаем логарифмический декремент затухания:
 \begin{equation}
