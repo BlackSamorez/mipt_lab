@@ -20,6 +20,7 @@ def plot_linear(x, y, xerr, yerr, color='blue', label='Аппроксимаци�
   [a, b] = np.polyfit(x, y, deg=1)
   x = np.linspace(xmin, xmax, 1000)
   plt.plot(x, a * x + b, color=color, label=label)
+  return [a, b]
 
 def fit(f, x, y):
   """Аргументы:
