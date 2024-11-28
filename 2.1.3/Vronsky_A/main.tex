@@ -1,0 +1,294 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[a4paper,top=1.3cm,bottom=2cm,left=1.5cm,right=1.5cm,marginparwidth=0.75cm]{geometry}
+%%% Работа с русским языком
+\usepackage{cmap}					% поиск в PDF
+\usepackage{mathtext}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{latexsym}
+\usepackage{physics}
+\usepackage{multirow}
+\usepackage{longtable}
+
+%%% Нормальное размещение таблиц (писать [H] в окружении таблицы)
+\usepackage{float}
+\restylefloat{table}
+
+\usepackage{graphicx}
+\graphicspath{ {./figures}{./processor_output}}
+
+\usepackage{wrapfig}
+\usepackage{tabularx}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+\def\mathdefault#1{#1}
+\everymath=\expandafter{\the\everymath\displaystyle}
+
+%%% Дополнительная работа с математикой
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+
+%% Номера формул
+\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+
+%% Шрифты
+\usepackage{euscript}	 % Шрифт Евклид
+\usepackage{mathrsfs} % Красивый матшрифт
+
+%% Свои команды
+\DeclareMathOperator{\sgn}{\mathop{sgn}}
+
+%% Перенос знаков в формулах (по Львовскому)
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+	{\hbox{$\mathsurround=0pt #1$}}{}}
+
+\date{\today}
+
+\usepackage{textcomp}
+\usepackage{gensymb}
+
+\usepackage{indentfirst} % Русская традиция первого отступа
+\usepackage[inline]{enumitem} % работа со списками
+
+%% Импорт csv таблиц
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{pgf}
+\usepackage{pgfplotstable}
+\pgfplotstableset{col sep=comma, search path=./processor_output}
+\pgfkeys{/pgf/number format/1000 sep={}}
+\newcolumntype{g}{>{\columncolor[gray]{.8}}c}
+
+\usepackage{datatool}
+\DTLloaddb{temperatures}{processor_output/temperatures.csv}
+
+% проверяет наличие аргумента в подстроке
+\usepackage{xstring}
+\newcommand\ifin[2]{\IfSubStr{,#2,}{,#1,}}
+
+\newcommand*{\nth}[2]{%
+  \foreach \x [count=\k] in #1{%
+        \ifnum\k=#2{%
+          \x
+        }\fi%
+    }
+}
+
+\begin{document}
+
+\begin{titlepage}
+	\begin{center}
+		{\large МОСКОВСКИЙ ФИЗИКО-ТЕХНИЧЕСКИЙ ИНСТИТУТ (НАЦИОНАЛЬНЫЙ ИССЛЕДОВАТЕЛЬСКИЙ УНИВЕРСИТЕТ)}
+	\end{center}
+	\begin{center}
+		{\large Физтех-школа прикладной математики и информатики}
+	\end{center}
+
+
+	\vspace{4.5cm}
+	{\huge
+		\begin{center}
+			{\bf Отчёт о выполнении лабораторной работы 2.1.3}\\
+      Определение $ C_p/C_v $ по скорости звука в газе
+		\end{center}
+	}
+	\vspace{2cm}
+	\begin{flushright}
+		{\LARGE Автор:\\ Вронский Александр Сергеевич \\
+			\vspace{0.2cm}
+			Б05-226}
+	\end{flushright}
+	\vspace{8cm}
+	\begin{center}
+		Долгопрудный\\
+		\today
+	\end{center}
+\end{titlepage}
+
+\section{Введение}
+
+\textbf{Цель работы:}
+\begin{enumerate*}[label=\arabic*)]
+  \item измерение частоты колебаний и длины волны при резонансе звуковых колебаний в газе, заполняющем трубу;
+  \item определение показателя адиабаты с помощью уравнения состояния идеального газа.
+\end{enumerate*}
+
+\textbf{В работе используются:} звуковой генератор ГЗ; электронный осциллограф ЭО; микрофон; телефон; теплоизолированная труба, обогреваемая водой из термостата.
+
+\section{Теоретические сведения}
+
+Скорость распространения звуковой волны в газах зависит от показателя адиабаты $ \gamma $. На измерении скорости звука основан один из наиболее точных методов определения показателя адиабаты.
+
+Скорость звука в газах определяется формулой:
+\begin{equation}\label{speed_of_sound}
+  c = \sqrt{\gamma \frac{RT}{\mu}},
+\end{equation}
+где $ R $ -- газовая постоянная, $ T $ -- температура газа, а $ \mu $ -- его молярная масса. Преобразуя эту формулу, найдем
+\begin{equation}\label{gamma}
+  \boxed{\gamma = \frac{\mu}{RT}c^2}
+\end{equation}
+
+Таким образом, для определения показателя адиабаты достаточно измерить температуру газа и скорость распространения звука (молярная масса газа предполагается известной).
+
+Звуковая волна, распространяющаяся вдоль трубы, испытывает многократные отражения от торцов. Если длина трубы $ L $ равна целому числу полуволн, то есть когда \[ L= \frac{n\lambda}{2}, \] где $ \lambda $ -- длина волны звука в трубе, а $ n $ -- любое целое число. Если это условие выполнено, то волна, отраженная от торца трубы, вернувшаяся к ее началу и вновь отраженная, совпадает по фазе с падающей. Совпадающие по фазе волны усиливают друг друга. Амплитуда звуковых колебаний при этом резко возрастает -- наступает резонанс.
+
+Скорость звука $ c $ связана с его частотой $ f $ и длиной волны $ \lambda $ соотношением
+\begin{equation}\label{lambda_f}
+  c=\lambda f.
+\end{equation}
+
+Будем плавно изменять частоту $ f $ звукового генератора, а следовательно, и длину звуковой волны $ \lambda $. Для последовательных резонансов получим:
+\begin{equation}\label{subsequent_resonance}
+  L = \frac{\lambda_1}{2}n = \frac{\lambda_2}{2}(n + 1) = \dots = \frac{\lambda_{k + 1}}{2}(n + k).
+\end{equation}
+Из \eqref{lambda_f} и \eqref{subsequent_resonance} имеем
+
+\[ f_1 = \frac{c}{\lambda_1} = \frac{c}{2L}n, \quad f_2 = \frac{c}{\lambda_2} = \frac{c}{2L}(n + 1) = f_1 + \frac{c}{2L}, \;\dots, \]
+\begin{equation}\label{freq_coef}
+  f_{k+1} = \frac{c}{\lambda_{k+1}} = \frac{c}{2L}(n + k) = f_1 + \frac{c}{2L}k
+\end{equation}
+
+Таким образом, чтобы определить скорость звука, достаточно найти угловой коэффициент графика зависимости частоты от номера резонанса.
+
+\section{Экспериментальная установка}
+
+В установке (рис. \ref{fig:apparatus}) звуковые колебания в трубе возбуждаются телефоном Т и улавливаются микрофоном М. Мембрана телефона приводится в движение переменным током звуковой частоты; в качестве источника переменной ЭДС используется звуковой генератор ГЗ. Возникающий в микрофоне сигнал наблюдается на осциллографе ЭО.
+
+Микрофон и телефон присоединены к установке через тонкие резиновые трубки. Такая связь достаточна для возбуждения и обнаружения звуковых колебаний в трубе и в то же время мало возмущает эти колебания: при расчетах оба торца трубы можно считать неподвижными, а влиянием соединительных отверстий пренебречь.
+
+Установка содержит теплоизолированную трубу постоянной длины. Воздух в трубе нагревается водой из термостата. Температура газа принимается равной температуре омывающей трубу воды. Таким образом, на установке можно измерить зависимость скорости звука от температуры.
+
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=12cm]{apparatus.jpg}
+  \end{center}
+  \caption{Установка для изучения зависимости скорости звука от температуры}
+  \label{fig:apparatus}
+\end{figure}
+
+\section{Ход работы}
+
+В установке была использована труба длины $ L = 800 \pm 1 $ мм. При фиксированной температуре плавно будем плавно увеличивать частоту звукового сигнала, начиная с $ \approx 400 $ Гц. На экране осциллографа резонанс будет выражен многократным увеличением амплитуды. Запишем частоты $ \hat{f}_k $ последовательных резонансов, а также ``приведенные'' частоты $ f_k = \hat{f}_k - f_1 $. Результаты измерений приведены в таблице \ref{tab:freq}. Погрешность измерений частоты $ \hat{f}_K $ составила $ \pm 1 $ Гц, поэтому погрешность $ f_k $ порядка $ \pm 2 $ Гц.
+
+% получить значения температур
+\def\mylist{}
+\DTLforeach{temperatures}{\temp=temperature}{
+  \ifdefempty{\mylist}
+  {
+    \eappto\mylist{\temp}
+  }
+  {
+    \eappto\mylist{,\temp}%
+  }
+}
+
+\begin{table}[H]
+  \centering
+  \pgfplotstabletypeset[
+    every head row/.style={
+      before row={
+        \toprule \textbf{T, \textcelsius} &
+        \multicolumn{2}{g}{\nth{\mylist}{1}} &
+        \multicolumn{2}{c}{\nth{\mylist}{2}} &
+        \multicolumn{2}{g}{\nth{\mylist}{3}} &
+        \multicolumn{2}{c}{\nth{\mylist}{4}} &
+        \multicolumn{2}{g}{\nth{\mylist}{5}} \\
+      },
+      after row=\midrule
+    },
+    every last row/.style={after row=\bottomrule},
+    display columns/0/.style={column name=\textbf{k}},
+    every column/.code={
+      \ifin{\pgfplotstablecol}{2,4,6,8,10}
+        {\pgfkeysalso{column name={$f_k$, Гц}}}{}
+      \ifin{\pgfplotstablecol}{1,3,5,7,9}
+        {\pgfkeysalso{column name={$\hat{f}_k$, Гц}}}{}
+      \ifin{\pgfplotstablecol}{1,2,5,6,9,10}
+        {\pgfkeysalso{column type=g}}{}
+    }
+  ]{measurements_table.csv}
+  \caption{Частоты резонанса в воздухе при разных температурах}
+  \label{tab:freq}
+\end{table}
+
+По полученным данным построены графики зависимости частоты резонанса от его номера (рис. \ref{fig:frequencies}).
+
+\begin{figure}[h]
+  \centering
+  \input{processor_output/frequencies.pgf}
+  \caption{График зависимости частоты резонанса от его номера}
+  \label{fig:frequencies}
+\end{figure}
+
+Все аппроксимации были проведены с помощью линейной регрессии со среднеквадратичной функцией потерь. Аппроксимируя зависимость частоты резонанса от его номера функцией и используя формулу \eqref{freq_coef}, вычисляется скорость звука $ c $. Соответствующая зависимость вычисленной скорости звука от температуры приведена в таблице \ref{tab:speed_of_sound} и на графике рис. \ref{fig:speed_of_sound}. После вычисления краевых значений наклона найдена погрешность скорости звука порядка $ \pm 0.95 $ м/с.
+
+\begin{table}[H]
+  \centering
+  \pgfplotstabletypeset[
+    header=has colnames,
+    every head row/.style={
+      before row=\toprule,
+      after row=\midrule
+    },
+    every last row/.style={after row=\bottomrule},
+    every column/.style={string type},
+    every row 0 column 0/.style={postproc cell content/.style={@cell content=\textbf{c, м/с}}},
+    display columns/0/.style={column name={\textbf{T, \textcelsius}}}
+  ]{speed_of_sound.csv}
+  \caption{Скорость звука в воздухе при разных температурах}
+  \label{tab:speed_of_sound}
+\end{table}
+
+\begin{figure}[h]
+  \centering
+  \input{processor_output/speed_of_sound.pgf}
+  \caption{График зависимости скорости звука в воздухе от температуры}
+  \label{fig:speed_of_sound}
+\end{figure}
+
+Заметим, что аппроксимируя полученную зависимость скорости звука от температуры, получим, что при $ T = 20 $ \textcelsius{} предсказанное значение скорости звука равно $ c = 342.2 \pm 0.95 $ м/с, что находится в пределах погрешности в размере $ 0.26 \% $ или $ 0.9 $ м/с от табличного значения $ c = 343.1 $ \textcelsius.
+
+\begin{table}[H]
+  \centering
+  \pgfplotstabletypeset[
+    header=has colnames,
+    every head row/.style={
+      before row=\toprule,
+      after row=\midrule
+    },
+    every last row/.style={after row=\bottomrule},
+    every column/.style={string type},
+    every row 0 column 0/.style={
+      postproc cell content/.style={
+        @cell content=$\boldsymbol{\gamma}$
+      }
+    },
+    display columns/0/.style={column name={\textbf{T, \textcelsius}}},
+    columns/mean/.style={column name=\textbf{Среднее}},
+    columns/std/.style={
+      column name=\textbf{Станд. откл.},
+      postproc cell content/.style={
+        @cell content/.add={$\pm$}{}
+      }
+    },
+  ]{gamma.csv}
+  \caption{Значения показателя адиабаты $ \gamma $ при разных значениях температуры}
+  \label{tab:gamma}
+\end{table}
+
+По формуле \eqref{gamma} рассчитывается $ \gamma $. Результаты вычислений приведены в таблице \ref{tab:gamma}. Кроме статистической погрешности в размере $ \pm 0.002$, также рассчитана погрешность, вытекающая из погрешностей измерения $ \Delta c =  \pm 0.95 $ м/с и $ \Delta T  \pm 0.2 $ \textcelsius{} (погрешность внутреннего термометра термостата) в размере $ \Delta \gamma = 0.008 $. В итоге, рассчитанное значение показателя адиабаты:
+\begin{equation}
+  \boxed{\gamma = 1.391 \pm 0.01}
+\end{equation}
+
+Найденное значение находится в пределах погрешности на уровне теоретически предказанного значения $ \gamma = 1.4 $.
+
+\section{Вывод}
+Способ измерения показателя адиабаты по скорости звука в воздухе показал хорошую точность. В ходе обработки данных также была рассчитана зависимость скорости звука от температуры.
+
+\end{document}
