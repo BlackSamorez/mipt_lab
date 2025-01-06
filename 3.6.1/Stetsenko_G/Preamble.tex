@@ -1,0 +1,82 @@
+% !TeX encoding = UTF-8
+
+\usepackage{geometry}
+\usepackage{amsmath, amsfonts, amssymb, amsthm} % стандартный набор AMS-пакетов для математ. текстов
+\usepackage{mathtext}
+\usepackage[utf8]{inputenc} % кодировка utf8
+\usepackage[russian]{babel} % русский язык
+\usepackage[pdftex,dvipsnames]{xcolor} % работа с цветами
+\usepackage[pdftex]{graphicx} % графика (картинки)
+\usepackage{tikz,pgfplots} % рисунки
+\usepackage{indentfirst}
+%\usepackage[labelfont=bf,labelsep=endash,skip=3pt]{caption} % подпись картинок
+% \usepackage{fancyhdr,pageslts} % настройка колонтитулов
+\usepackage{enumitem} % работа со списками
+\usepackage{floatrow,multicol,multirow,longtable,hhline} % работа с таблицами
+\usepackage{float,wrapfig} % плавающие объекты
+\usepackage{tcolorbox} % рамка вокруг текста
+%\usepackage[calc]{datetime2} % дата
+\usepackage{bm} % жирное начертание в формулах
+\usepackage{physics} % физический пакет
+\DeclareMathAlphabet\mathbfcal{OMS}{cmsy}{b}{n}
+\usepackage{pgfornament} % красивые рюшечки и вензеля
+\usepackage{mdframed}
+\usepackage{derivative}
+\usepackage{mathrsfs} %EDS
+\usepackage{soul} % strikethorugh
+%\usepackage{boondox-cal}
+
+% ----------------------------------------
+% Настройка шрифта
+
+% Просто закооментируйте следующую строчку, если не работает. Будет другой шрифт, правда :(
+% \usepackage{pscyr}
+
+% ----------------------------------------
+% Стилевые настройки
+
+\usepackage{boldline} % жирная линия после таблиц (чтобы не было ошибок, этот пакет должен подключаться именно тут!)
+\floatsetup[table]{style=Plaintop,floatrowsep=qquad} % настройка оформления таблиц
+\setlist[enumerate,itemize]{leftmargin=5mm,itemindent=10mm,itemsep=0mm,
+listparindent=0em,labelsep=2mm,topsep=2mm,labelwidth=4mm} % настройки списков
+
+\setlength{\columnsep}{0.5cm} % расстояние между колонками
+\setlength{\parskip}{1pt} % расстояние до текста от колонтитула
+
+%\usepackage{titlesec} % управление оформлением section
+%\renewcommand{\thesection}{\Roman{section}}
+%\titleformat{\section}[block]{\bfseries\large}{\thesection.}{5pt}{}
+
+% Настройка совместимости
+\pgfplotsset{compat=1.18}
+
+% ----------------------------------------
+% Настройки полей
+\geometry{
+	left=10mm,
+	top=10mm,
+	right=10mm,
+	bottom=15mm,
+	marginparsep=0mm,
+	marginparwidth=0mm,
+	headheight=0pt,
+	headsep=0pt,
+	footskip=20pt}
+
+% ----------------------------------------
+% Настройки колонтитулов и нумерации страниц
+\pagenumbering{arabic}
+
+
+
+\newcounter{ntask}
+\setcounter{ntask}{0}
+
+
+\newcommand{\arsh}{\mathrm{arsh} \,\,}
+\newcommand{\arch}{\mathrm{arch} \,\,}
+\newcommand{\arth}{\mathrm{arth} \,\,}
+\newcommand{\arcth}{\mathrm{arcth} \,\,}
+\renewcommand{\Re}{\operatorname{Re} \,}
+\newcommand{\EDS}{\mathscr{E}}
+\newcommand{\diffract}[1]{\frac{\mathrm{d}#1}{\mathrm{d}t}}
