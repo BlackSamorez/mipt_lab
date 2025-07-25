@@ -1,52 +1,76 @@
+#!/usr/bin/env -S uv run --script
+#
+# /// script
+# requires-python = ">=3.10"
+# dependencies = []
+# ///
+
+
 import os
-import logging
 import sys
 
+
 def get_subdirectories(path, ignore_dotfiles=False):
-    return [_ for _ in os.listdir(path) if os.path.isdir(os.path.join(path, _))
-            and not (ignore_dotfiles and _.startswith('.'))]
+    output = [filename for filename in os.listdir(path) if os.path.isdir(os.path.join(path, filename))]
+
+    if ignore_dotfiles:
+        output = [filename for filename in output if not filename.startswith('.')]
+
+    return output
+
+
+def exit(reason):
+    print(f'Failed integrity check: {reason}')
+    sys.exit(1)
+
 
 def main():
-    logging.getLogger().setLevel(logging.INFO)
     root_dir = os.path.dirname(os.path.realpath(__file__))
-    for task_rel_dir in get_subdirectories(root_dir, ignore_dotfiles=True):
-        if task_rel_dir == 'labs_guide':
+    for task in get_subdirectories(root_dir, ignore_dotfiles=True):
+        if task == 'labs_guide':
             continue
 
-        task_full_dir = os.path.join(root_dir, task_rel_dir)
-        task_subdirectories = get_subdirectories(task_full_dir)
-        if 'pdf' not in task_subdirectories:
-            logging.error(f'pdf folder is not present in {task_rel_dir}')
-            sys.exit(1)
+        task_content = get_subdirectories(os.path.join(root_dir, task))
+        if 'pdf' not in task_content:
+            exit(f'pdf folder is not present in {task}')
 
-        src_names = set(task_subdirectories)
-        src_names.remove('pdf')
+        authors = set(task_content)
+        authors.remove('pdf')
 
-        for src_name in src_names:
-            if ' ' in src_name:
-                logging.error(f'"{os.path.join(task_rel_dir, src_name)}" should not contain spaces')
-                sys.exit(1)
-            if '_' not in src_name:
-                logging.error(f'"{os.path.join(task_rel_dir, src_name)}" should contain "_" separator')
-                sys.exit(1)
+        for author in authors:
+            if ' ' in author:
+                exit(f'"{os.path.join(task, author)}" should not contain spaces')
+            if '_' not in author:
+                exit(f'"{os.path.join(task, author)}" should contain "_" separator')
+            if author.count('_') != 1:
+                exit(f'"{os.path.join(task, author)}" should contain only one "_" separator')
 
-        pdf_filenames = {_ for _ in os.listdir(os.path.join(task_full_dir, 'pdf'))}
-        for pdf_filename in pdf_filenames:
-            if pdf_filename[-len('.pdf'):] != '.pdf':
-                logging.error(f'{os.path.join(task_rel_dir, "pdf", pdf_filename)} is not a pdf')
-                sys.exit(1)
+        for filename in os.listdir(os.path.join(root_dir, task, 'pdf')):
+            if not filename.endswith('.pdf'):
+                exit(f'{os.path.join(task, "pdf", filename)} is not a pdf')
 
-        pdf_names = {_[:-len('.pdf')] for _ in pdf_filenames}
-        if sorted(pdf_names) != sorted(src_names):
-            logging.error(f'in task {task_rel_dir} pdf files and source directories do not match: ' \
-                          f'{sorted(pdf_names)} != {sorted(src_names)}')
-            sys.exit(1)
+        pdf_authors = {filename[:-len('.pdf')] for filename in os.listdir(os.path.join(root_dir, task, 'pdf'))}
 
-        trash_files = [_ for _ in os.listdir(task_full_dir) if os.path.isfile(os.path.join(task_full_dir, _))]
+        for author in authors:
+            if author in pdf_authors:
+                continue
+            exit(f'{os.path.join(task, author)} exists, ' +
+                 f'while {os.path.join(task, "pdf", author + ".pdf")} does not exist')
 
-        assert len(trash_files) == 0, f'trash files in {task_rel_dir}: {trash_files}'
+        for author in pdf_authors:
+            if author in authors:
+                continue
+            exit(f'{os.path.join(task, "pdf", author + ".pdf")} exists, ' +
+                 f'while {os.path.join(task, author)} does not exist')
 
-    logging.info('check_integrity.py found no issues.')
+        trash_files = [
+            filename for filename in os.listdir(os.path.join(root_dir, task))
+            if os.path.isfile(os.path.join(root_dir, task, filename))
+        ]
+        if len(trash_files) != 0:
+            exit(f'trash files in {task}: {trash_files}')
+
+    print('check_integrity.py found no issues.')
 
 
 if __name__ == '__main__':
