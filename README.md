@@ -13,6 +13,10 @@
 ```
 python3 check_integrity.py
 ```
+или
+```
+uv run check_integrity.py
+```
 
 # Добавить свои работы
 
