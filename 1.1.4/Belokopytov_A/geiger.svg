@@ -1,0 +1,19 @@
+<svg width="210mm" height="90mm" version="1.1" viewBox="0 0 210 90" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect width="210" height="90" fill="#fff"/><use transform="rotate(180 65 13)" xlink:href="#c"/><rect x="3" y="19" width="3" height="46" fill-opacity=".5"/>
+ <g fill="none">
+ <g stroke-width=".3"><path d="m35 62c0-8 4-12 7-16m-14-22c1 7 8 7 12 14" stroke="#00f"/><path d="m17 41c-7-4-7-9-8-14m13 20c0 8-5 8-7 14" stroke="#f00"/></g>
+ <g stroke="#000"><rect x="154" y="9" width="53" height="28"/><rect x="154" y="46" width="53" height="28"/><rect x="167" y="13" width="35" height="12"/></g></g>
+ <rect x="124" y="19" width="6" height="46" fill="#888"/>
+ <g stroke="#000" fill="none" stroke-width=".4"><path d="m6 18v-10m118 11v-10m-117 4h116m9 55h4"/><path d="m52 52-4-10"/><rect x="3" y="19" width="127" height="46" stroke-width="2"/></g>
+ <rect x="129" y="40" width="2" height="4" fill="#888"/>
+ <g id="f" transform="translate(1-7)" stroke-width=".5" fill="none" stroke="#000"><path d="m168 59h4"/>
+ <g stroke="#f00"><path d="m190 61v-4m-2 2h4"/><circle cx="184" cy="59" r="1" fill="#fff"/></g>
+ <circle cx="177" cy="59" r="1" fill="#fff"/><circle cx="184" cy="59" r="2"/><circle cx="177" cy="59" r="2"/></g>
+ <use transform="translate(0-20)" xlink:href="#f"/>
+ <g id="a" transform="translate(1-7)" fill="none" stroke="#888" stroke-width=".5"><rect x="169" y="22" width="4" height="4"/><rect x="169" y="26" width="4" height="4"/></g>
+ <use transform="translate(5)" xlink:href="#a"/><use transform="translate(10)" xlink:href="#a"/><use transform="translate(15)" xlink:href="#a"/><use transform="translate(20)" xlink:href="#a"/><use transform="translate(25)" xlink:href="#a"/><path d="m6 42h172v-10m7 20v-20m-54 33h47v-13" fill="none" stroke="#000" stroke-width=".7"/>
+ <g fill="#0ff" stroke="#00f" stroke-width=".5"><circle cx="31" cy="55" r="2"/><circle cx="30" cy="49" r="2"/><circle cx="35" cy="45" r="2"/><circle cx="28" cy="38" r="2"/><circle cx="26" cy="32" r="2"/><circle cx="23" cy="27" r="2"/></g>
+ <g fill="#f00" stroke="#800" stroke-width=".5"><circle cx="19" cy="60" r="2"/><circle cx="24" cy="61" r="2"/><circle cx="23" cy="55" r="2"/><circle cx="16" cy="36" r="2"/><circle cx="14" cy="29" r="2"/><circle cx="13" cy="23" r="2"/></g>
+ <g transform="rotate(75 67 58)"><path id="b" d="m3 97c3-7 3 7 6 0s3 7 6 0 3 7 6 0" fill="none" stroke="#000" stroke-width=".3"/><use transform="translate(18)" xlink:href="#b"/><use transform="translate(36)" xlink:href="#b"/><use transform="translate(54)" xlink:href="#b"/></g>
+ <path id="c" d="m120 14 4-1-4-1 1 1"/><use transform="rotate(60 22-33)" xlink:href="#c"/><path id="e" d="m38 37 3 3-1-4v2" fill="#00f"/><use transform="rotate(266 45 41)" xlink:href="#e"/><path id="d" d="m14 60v4l2-3h-1" fill="#f00"/><use transform="rotate(147 17 43)" xlink:href="#d"/><path d="m134 41v-4m-2 2h4" fill="none" stroke="#f00" stroke-width=".4"/>
+ <g font-family="times" font-size="5.5px"><text x="47" y="11">Активная зона</text><text x="47" y="57">Анод</text><text x="22" y="24" fill="#00f">Электроны</text><text x="6" y="51" fill="#f00">Ионы</text><text x="33" y="76">Фотон</text><text x="80" y="63">Катод</text>
+ <g text-anchor="middle"><text x="181" y="80">Источник<tspan x="181" y="86">напряжения</tspan></text><text x="178" y="7">Счетчик</text></g></g></svg>
