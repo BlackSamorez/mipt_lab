@@ -1,0 +1,317 @@
+\documentclass[a4paper,12pt]{article} % Выбор класса (рекомендую KOMA-script)
+\usepackage[unicode=true,colorlinks=true]{hyperref} % Гиперссылки
+\usepackage[warn]{mathtext} % Кириллица в формулах через \text{}
+\usepackage[english,russian]{babel} % Переносы и другие языковые особенности
+\usepackage{misccorr} % Локализация не вошедшая в babel. Надо загрузить _до_ unicode-math
+\usepackage{amsmath} % Расширенная математика
+\usepackage{unicode-math} % Улучшенная работа с математическими шрифтами 
+\usepackage[regular]{newcomputermodern} % Шрифты Computer Modern
+\usepackage{indentfirst} % Отступ для первого параграфа
+\usepackage{microtype} % Микротипографика (висячая пунктуация точно работает)
+\usepackage{srcltx} % Обратный поиск
+\usepackage{graphicx} % Вставка графики
+\usepackage[top=2cm,bottom=3cm,left=1.5cm,right=1.5cm]{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{tabularray}
+\usepackage{pgf}
+\usepackage{wrapfig}
+\usepackage{icomma}
+
+\begin{document}
+
+\title{Нелинейные колебания длиннопериодного маятника
+(Лабораторная работа 1.4.3)}
+\author{Белокопытов Александр}
+\maketitle
+
+\section{Аннотация}
+Нелинейными называются колебания, которые не описываются линейным
+дифференциальным уравнением.
+В работе рассматривается нелинейный физический маятник с затуханием.
+
+Оборудование: длиннопериодный физический маятник (рис. \ref{fig:setup}),
+оптопара и компьютер для регистрации колебаний.
+
+\begin{figure}[H]
+	\caption{Длиннопериодный маятник}
+	\begin{center}
+		\includegraphics[width=0.38\textwidth]{setup}
+	\end{center}
+	\label{fig:setup}
+\end{figure}
+
+\section{Уравнение колебаний нелинейного маятника с вязким трением}
+Движение физического маятника с вязким трением описывается уравнением
+$$I\ddot{\varphi}+b\dot{\varphi}+mga\sin{\varphi}=0.$$
+
+При малых значениях угла отклонения $\sin{\varphi}\approx\varphi$ и уравнение
+переходит в уравнение гармонических колебаний с затуханием, но когда $\varphi$
+достаточно велико, такое приближение не работает.
+
+Пусть $\omega_0=\sqrt{\frac{mga}{I}}$ --- угловая частота. Обозначим
+$\beta=\frac{b}{\omega_0I}$, $\tau=\omega_0t$. Для удобства будем рассматривать
+производные по безразмерному времени $\tau$, обозначим их как $\varphi'$
+и $\varphi''$. Тогда уравнение перепишется в виде
+\begin{equation}
+	\label{eq:main}
+	\varphi''+\beta\varphi'+\sin{\varphi}=0
+\end{equation}
+
+Фазовая диаграмма таких колебаний имеет вид, представленный на рисунке
+\ref{fig:phas}.
+
+\begin{figure}[H]
+	\caption{Фазовая диаграмма нелинейного маятника с затуханием}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{phas}
+	\end{center}
+	\label{fig:phas}
+\end{figure}
+
+Проинтегрируем уравнение (\ref{eq:main}) по углу отклонения. Получим:
+$$\int\varphi'd\varphi'+\beta\int\varphi'd\varphi+\int\sin{\varphi}d\varphi=C$$
+$$\frac{{\varphi'}^2}{2}-\cos\varphi=-\beta\int\varphi'd\varphi+C$$
+
+Постоянную интегрирования найдём из начальных условий. Будем считать, что
+в начале угол отклонения нулевой, а угловая скорость равна $\varphi_0'$.
+Тогда уравнение примет вид
+
+\begin{equation}
+\frac{{\varphi'}^2}{2}-\cos\varphi=-\beta\int_0^\varphi\varphi'd\varphi+
+\frac{{\varphi_0'}^2}{2}-1
+\label{eq:f1}
+\end{equation}
+
+Обозначим амплитуду как $\varphi_x$. В момент первого максимального отклонения:
+
+\begin{equation}
+\beta\int_0^{\varphi_x}\varphi'd\varphi=\frac{{\varphi_0'}^2}{2}-
+2\sin^2\frac{\varphi_x}{2}
+\label{eq:otkl}
+\end{equation}
+
+При возврате угловая скорость уменьшится из-за потерь энергии на трение, получим:
+\begin{equation}
+\frac{{\varphi_1'}^2}{2}=\frac{{\varphi_0'}^2}{2}
+-\beta\int_0^{\varphi_x}\varphi'd\varphi-\beta\int_{\varphi_x}^0\varphi'd\varphi
+\label{eq:v_diff}
+\end{equation}
+
+\section{Связь амплитуды колебаний и угловых скоростей в положении равновесия}
+
+Оценим значение интегралов в (\ref{eq:v_diff}). Графически они представлены
+рисунке \ref{fig:integrals}.
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{integrals}
+	\end{center}
+	\label{fig:integrals}
+	\caption{Участок траектории маятника на фазовой плоскости}
+\end{figure}
+
+Воспользуемся следующим приближением (используются модули угловых скоростей):
+$$\int_0^{\varphi_x}\varphi'd\varphi\approx A\varphi_x\varphi_0'$$
+$$\int_{\varphi_x}^0\varphi'd\varphi\approx A\varphi_x\varphi_1'$$
+
+Мы считаем, что площади фигур относятся так же, как и их стороны. Преобразуем
+уравнение (\ref{eq:v_diff}):
+$$\frac{{\varphi_1'}^2}{2}=\frac{{\varphi_0'}^2}{2}-\beta A\varphi_x
+(\varphi_0'+\varphi_1')
+$$
+$$\varphi_0'-\varphi_1'=2\beta A \varphi_x$$
+
+Уравнение (\ref{eq:otkl}) преобразуется как
+$$\beta A \varphi_x\varphi_0'=
+\frac{{\varphi_0'}^2}{2}-
+2\sin^2\frac{\varphi_x}{2}$$
+
+Тогда:
+\begin{equation}
+	\sin^2\frac{\varphi_x}{2}=\frac{\varphi_0'\varphi_1'}{4}
+	\label{eq:approx1}
+\end{equation}
+
+Другим приближением является взятие среднего арифметического угловых скоростей:
+\begin{equation}
+	\sin^2\frac{\varphi_x}{2}=\frac{{\varphi_0'}^2+{\varphi_1'}^2}{8}
+	\label{eq:approx2}
+\end{equation}
+
+Среднее между (\ref{eq:approx1}) и (\ref{eq:approx2}):
+\begin{equation}
+	\sin^2\frac{\varphi_x}{2}=\frac{({\varphi_0'}+{\varphi_1'})^2}{16}
+	\label{eq:approx}
+\end{equation}
+
+Такое приближение даёт достаточную точность в условиях лабораторной работы.
+
+\section{Период колебаний}
+
+При рассмотрении периода одного колебания затухание достаточно мало.
+И затуханием при вычислении периода одного колебания можно пренебречь. Полупериод
+колебания составляет:
+$$\tau_{1\over2}=\int_0^{\varphi_x}\frac{d\varphi}{\varphi'}+
+\int^0_{\varphi_x}\frac{d\varphi}{\varphi'}$$
+$$\int_0^{\varphi_x}\frac{d\varphi}{\varphi'}=\int_0^{\varphi_x}
+\frac{d\varphi}{2\sqrt{\sin^2\frac{\varphi_x}{2}-\sin^2\frac{\varphi}{2}}}=
+K\left(\sin^2\frac{\varphi_x}{2}\right)$$
+
+Данный интеграл не выражается через элементарные функции, но может быть вычислен
+численно, и называется полным эллиптическим интегралом первого рода.
+
+Найдём период колебаний:
+$$T=2\frac{\tau_{1\over2}}{\omega_0}=T_0
+\frac{2K\left(\sin^2\frac{\varphi_x}{2}\right)}{\pi},$$
+где $T_0$ --- период линейных колебаний.
+
+\section{Определение периода линейных колебаний маятника}
+Без учёта трения закон сохранения энергии связывает угловую скорость
+и максимальную амплитуду качания маятника (180 градусов):
+$$\frac{I\omega^2}{2}=2mga$$
+$$\omega=2\sqrt{\frac{mga}{I}}=2\omega_0$$
+$$T_0=\frac{4\pi}{\omega}$$
+
+\section{Способ измерения}
+Зная угловой размер спицы маятника, можно определить его угловую скорость по
+времени прохождения спицей луча оптопары, расположенной в точке равновесия
+маятника. Также фиксируя моменты прохождения спицы через оптопару можно найти
+полупериод каждого колебания. Точность таймера достаточно высокая, и основная
+погрешность измерений создаётся трением в подвесе.
+
+Безразмерная угловая скорость выражается формулой:
+$$\varphi'=\frac{\varphi}{\omega_0 \Delta t},$$
+где $\varphi$ --- угловой размер спицы.
+
+При этом при амплитуде 180 градусов:
+$$\omega=\frac{\varphi}{\Delta t}=2\omega_0$$
+$$\frac{\varphi}{\omega_0}=2\Delta t$$
+
+\section{Результаты измерений}
+
+На рисунках \ref{fig:plot1}-\ref{fig:plot6_1} представлена зависимость периода
+колебаний от амплитуды, полученная прямым измерением и полученная численным 
+вычислением эллиптического интеграла. Измерения производились для 6 разных
+положений грузика на стержне. Также представлен график значений отклонений
+измеренного и теоретического значения для разных амплитуд.
+
+%Из графиков видно, что имеется небольшое периодическое отклонение в результатах,
+%совпадающее на разных значениях амплитуды, вызванное неровностью установки
+%оптопары. Оно возникает из-за того, что вращении маятника в одну сторону стержень 
+%обнаруживается чуть раньше, чем нужно, а в другую сторону --- чуть позже.
+%
+%Кроме этого, хорошо видно значительное отклонение результатов от теоретической
+%кривой на очень маленьких и очень больших амплитудах.
+%
+%На малых амплитудах это отклонение вызвано в основном неровностью установки
+%оптопары, которое на малых масштабах влияет значительно сильнее, чем на больших,
+%поэтому отклонения несут периодический характер.
+%
+%На больших амплитудах другая ситуация --- на них очень велико влияние вязкого
+%трения: за один полупериод амплитуда может уменьшится на 5-10 градусов, что
+%вносит значительное по величине отклонение (теоретическая кривая построена без
+%учёта вязкого трения).
+
+На малых амплитудах зависимость периода от амплитуды достаточно слабая, что
+соответствует случаю линейных колебаний.
+
+\newpage
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды в первом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot1.pdf}
+	\end{center}
+	\label{fig:plot1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды в первом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot1_1.pdf}
+	\end{center}
+	\label{fig:plot1_1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды во втором опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot2.pdf}
+	\end{center}
+	\label{fig:plot2}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды во втором опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot2_1.pdf}
+	\end{center}
+	\label{fig:plot2_1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды в третьем опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot3.pdf}
+	\end{center}
+	\label{fig:plot3}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды в третьем опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot3_1.pdf}
+	\end{center}
+	\label{fig:plot3_1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды в четвёртом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot4.pdf}
+	\end{center}
+	\label{fig:plot4}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды в четвёртом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot4_1.pdf}
+	\end{center}
+	\label{fig:plot4_1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды в пятом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot5.pdf}
+	\end{center}
+	\label{fig:plot5}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды в пятом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot5_1.pdf}
+	\end{center}
+	\label{fig:plot5_1}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость периода колебаний от амплитуды в шестом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot6.pdf}
+	\end{center}
+	\label{fig:plot6}
+\end{figure}
+
+\begin{figure}[H]
+	\caption{Зависимость отклонений между периодами от амплитуды в шестом опыте}
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{plot6_1.pdf}
+	\end{center}
+	\label{fig:plot6_1}
+\end{figure}
+
+\end{document}
